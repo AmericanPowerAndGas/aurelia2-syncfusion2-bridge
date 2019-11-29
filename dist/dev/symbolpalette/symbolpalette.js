@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/symbolpalette/symbolpalette.js.map
+//# sourceMappingURL=../devbuild/dev/symbolpalette/symbolpalette.js.map

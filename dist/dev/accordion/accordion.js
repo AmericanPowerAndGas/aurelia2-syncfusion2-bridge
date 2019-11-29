@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/accordion/accordion.js.map
+//# sourceMappingURL=../devbuild/dev/accordion/accordion.js.map

@@ -66,4 +66,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/progressbar/progressbar.js.map
+//# sourceMappingURL=../devbuild/dev/progressbar/progressbar.js.map

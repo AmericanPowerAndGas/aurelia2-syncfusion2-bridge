@@ -120,4 +120,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/chart/chart.js.map
+//# sourceMappingURL=../devbuild/dev/chart/chart.js.map

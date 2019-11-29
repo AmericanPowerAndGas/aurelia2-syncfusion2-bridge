@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/tagcloud/tagcloud.js.map
+//# sourceMappingURL=../devbuild/dev/tagcloud/tagcloud.js.map

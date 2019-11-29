@@ -66,4 +66,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/checkbox/checkbox.js.map
+//# sourceMappingURL=../devbuild/dev/checkbox/checkbox.js.map

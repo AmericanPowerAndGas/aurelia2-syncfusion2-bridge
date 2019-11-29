@@ -8,5 +8,6 @@ var constants = exports.constants = {
   bindablePrefix: 'e-',
   attributePrefix: 'ej-',
   elementPrefix: 'ej-',
-  aureliaTemplateString: '<template><slot></slot></template>'
+  aureliaTemplateString: '<template><slot></slot></template>',
+  ej2AttributePrefix: 'ej2-'
 };

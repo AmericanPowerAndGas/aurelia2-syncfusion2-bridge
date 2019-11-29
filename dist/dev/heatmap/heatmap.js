@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/heatmap/heatmap.js.map
+//# sourceMappingURL=../devbuild/dev/heatmap/heatmap.js.map

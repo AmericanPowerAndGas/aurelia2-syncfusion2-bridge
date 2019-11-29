@@ -29,4 +29,4 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
     }
   };
 });
-//# sourceMappingURL=../dist/dev/rangenavigator/rangeseries.js.map
+//# sourceMappingURL=../devbuild/dev/rangenavigator/rangeseries.js.map

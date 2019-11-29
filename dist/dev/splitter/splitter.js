@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/splitter/splitter.js.map
+//# sourceMappingURL=../devbuild/dev/splitter/splitter.js.map

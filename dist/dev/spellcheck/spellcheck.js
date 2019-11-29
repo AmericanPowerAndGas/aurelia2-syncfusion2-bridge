@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/spellcheck/spellcheck.js.map
+//# sourceMappingURL=../devbuild/dev/spellcheck/spellcheck.js.map

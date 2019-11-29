@@ -101,4 +101,4 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
     execute: function () {}
   };
 });
-//# sourceMappingURL=../dist/dev/common/decorators.js.map
+//# sourceMappingURL=../devbuild/dev/common/decorators.js.map

@@ -245,4 +245,4 @@ System.register(['./events', '../common/util', '../common/decorators'], function
     }
   };
 });
-//# sourceMappingURL=../dist/dev/common/widget-base.js.map
+//# sourceMappingURL=../devbuild/dev/common/widget-base.js.map

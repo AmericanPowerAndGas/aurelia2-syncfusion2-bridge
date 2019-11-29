@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/digitalgauge/digitalgauge.js.map
+//# sourceMappingURL=../devbuild/dev/digitalgauge/digitalgauge.js.map

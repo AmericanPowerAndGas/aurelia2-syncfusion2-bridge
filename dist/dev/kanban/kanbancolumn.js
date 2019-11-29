@@ -29,4 +29,4 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
     }
   };
 });
-//# sourceMappingURL=../dist/dev/kanban/kanbancolumn.js.map
+//# sourceMappingURL=../devbuild/dev/kanban/kanbancolumn.js.map

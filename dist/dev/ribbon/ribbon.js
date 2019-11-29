@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/ribbon/ribbon.js.map
+//# sourceMappingURL=../devbuild/dev/ribbon/ribbon.js.map

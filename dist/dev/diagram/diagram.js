@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/diagram/diagram.js.map
+//# sourceMappingURL=../devbuild/dev/diagram/diagram.js.map

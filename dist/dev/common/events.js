@@ -59,4 +59,4 @@ System.register(['./util', 'aurelia-dependency-injection', './constants'], funct
     execute: function () {}
   };
 });
-//# sourceMappingURL=../dist/dev/common/events.js.map
+//# sourceMappingURL=../devbuild/dev/common/events.js.map

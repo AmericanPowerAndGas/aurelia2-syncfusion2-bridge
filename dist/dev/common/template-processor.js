@@ -110,4 +110,4 @@ System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-temp
     }
   };
 });
-//# sourceMappingURL=../dist/dev/common/template-processor.js.map
+//# sourceMappingURL=../devbuild/dev/common/template-processor.js.map

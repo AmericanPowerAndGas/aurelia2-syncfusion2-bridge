@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/daterangepicker/daterangepicker.js.map
+//# sourceMappingURL=../devbuild/dev/daterangepicker/daterangepicker.js.map

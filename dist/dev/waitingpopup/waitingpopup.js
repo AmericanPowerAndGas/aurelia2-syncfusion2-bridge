@@ -66,4 +66,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/waitingpopup/waitingpopup.js.map
+//# sourceMappingURL=../devbuild/dev/waitingpopup/waitingpopup.js.map

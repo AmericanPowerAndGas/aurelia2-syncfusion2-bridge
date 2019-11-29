@@ -88,4 +88,4 @@ System.register(['aurelia-dependency-injection', 'aurelia-templating', './consta
     }
   };
 });
-//# sourceMappingURL=../dist/dev/common/template.js.map
+//# sourceMappingURL=../devbuild/dev/common/template.js.map

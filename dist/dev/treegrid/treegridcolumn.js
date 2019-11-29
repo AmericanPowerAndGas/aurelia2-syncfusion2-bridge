@@ -93,4 +93,4 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
     }
   };
 });
-//# sourceMappingURL=../dist/dev/treegrid/treegridcolumn.js.map
+//# sourceMappingURL=../devbuild/dev/treegrid/treegridcolumn.js.map

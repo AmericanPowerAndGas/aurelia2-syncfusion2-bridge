@@ -66,4 +66,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/colorpicker/colorpicker.js.map
+//# sourceMappingURL=../devbuild/dev/colorpicker/colorpicker.js.map

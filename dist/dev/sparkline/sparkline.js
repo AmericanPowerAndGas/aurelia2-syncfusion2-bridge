@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/sparkline/sparkline.js.map
+//# sourceMappingURL=../devbuild/dev/sparkline/sparkline.js.map

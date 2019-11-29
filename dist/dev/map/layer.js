@@ -29,4 +29,4 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
     }
   };
 });
-//# sourceMappingURL=../dist/dev/map/layer.js.map
+//# sourceMappingURL=../devbuild/dev/map/layer.js.map

@@ -67,4 +67,4 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }
   };
 });
-//# sourceMappingURL=../dist/dev/pivotgrid/pivotgrid.js.map
+//# sourceMappingURL=../devbuild/dev/pivotgrid/pivotgrid.js.map
