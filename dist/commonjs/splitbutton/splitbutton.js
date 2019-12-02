@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.ejSplitButton = undefined;
 
-var _dec, _dec2, _dec3, _class;
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _widgetBase = require('../common/widget-base');
+var _widgetBase = require("../common/widget-base");
 
-var _constants = require('../common/constants');
+var _constants = require("../common/constants");
 
-var _decorators = require('../common/decorators');
+var _decorators = require("../common/decorators");
 
-var _common = require('../common/common');
+var _common = require("../common/common");
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -21,17 +21,28 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ejSplitButton = exports.ejSplitButton = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'split-button'), _dec2 = (0, _decorators.generateBindables)('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
-  _inherits(ejSplitButton, _WidgetBase);
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
-  function ejSplitButton(element) {
-    _classCallCheck(this, ejSplitButton);
+var ejSplitButton = function (_WidgetBase) {
+    _inherits(ejSplitButton, _WidgetBase);
 
-    var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+    function ejSplitButton(element) {
+        _classCallCheck(this, ejSplitButton);
 
-    _this.element = element;
-    return _this;
-  }
+        var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
 
-  return ejSplitButton;
-}(_widgetBase.WidgetBase)) || _class) || _class) || _class);
+        _this.element = element;
+        return _this;
+    }
+
+    return ejSplitButton;
+}(_widgetBase.WidgetBase);
+exports.ejSplitButton = ejSplitButton = __decorate([(0, _common.customAttribute)(_constants.constants.attributePrefix + "split-button"), (0, _decorators.generateBindables)('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }), (0, _common.inject)(Element)], ejSplitButton);
+exports.ejSplitButton = ejSplitButton;

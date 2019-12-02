@@ -32,141 +32,125 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
-  
-  /**
-  * Plugin configuration builder
-  */
   export class EjConfigBuilder {
-    resources: string[];
-    useGlobalResources: boolean;
-    
-    /**
-      * Globally register all EJ wrappers including templating support
-      */
-    useAll(): EjConfigBuilder;
-    
-    /**
-       * Don't globalize any resources
-       * Allows you to import wrappers yourself via <require></require>
-       */
-    withoutGlobalResources(): EjConfigBuilder;
-    ejGrid(): EjConfigBuilder;
-    ejChart(): EjConfigBuilder;
-    ejSunburstChart(): EjConfigBuilder;
-    ejMap(): EjConfigBuilder;
-    ejTreeMap(): EjConfigBuilder;
-    ejRangeNavigator(): EjConfigBuilder;
-    ejDiagram(): EjConfigBuilder;
-    ejHeatMap(): EjConfigBuilder;
-    ejHeatMapLegend(): EjConfigBuilder;
-    ejSparkline(): EjConfigBuilder;
-    ejSymbolPalette(): EjConfigBuilder;
-    ejOverview(): EjConfigBuilder;
-    ejPager(): EjConfigBuilder;
-    ejBulletGraph(): EjConfigBuilder;
-    ejCircularGauge(): EjConfigBuilder;
-    ejLinearGauge(): EjConfigBuilder;
-    ejDigitalGauge(): EjConfigBuilder;
-    ejSplitter(): EjConfigBuilder;
-    ejDatePicker(): EjConfigBuilder;
-    ejGantt(): EjConfigBuilder;
-    ejTreeGrid(): EjConfigBuilder;
-    ejColorPicker(): EjConfigBuilder;
-    ejDialog(): EjConfigBuilder;
-    ejScroller(): EjConfigBuilder;
-    ejBarcode(): EjConfigBuilder;
-    ejPdfViewer(): EjConfigBuilder;
-    ejNumericTextbox(): EjConfigBuilder;
-    ejCurrencyTextbox(): EjConfigBuilder;
-    ejPercentageTextbox(): EjConfigBuilder;
-    ejTimePicker(): EjConfigBuilder;
-    ejToolbar(): EjConfigBuilder;
-    ejMenu(): EjConfigBuilder;
-    ejMaskEdit(): EjConfigBuilder;
-    ejTreeView(): EjConfigBuilder;
-    ejKanban(): EjConfigBuilder;
-    ejRibbon(): EjConfigBuilder;
-    ejSpreadsheet(): EjConfigBuilder;
-    ejRating(): EjConfigBuilder;
-    ejListBox(): EjConfigBuilder;
-    ejListView(): EjConfigBuilder;
-    ejNavigationDrawer(): EjConfigBuilder;
-    ejRotator(): EjConfigBuilder;
-    ejRTE(): EjConfigBuilder;
-    ejDropDownList(): EjConfigBuilder;
-    ejComboBox(): EjConfigBuilder;
-    ejAutocomplete(): EjConfigBuilder;
-    ejRadialMenu(): EjConfigBuilder;
-    ejRadialSlider(): EjConfigBuilder;
-    ejTile(): EjConfigBuilder;
-    ejAccordion(): EjConfigBuilder;
-    ejTab(): EjConfigBuilder;
-    ejCheckBox(): EjConfigBuilder;
-    ejRadioButton(): EjConfigBuilder;
-    ejToggleButton(): EjConfigBuilder;
-    ejSplitButton(): EjConfigBuilder;
-    ejGroupButton(): EjConfigBuilder;
-    ejDateTimePicker(): EjConfigBuilder;
-    ejDateRangePicker(): EjConfigBuilder;
-    ejProgressBar(): EjConfigBuilder;
-    ejTagCloud(): EjConfigBuilder;
-    ejButton(): EjConfigBuilder;
-    ejSlider(): EjConfigBuilder;
-    ejFileExplorer(): EjConfigBuilder;
-    ejPivotGrid(): EjConfigBuilder;
-    ejPivotChart(): EjConfigBuilder;
-    ejPivotGauge(): EjConfigBuilder;
-    ejPivotSchemaDesigner(): EjConfigBuilder;
-    ejPivotTreeMap(): EjConfigBuilder;
-    ejWaitingPopup(): EjConfigBuilder;
-    ejReportViewer(): EjConfigBuilder;
-    ejSchedule(): EjConfigBuilder;
-    ejUploadbox(): EjConfigBuilder;
-    ejSignature(): EjConfigBuilder;
-    ejTooltip(): EjConfigBuilder;
-    ejSpellCheck(): EjConfigBuilder;
-    ejTemplate(): EjConfigBuilder;
-    ej2DatePicker(): EjConfigBuilder;
+    constructor();
+    useAll(): any;
+    withoutGlobalResources(): any;
+    ejGrid(): any;
+    ejChart(): any;
+    ejSunburstChart(): any;
+    ejMap(): any;
+    ejTreeMap(): any;
+    ejRangeNavigator(): any;
+    ejDiagram(): any;
+    ejHeatMap(): any;
+    ejHeatMapLegend(): any;
+    ejSparkline(): any;
+    ejSymbolPalette(): any;
+    ejOverview(): any;
+    ejPager(): any;
+    ejBulletGraph(): any;
+    ejCircularGauge(): any;
+    ejLinearGauge(): any;
+    ejDigitalGauge(): any;
+    ejSplitter(): any;
+    ejDatePicker(): any;
+    ejGantt(): any;
+    ejTreeGrid(): any;
+    ejColorPicker(): any;
+    ejDialog(): any;
+    ejScroller(): any;
+    ejBarcode(): any;
+    ejPdfViewer(): any;
+    ejNumericTextbox(): any;
+    ejCurrencyTextbox(): any;
+    ejPercentageTextbox(): any;
+    ejTimePicker(): any;
+    ejToolbar(): any;
+    ejMenu(): any;
+    ejMaskEdit(): any;
+    ejTreeView(): any;
+    ejKanban(): any;
+    ejRibbon(): any;
+    ejSpreadsheet(): any;
+    ejRating(): any;
+    ejListBox(): any;
+    ejListView(): any;
+    ejNavigationDrawer(): any;
+    ejRotator(): any;
+    ejRTE(): any;
+    ejDropDownList(): any;
+    ejComboBox(): any;
+    ejAutocomplete(): any;
+    ejRadialMenu(): any;
+    ejRadialSlider(): any;
+    ejTile(): any;
+    ejAccordion(): any;
+    ejTab(): any;
+    ejCheckBox(): any;
+    ejRadioButton(): any;
+    ejToggleButton(): any;
+    ejSplitButton(): any;
+    ejGroupButton(): any;
+    ejDateTimePicker(): any;
+    ejDateRangePicker(): any;
+    ejProgressBar(): any;
+    ejTagCloud(): any;
+    ejButton(): any;
+    ejSlider(): any;
+    ejFileExplorer(): any;
+    ejPivotGrid(): any;
+    ejPivotChart(): any;
+    ejPivotGauge(): any;
+    ejPivotSchemaDesigner(): any;
+    ejPivotTreeMap(): any;
+    ejWaitingPopup(): any;
+    ejReportViewer(): any;
+    ejSchedule(): any;
+    ejUploadbox(): any;
+    ejSignature(): any;
+    ejTooltip(): any;
+    ejSpellCheck(): any;
+    ejTemplate(): any;
+    ej2DatePicker(): any;
   }
-  export function configure(aurelia: any, configCallback?: ((builder: EjConfigBuilder) => void)): any;
-  export class ejAccordion extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejAutocomplete extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejBarcode extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejBulletGraph extends WidgetBase {
-    qualitativeRanges: any;
-    constructor(element?: any);
-  }
-  export class QualitativeRange {
-  
-  }
-  export class ejButton extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejChart extends WidgetBase {
-    series: any;
-    constructor(element?: any);
-  }
-  export class Series {
-  
-  }
-  export class ejCheckBox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejCircularGauge extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejColorPicker extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejComboBox extends WidgetBase {
-    constructor(element?: any);
-  }
+  export function configure(aurelia?: any, configCallback?: any): any;
+  export {
+    ejAccordion
+  };
+  export {
+    ejAutocomplete
+  };
+  export {
+    ejBarcode
+  };
+  export {
+    ejBulletGraph
+  };
+  export {
+    QualitativeRange
+  };
+  export {
+    ejButton
+  };
+  export {
+    ejChart
+  };
+  export {
+    Series
+  };
+  export {
+    ejCheckBox
+  };
+  export {
+    ejCircularGauge
+  };
+  export {
+    ejColorPicker
+  };
+  export {
+    ejComboBox
+  };
   export {
     customAttribute,
     bindable,
@@ -180,341 +164,275 @@ declare module 'aurelia-syncfusion-bridge' {
   export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any, observerCollection?: any): any;
   export function delayed(): any;
   export class Ej2WidgetBase {
-    
-    /**
-    * To Create an widget
-    * @param option Object which contains  Element in which  widget will be created
-    */
     createWidget(option?: any): any;
     bind(ctx?: any, overrideCtx?: any): any;
     createTwoWays(): any;
     addTwoways(prop?: any): any;
-    
-    /**
-     * To get property and event options from the element
-     * @param element Element from which options are acquired
-     */
     getWidgetOptions(element?: any): any;
     getChildProperties(options?: any): any;
     attached(): any;
     unsubscribe(): any;
     unbind(): any;
-    
-    /**
-       * To change widget model value
-       * @param property The viewModel property name
-       * @param newValue New value of the property
-       * @param oldvalue Pld value of the property
-       */
     propertyChanged(property?: any, newValue?: any, oldValue?: any): any;
     update(e?: any): any;
     detached(): any;
   }
-  
-  /**
-  * To get binded events from the element
-  * @param element The Element from which events acquired
-  */
   export function getEventOption(element?: any): any;
-  
-  /**
-  * Fire DOM event on an element
-  * @param element The Element which the DOM event will be fired on
-  * @param name The Event's name
-  * @param data Addition data to attach to an event
-  */
-  export function fireEvent(element: Element, name: string, data?: any): any;
-  export class TemplateProcessor {
-    constructor(context?: any, templateEngine?: any);
-    initTemplate(): any;
-    initWidgetDependancies(): any;
-    renderStringTemplate(self?: any, selector?: any, data?: any, index?: any): any;
-    compileTemplate(element?: any): any;
-    clearTempalte(): any;
-    unbindViews(obj?: any): any;
-  }
-  export class Template {
-    template: any;
-    constructor(target?: any);
-  }
+  export function fireEvent(element?: any, name?: any, data?: any): any;
+  export {
+    TemplateProcessor
+  };
+  export {
+    Template
+  };
   export class Util {
-    getBindablePropertyName(propertyName: string): string;
-    _unhyphenate(name: string): string;
+    getBindablePropertyName(propertyName?: any): any;
+    _unhyphenate(name?: any): any;
     getOptions(model?: any, properties?: any): any;
     getControlPropertyName(options?: any, propertyName?: any): any;
     hasValue(prop?: any): any;
     processData(value?: any): any;
   }
   export class WidgetBase {
-    
-    /**
-    * To Create an widget
-    * @param option Object which contains  Element in which  widget will be created
-    */
     createWidget(option?: any): any;
     bind(ctx?: any, overrideCtx?: any): any;
     createTwoWays(): any;
     addTwoways(prop?: any): any;
-    
-    /**
-    * To get property and event options from the element
-    * @param element Element from which options are acquired
-    */
     getWidgetOptions(element?: any): any;
     getChildProperties(options?: any): any;
     attached(): any;
     unsubscribe(): any;
     unbind(): any;
-    
-    /**
-     * To change widget model value
-     * @param property The viewModel property name
-     * @param newValue New value of the property
-     * @param oldvalue Pld value of the property
-     */
     propertyChanged(property?: any, newValue?: any, oldValue?: any): any;
     update(e?: any): any;
     detached(): any;
   }
-  export class ejCurrencyTextbox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDatePicker extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDateRangePicker extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDateTimePicker extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDiagram extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDialog extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDigitalGauge extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejDropDownList extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejFileExplorer extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejGantt extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejGroupButton extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class Column {
-    template: any;
-    setTemplates(): any;
-  }
-  export class ejGrid extends WidgetBase {
-    columns: any;
-    constructor(element?: any, templateEngine?: any);
-  }
-  export class ejHeatMap extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejHeatMapLegend extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejKanban extends WidgetBase {
-    columns: any;
-    constructor(element?: any);
-  }
-  export class KanbanColumn {
-  
-  }
-  export class ejLinearGauge extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejListBox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejListView extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class Layer {
-  
-  }
-  export class ejMap extends WidgetBase {
-    layers: any;
-    constructor(element?: any);
-  }
-  export class ejMaskEdit extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejMenu extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejNavigationDrawer extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejNumericTextbox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejOverview extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPager extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPdfViewer extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPercentageTextbox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPivotChart extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPivotGauge extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPivotGrid extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPivotSchemaDesigner extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejPivotTreeMap extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejProgressBar extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class Item {
-    template: any;
-    setTemplates(): any;
-  }
-  export class ejRadialMenu extends WidgetBase {
-    items: any;
-    constructor(element?: any, templateEngine?: any);
-  }
-  export class ejRadialSlider extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejRadioButton extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejRangeNavigator extends WidgetBase {
-    series: any;
-    constructor(element?: any);
-  }
-  export class RangeSeries {
-  
-  }
-  export class ejRating extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejReportViewer extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejRibbon extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejRotator extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejRte extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSchedule extends WidgetBase {
-    resources: any;
-    constructor(element?: any);
-  }
-  export class ScheduleResource {
-  
-  }
-  export class ejScroller extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSignature extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSlider extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSparkline extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSpellCheck extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSplitButton extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejSplitter extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class Sheet {
-  
-  }
-  export class ejSpreadsheet extends WidgetBase {
-    sheets: any;
-    constructor(element?: any);
-  }
-  export class ejSunburstChart extends WidgetBase {
-    levels: any;
-    constructor(element?: any);
-  }
-  export class SunburstLevels {
-  
-  }
-  export class ejSymbolPalette extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejTab extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejTagCloud extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejTile extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejTimePicker extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejToggleButton extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejToolbar extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejTooltip extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejTreeGrid extends WidgetBase {
-    columns: any;
-    constructor(element?: any, templateEngine?: any);
-  }
-  export class TreeGridColumn {
-    angularTemplate: any;
-    setTemplates(): any;
-  }
-  export class Level {
-  
-  }
-  export class ejTreeMap extends WidgetBase {
-    levels: any;
-    constructor(element?: any);
-  }
-  export class ejTreeView extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejUploadbox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejWaitingPopup extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ej2DatePicker extends Ej2WidgetBase {
-    constructor(element?: any);
-  }
+  export {
+    ejCurrencyTextbox
+  };
+  export {
+    ejDatePicker
+  };
+  export {
+    ejDateRangePicker
+  };
+  export {
+    ejDateTimePicker
+  };
+  export {
+    ejDiagram
+  };
+  export {
+    ejDialog
+  };
+  export {
+    ejDigitalGauge
+  };
+  export {
+    ejDropDownList
+  };
+  export {
+    ejFileExplorer
+  };
+  export {
+    ejGantt
+  };
+  export {
+    Column
+  };
+  export {
+    ejGrid
+  };
+  export {
+    ejGroupButton
+  };
+  export {
+    ejHeatMap
+  };
+  export {
+    ejHeatMapLegend
+  };
+  export {
+    ejKanban
+  };
+  export {
+    KanbanColumn
+  };
+  export {
+    ejLinearGauge
+  };
+  export {
+    ejListBox
+  };
+  export {
+    ejListView
+  };
+  export {
+    Layer
+  };
+  export {
+    ejMap
+  };
+  export {
+    ejMaskEdit
+  };
+  export {
+    ejMenu
+  };
+  export {
+    ejNavigationDrawer
+  };
+  export {
+    ejNumericTextbox
+  };
+  export {
+    ejOverview
+  };
+  export {
+    ejPager
+  };
+  export {
+    ejPdfViewer
+  };
+  export {
+    ejPercentageTextbox
+  };
+  export {
+    ejPivotChart
+  };
+  export {
+    ejPivotGauge
+  };
+  export {
+    ejPivotGrid
+  };
+  export {
+    ejPivotSchemaDesigner
+  };
+  export {
+    ejPivotTreeMap
+  };
+  export {
+    ejProgressBar
+  };
+  export {
+    Item
+  };
+  export {
+    ejRadialMenu
+  };
+  export {
+    ejRadialSlider
+  };
+  export {
+    ejRadioButton
+  };
+  export {
+    ejRangeNavigator
+  };
+  export {
+    RangeSeries
+  };
+  export {
+    ejRating
+  };
+  export {
+    ejReportViewer
+  };
+  export {
+    ejRibbon
+  };
+  export {
+    ejRotator
+  };
+  export {
+    ejRte
+  };
+  export {
+    ejSchedule
+  };
+  export {
+    ScheduleResource
+  };
+  export {
+    ejScroller
+  };
+  export {
+    ejSlider
+  };
+  export {
+    ejSignature
+  };
+  export {
+    ejSparkline
+  };
+  export {
+    ejSpellCheck
+  };
+  export {
+    ejSplitButton
+  };
+  export {
+    ejSplitter
+  };
+  export {
+    Sheet
+  };
+  export {
+    ejSpreadsheet
+  };
+  export {
+    ejSunburstChart
+  };
+  export {
+    SunburstLevels
+  };
+  export {
+    ejSymbolPalette
+  };
+  export {
+    ejTab
+  };
+  export {
+    ejTagCloud
+  };
+  export {
+    ejTile
+  };
+  export {
+    ejTimePicker
+  };
+  export {
+    ejToggleButton
+  };
+  export {
+    ejToolbar
+  };
+  export {
+    ejTooltip
+  };
+  export {
+    ejTreeGrid
+  };
+  export {
+    TreeGridColumn
+  };
+  export {
+    Level
+  };
+  export {
+    ejTreeMap
+  };
+  export {
+    ejTreeView
+  };
+  export {
+    ejUploadbox
+  };
+  export {
+    ejWaitingPopup
+  };
+  export {
+    ej2DatePicker
+  };
 }
