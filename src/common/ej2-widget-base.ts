@@ -1,10 +1,14 @@
-import { DatePicker } from '@syncfusion/ej2-calendars';
+
+
 
 import { delayed } from '../common/decorators';
 import { getEventOption } from '../common/events';
 import { Util } from '../common/util';
 
 export class Ej2WidgetBase {  
+  constructor(component) {
+    this.component = component;
+  }    
 /**
 * To Create an widget
 * @param option Object which contains  Element in which  widget will be created
@@ -16,7 +20,7 @@ export class Ej2WidgetBase {
       this.createTwoWays();
     }
 
-    this.eWidget = this.widget = new DatePicker(this.allOption);
+    this.eWidget = this.widget = new this.component(this.allOption);
     this.widget.appendTo(option.element);
     if (this.templateProcessor) {
       this.templateProcessor.initWidgetDependancies();

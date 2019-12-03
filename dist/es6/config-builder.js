@@ -81,7 +81,8 @@ export class EjConfigBuilder {
             .ejTooltip()
             .ejSpellCheck()
             .ejTemplate()
-            .ej2DatePicker();
+            .ej2DatePicker()
+            .ej2Accordion();
         return this;
     }
     withoutGlobalResources() {
@@ -406,6 +407,10 @@ export class EjConfigBuilder {
     }
     ej2DatePicker() {
         this.resources.push(PLATFORM.moduleName('./ej2/datepicker/datepicker'));
+        return this;
+    }
+    ej2Accordion() {
+        this.resources.push(PLATFORM.moduleName('./ej2/accordion/accordion'));
         return this;
     }
 }

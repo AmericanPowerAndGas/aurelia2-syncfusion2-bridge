@@ -13,7 +13,8 @@ System.register([], function (_export, _context) {
                 attributePrefix: 'ej-',
                 elementPrefix: 'ej-',
                 aureliaTemplateString: '<template><slot></slot></template>',
-                ej2AttributePrefix: 'ej2-'
+                ej2AttributePrefix: 'ej2-',
+                ej2ElementPrefix: 'ej2-'
             });
 
             _export('constants', constants);

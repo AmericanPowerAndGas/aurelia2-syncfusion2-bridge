@@ -1,10 +1,10 @@
-define(["exports", "../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-calendars"], function (exports, _ej2WidgetBase, _constants, _decorators, _common, _ej2Calendars) {
+define(["exports", "../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-navigations"], function (exports, _ej2WidgetBase, _constants, _decorators, _common, _ej2Navigations) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    exports.ej2DatePicker = undefined;
+    exports.ej2Accordion = undefined;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -51,21 +51,20 @@ define(["exports", "../../common/ej2-widget-base", "../../common/constants", "..
         }return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
 
-    var ej2DatePicker = function (_Ej2WidgetBase) {
-        _inherits(ej2DatePicker, _Ej2WidgetBase);
+    var ej2Accordion = function (_Ej2WidgetBase) {
+        _inherits(ej2Accordion, _Ej2WidgetBase);
 
-        function ej2DatePicker(element) {
-            _classCallCheck(this, ej2DatePicker);
+        function ej2Accordion(element) {
+            _classCallCheck(this, ej2Accordion);
 
-            var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Calendars.DatePicker));
+            var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Navigations.Accordion));
 
-            _this.isEditor = true;
             _this.element = element;
             return _this;
         }
 
-        return ej2DatePicker;
+        return ej2Accordion;
     }(_ej2WidgetBase.Ej2WidgetBase);
-    exports.ej2DatePicker = ej2DatePicker = __decorate([(0, _common.customAttribute)(_constants.constants.ej2AttributePrefix + "date-picker"), (0, _decorators.generateBindables)('ej2DatePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _common.inject)(Element)], ej2DatePicker);
-    exports.ej2DatePicker = ej2DatePicker;
+    exports.ej2Accordion = ej2Accordion = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "accordion"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }), (0, _common.inject)(Element)], ej2Accordion);
+    exports.ej2Accordion = ej2Accordion;
 });

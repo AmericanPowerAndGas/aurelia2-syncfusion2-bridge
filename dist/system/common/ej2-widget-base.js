@@ -1,9 +1,9 @@
 "use strict";
 
-System.register(["@syncfusion/ej2-calendars", "../common/decorators", "../common/events", "../common/util"], function (_export, _context) {
+System.register(["../common/decorators", "../common/events", "../common/util"], function (_export, _context) {
     "use strict";
 
-    var DatePicker, delayed, getEventOption, Util, _typeof, __decorate, Ej2WidgetBase;
+    var delayed, getEventOption, Util, _typeof, __decorate, Ej2WidgetBase;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -12,9 +12,7 @@ System.register(["@syncfusion/ej2-calendars", "../common/decorators", "../common
     }
 
     return {
-        setters: [function (_syncfusionEj2Calendars) {
-            DatePicker = _syncfusionEj2Calendars.DatePicker;
-        }, function (_commonDecorators) {
+        setters: [function (_commonDecorators) {
             delayed = _commonDecorators.delayed;
         }, function (_commonEvents) {
             getEventOption = _commonEvents.getEventOption;
@@ -38,8 +36,10 @@ System.register(["@syncfusion/ej2-calendars", "../common/decorators", "../common
             };
 
             _export("Ej2WidgetBase", Ej2WidgetBase = function () {
-                function Ej2WidgetBase() {
+                function Ej2WidgetBase(component) {
                     _classCallCheck(this, Ej2WidgetBase);
+
+                    this.component = component;
                 }
 
                 Ej2WidgetBase.prototype.createWidget = function createWidget(option) {
@@ -49,7 +49,7 @@ System.register(["@syncfusion/ej2-calendars", "../common/decorators", "../common
                     if (!this.ejOptions && !this.isEditor) {
                         this.createTwoWays();
                     }
-                    this.eWidget = this.widget = new DatePicker(this.allOption);
+                    this.eWidget = this.widget = new this.component(this.allOption);
                     this.widget.appendTo(option.element);
                     if (this.templateProcessor) {
                         this.templateProcessor.initWidgetDependancies();

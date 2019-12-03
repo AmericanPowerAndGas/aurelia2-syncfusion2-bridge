@@ -1,8 +1,8 @@
 'use strict';
 
 exports.__esModule = true;
-exports.ej2DatePicker = exports.ejWaitingPopup = undefined;
-exports.ejUploadbox = exports.ejTreeView = exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSignature = exports.ejSlider = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
+exports.ej2DatePicker = exports.ej2Accordion = exports.ejWaitingPopup = undefined;
+exports.ejUploadbox = exports.ejTreeView = exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMap = exports.Layer = exports.ejMaskEdit = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -24,6 +24,8 @@ var _aureliaTaskQueue = require('aurelia-task-queue');
 
 var _aureliaBinding = require('aurelia-binding');
 
+var _ej2Navigations = require('@syncfusion/ej2-navigations');
+
 var _ej2Calendars = require('@syncfusion/ej2-calendars');
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -41,7 +43,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     }
 
     EjConfigBuilder.prototype.useAll = function useAll() {
-        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2DatePicker();
+        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2DatePicker().ej2Accordion();
         return this;
     };
 
@@ -447,6 +449,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
         return this;
     };
 
+    EjConfigBuilder.prototype.ej2Accordion = function ej2Accordion() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/accordion/accordion'));
+        return this;
+    };
+
     return EjConfigBuilder;
 }();
 
@@ -771,7 +778,8 @@ var constants = exports.constants = {
     attributePrefix: 'ej-',
     elementPrefix: 'ej-',
     aureliaTemplateString: '<template><slot></slot></template>',
-    ej2AttributePrefix: 'ej2-'
+    ej2AttributePrefix: 'ej2-',
+    ej2ElementPrefix: 'ej2-'
 };
 
 function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
@@ -852,8 +860,10 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
-    function Ej2WidgetBase() {
+    function Ej2WidgetBase(component) {
         _classCallCheck(this, Ej2WidgetBase);
+
+        this.component = component;
     }
 
     Ej2WidgetBase.prototype.createWidget = function createWidget(option) {
@@ -863,7 +873,7 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
-        this.eWidget = this.widget = new _ej2Calendars.DatePicker(this.allOption);
+        this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
@@ -2045,6 +2055,33 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var ejMaskEdit = function (_WidgetBase29) {
+    _inherits(ejMaskEdit, _WidgetBase29);
+
+    function ejMaskEdit(element) {
+        _classCallCheck(this, ejMaskEdit);
+
+        var _this38 = _possibleConstructorReturn(this, _WidgetBase29.call(this));
+
+        _this38.isEditor = true;
+        _this38.element = element;
+        return _this38;
+    }
+
+    return ejMaskEdit;
+}(WidgetBase);
+exports.ejMaskEdit = ejMaskEdit = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'mask-edit'), generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), (0, _aureliaDependencyInjection.inject)(Element)], ejMaskEdit);
+exports.ejMaskEdit = ejMaskEdit;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var Layer = function Layer() {
     _classCallCheck(this, Layer);
 };
@@ -2060,19 +2097,19 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejMap = function (_WidgetBase29) {
-    _inherits(ejMap, _WidgetBase29);
+var ejMap = function (_WidgetBase30) {
+    _inherits(ejMap, _WidgetBase30);
 
     function ejMap(element) {
         _classCallCheck(this, ejMap);
 
-        var _this38 = _possibleConstructorReturn(this, _WidgetBase29.call(this));
+        var _this39 = _possibleConstructorReturn(this, _WidgetBase30.call(this));
 
-        _this38.layers = [];
-        _this38.element = element;
-        _this38.hasChildProperty = true;
-        _this38.childPropertyName = 'layers';
-        return _this38;
+        _this39.layers = [];
+        _this39.element = element;
+        _this39.hasChildProperty = true;
+        _this39.childPropertyName = 'layers';
+        return _this39;
     }
 
     return ejMap;
@@ -2080,33 +2117,6 @@ var ejMap = function (_WidgetBase29) {
 __decorate([(0, _aureliaTemplating.children)(constants.elementPrefix + 'layer')], ejMap.prototype, "layers", void 0);
 exports.ejMap = ejMap = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'map'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejMap', ['background', 'baseMapIndex', 'centerPosition', 'draggingOnSelection', 'enableAnimation', 'enableRTL', 'enableLayerChangeAnimation', 'enablePan', 'enableResize', 'isResponsive', 'zoomSettings', 'navigationControl', 'locale', 'layers'], ['baseMapIndex', 'enablePan', 'enableResize', 'enableAnimation', 'zoomSettings.level', 'zoomSettings.minValue', 'zoomSettings.maxValue', 'zoomSettings.factor', 'zoomSettings.enableZoom', 'zoomSettings.enableZoomOnSelection', 'navigationControl.enableNavigation', 'navigationControl.orientation', 'navigationControl.absolutePosition', 'navigationControl.dockPosition'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejMap);
 exports.ejMap = ejMap;
-
-
-var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
-    var c = arguments.length,
-        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-        d;
-    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    }return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var ejMaskEdit = function (_WidgetBase30) {
-    _inherits(ejMaskEdit, _WidgetBase30);
-
-    function ejMaskEdit(element) {
-        _classCallCheck(this, ejMaskEdit);
-
-        var _this39 = _possibleConstructorReturn(this, _WidgetBase30.call(this));
-
-        _this39.isEditor = true;
-        _this39.element = element;
-        return _this39;
-    }
-
-    return ejMaskEdit;
-}(WidgetBase);
-exports.ejMaskEdit = ejMaskEdit = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'mask-edit'), generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), (0, _aureliaDependencyInjection.inject)(Element)], ejMaskEdit);
-exports.ejMaskEdit = ejMaskEdit;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -2816,11 +2826,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejSlider = function (_WidgetBase55) {
-    _inherits(ejSlider, _WidgetBase55);
+var ejSignature = function (_WidgetBase55) {
+    _inherits(ejSignature, _WidgetBase55);
 
-    function ejSlider(element) {
-        _classCallCheck(this, ejSlider);
+    function ejSignature(element) {
+        _classCallCheck(this, ejSignature);
 
         var _this64 = _possibleConstructorReturn(this, _WidgetBase55.call(this));
 
@@ -2828,10 +2838,10 @@ var ejSlider = function (_WidgetBase55) {
         return _this64;
     }
 
-    return ejSlider;
+    return ejSignature;
 }(WidgetBase);
-exports.ejSlider = ejSlider = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'slider'), generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejSlider);
-exports.ejSlider = ejSlider;
+exports.ejSignature = ejSignature = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'signature'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejSignature', ['backgroundColor', 'backgroundImage', 'enabled', 'height', 'isResponsive', 'saveImageFormat', 'saveWithBackground', 'showRoundedCorner', 'strokeColor', 'strokeWidth', 'width']), (0, _aureliaDependencyInjection.inject)(Element)], ejSignature);
+exports.ejSignature = ejSignature;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -2842,11 +2852,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejSignature = function (_WidgetBase56) {
-    _inherits(ejSignature, _WidgetBase56);
+var ejSlider = function (_WidgetBase56) {
+    _inherits(ejSlider, _WidgetBase56);
 
-    function ejSignature(element) {
-        _classCallCheck(this, ejSignature);
+    function ejSlider(element) {
+        _classCallCheck(this, ejSlider);
 
         var _this65 = _possibleConstructorReturn(this, _WidgetBase56.call(this));
 
@@ -2854,10 +2864,10 @@ var ejSignature = function (_WidgetBase56) {
         return _this65;
     }
 
-    return ejSignature;
+    return ejSlider;
 }(WidgetBase);
-exports.ejSignature = ejSignature = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'signature'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejSignature', ['backgroundColor', 'backgroundImage', 'enabled', 'height', 'isResponsive', 'saveImageFormat', 'saveWithBackground', 'showRoundedCorner', 'strokeColor', 'strokeWidth', 'width']), (0, _aureliaDependencyInjection.inject)(Element)], ejSignature);
-exports.ejSignature = ejSignature;
+exports.ejSlider = ejSlider = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'slider'), generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejSlider);
+exports.ejSlider = ejSlider;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -3455,17 +3465,45 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ej2DatePicker = function (_Ej2WidgetBase) {
-    _inherits(ej2DatePicker, _Ej2WidgetBase);
+
+var ej2Accordion = function (_Ej2WidgetBase) {
+    _inherits(ej2Accordion, _Ej2WidgetBase);
+
+    function ej2Accordion(element) {
+        _classCallCheck(this, ej2Accordion);
+
+        var _this85 = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Navigations.Accordion));
+
+        _this85.element = element;
+        return _this85;
+    }
+
+    return ej2Accordion;
+}(Ej2WidgetBase);
+exports.ej2Accordion = ej2Accordion = __decorate([(0, _aureliaTemplating.customElement)(constants.ej2ElementPrefix + 'accordion'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ej2Accordion);
+exports.ej2Accordion = ej2Accordion;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ej2DatePicker = function (_Ej2WidgetBase2) {
+    _inherits(ej2DatePicker, _Ej2WidgetBase2);
 
     function ej2DatePicker(element) {
         _classCallCheck(this, ej2DatePicker);
 
-        var _this85 = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this));
+        var _this86 = _possibleConstructorReturn(this, _Ej2WidgetBase2.call(this, _ej2Calendars.DatePicker));
 
-        _this85.isEditor = true;
-        _this85.element = element;
-        return _this85;
+        _this86.isEditor = true;
+        _this86.element = element;
+        return _this86;
     }
 
     return ej2DatePicker;

@@ -1,4 +1,4 @@
-define(["exports", "@syncfusion/ej2-calendars", "../common/decorators", "../common/events", "../common/util"], function (exports, _ej2Calendars, _decorators, _events, _util) {
+define(["exports", "../common/decorators", "../common/events", "../common/util"], function (exports, _decorators, _events, _util) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -28,8 +28,10 @@ define(["exports", "@syncfusion/ej2-calendars", "../common/decorators", "../comm
     };
 
     var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
-        function Ej2WidgetBase() {
+        function Ej2WidgetBase(component) {
             _classCallCheck(this, Ej2WidgetBase);
+
+            this.component = component;
         }
 
         Ej2WidgetBase.prototype.createWidget = function createWidget(option) {
@@ -39,7 +41,7 @@ define(["exports", "@syncfusion/ej2-calendars", "../common/decorators", "../comm
             if (!this.ejOptions && !this.isEditor) {
                 this.createTwoWays();
             }
-            this.eWidget = this.widget = new _ej2Calendars.DatePicker(this.allOption);
+            this.eWidget = this.widget = new this.component(this.allOption);
             this.widget.appendTo(option.element);
             if (this.templateProcessor) {
                 this.templateProcessor.initWidgetDependancies();

@@ -8,9 +8,10 @@ import { Ej2WidgetBase } from '../../common/ej2-widget-base';
 import { constants } from '../../common/constants';
 import { generateBindables } from '../../common/decorators';
 import { customAttribute, inject } from '../../common/common';
+import { DatePicker } from '@syncfusion/ej2-calendars';
 let ej2DatePicker = class ej2DatePicker extends Ej2WidgetBase {
     constructor(element) {
-        super();
+        super(DatePicker);
         this.isEditor = true;
         this.element = element;
     }

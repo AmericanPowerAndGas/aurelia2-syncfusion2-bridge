@@ -4,5 +4,6 @@ export const constants = {
     attributePrefix: 'ej-',
     elementPrefix: 'ej-',
     aureliaTemplateString: '<template><slot></slot></template>',
-    ej2AttributePrefix: 'ej2-'
+    ej2AttributePrefix: 'ej2-',
+    ej2ElementPrefix: 'ej2-',
 };

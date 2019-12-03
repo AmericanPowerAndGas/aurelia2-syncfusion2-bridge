@@ -87,7 +87,8 @@ export class EjConfigBuilder {
             .ejTooltip()
             .ejSpellCheck()
             .ejTemplate()
-            .ej2DatePicker();
+            .ej2DatePicker()
+            .ej2Accordion();
         return this;
     }
     withoutGlobalResources() {
@@ -414,6 +415,10 @@ export class EjConfigBuilder {
         this.resources.push(PLATFORM.moduleName('./ej2/datepicker/datepicker'));
         return this;
     }
+    ej2Accordion() {
+        this.resources.push(PLATFORM.moduleName('./ej2/accordion/accordion'));
+        return this;
+    }
 }
 
 export function configure(aurelia, configCallback) {
@@ -673,7 +678,8 @@ export const constants = {
     attributePrefix: 'ej-',
     elementPrefix: 'ej-',
     aureliaTemplateString: '<template><slot></slot></template>',
-    ej2AttributePrefix: 'ej2-'
+    ej2AttributePrefix: 'ej2-',
+    ej2ElementPrefix: 'ej2-',
 };
 
 export function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
@@ -744,14 +750,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { DatePicker } from '@syncfusion/ej2-calendars';
 export class Ej2WidgetBase {
+    constructor(component) {
+        this.component = component;
+    }
     createWidget(option) {
         this.allOption = this.getWidgetOptions(option.element);
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
-        this.eWidget = this.widget = new DatePicker(this.allOption);
+        this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
@@ -1723,6 +1731,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ejMaskEdit = class ejMaskEdit extends WidgetBase {
+    constructor(element) {
+        super();
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ejMaskEdit = __decorate([
+    customAttribute(`${constants.attributePrefix}mask-edit`),
+    generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']),
+    inject(Element)
+], ejMaskEdit);
+export { ejMaskEdit };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let Layer = class Layer {
 };
 Layer = __decorate([
@@ -1757,26 +1785,6 @@ ejMap = __decorate([
     inject(Element)
 ], ejMap);
 export { ejMap };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-let ejMaskEdit = class ejMaskEdit extends WidgetBase {
-    constructor(element) {
-        super();
-        this.isEditor = true;
-        this.element = element;
-    }
-};
-ejMaskEdit = __decorate([
-    customAttribute(`${constants.attributePrefix}mask-edit`),
-    generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']),
-    inject(Element)
-], ejMaskEdit);
-export { ejMaskEdit };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2334,25 +2342,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejSlider = class ejSlider extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejSlider = __decorate([
-    customAttribute(`${constants.attributePrefix}slider`),
-    generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejSlider);
-export { ejSlider };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejSignature = class ejSignature extends WidgetBase {
     constructor(element) {
         super();
@@ -2366,6 +2355,25 @@ ejSignature = __decorate([
     inject(Element)
 ], ejSignature);
 export { ejSignature };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejSlider = class ejSlider extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejSlider = __decorate([
+    customAttribute(`${constants.attributePrefix}slider`),
+    generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejSlider);
+export { ejSlider };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2845,9 +2853,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { Accordion } from '@syncfusion/ej2-navigations';
+let ej2Accordion = class ej2Accordion extends Ej2WidgetBase {
+    constructor(element) {
+        super(Accordion);
+        this.element = element;
+    }
+};
+ej2Accordion = __decorate([
+    customElement(`${constants.ej2ElementPrefix}accordion`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ej2Accordion);
+export { ej2Accordion };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { DatePicker } from '@syncfusion/ej2-calendars';
 let ej2DatePicker = class ej2DatePicker extends Ej2WidgetBase {
     constructor(element) {
-        super();
+        super(DatePicker);
         this.isEditor = true;
         this.element = element;
     }

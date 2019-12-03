@@ -7,8 +7,6 @@ exports.Ej2WidgetBase = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _ej2Calendars = require("@syncfusion/ej2-calendars");
-
 var _decorators = require("../common/decorators");
 
 var _events = require("../common/events");
@@ -27,8 +25,10 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
-    function Ej2WidgetBase() {
+    function Ej2WidgetBase(component) {
         _classCallCheck(this, Ej2WidgetBase);
+
+        this.component = component;
     }
 
     Ej2WidgetBase.prototype.createWidget = function createWidget(option) {
@@ -38,7 +38,7 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
-        this.eWidget = this.widget = new _ej2Calendars.DatePicker(this.allOption);
+        this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();

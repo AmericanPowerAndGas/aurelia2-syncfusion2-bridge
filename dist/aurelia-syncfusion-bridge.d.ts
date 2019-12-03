@@ -30,6 +30,9 @@ declare module 'aurelia-syncfusion-bridge' {
     BindingEngine
   } from 'aurelia-binding';
   import {
+    Accordion
+  } from '@syncfusion/ej2-navigations';
+  import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   export class EjConfigBuilder {
@@ -113,6 +116,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSpellCheck(): any;
     ejTemplate(): any;
     ej2DatePicker(): any;
+    ej2Accordion(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -164,6 +168,7 @@ declare module 'aurelia-syncfusion-bridge' {
   export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any, observerCollection?: any): any;
   export function delayed(): any;
   export class Ej2WidgetBase {
+    constructor(component?: any);
     createWidget(option?: any): any;
     bind(ctx?: any, overrideCtx?: any): any;
     createTwoWays(): any;
@@ -268,13 +273,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListView
   };
   export {
+    ejMaskEdit
+  };
+  export {
     Layer
   };
   export {
     ejMap
-  };
-  export {
-    ejMaskEdit
   };
   export {
     ejMenu
@@ -358,10 +363,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejScroller
   };
   export {
-    ejSlider
+    ejSignature
   };
   export {
-    ejSignature
+    ejSlider
   };
   export {
     ejSparkline
@@ -431,6 +436,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejWaitingPopup
+  };
+  export {
+    ej2Accordion
   };
   export {
     ej2DatePicker

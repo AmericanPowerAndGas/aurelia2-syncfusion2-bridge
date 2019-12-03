@@ -1,9 +1,9 @@
 "use strict";
 
-System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common"], function (_export, _context) {
+System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-calendars"], function (_export, _context) {
     "use strict";
 
-    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, _typeof, __decorate, ej2DatePicker;
+    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, DatePicker, _typeof, __decorate, ej2DatePicker;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -45,6 +45,8 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
         }, function (_commonCommon) {
             customAttribute = _commonCommon.customAttribute;
             inject = _commonCommon.inject;
+        }, function (_syncfusionEj2Calendars) {
+            DatePicker = _syncfusionEj2Calendars.DatePicker;
         }],
         execute: function () {
             _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
@@ -68,7 +70,7 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 function ej2DatePicker(element) {
                     _classCallCheck(this, ej2DatePicker);
 
-                    var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this));
+                    var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, DatePicker));
 
                     _this.isEditor = true;
                     _this.element = element;

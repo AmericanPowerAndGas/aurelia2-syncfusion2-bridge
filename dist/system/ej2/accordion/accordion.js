@@ -1,9 +1,9 @@
 "use strict";
 
-System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-calendars"], function (_export, _context) {
+System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-navigations"], function (_export, _context) {
     "use strict";
 
-    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, DatePicker, _typeof, __decorate, ej2DatePicker;
+    var Ej2WidgetBase, constants, generateBindables, customElement, inlineView, inject, Accordion, _typeof, __decorate, ej2Accordion;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -43,10 +43,11 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
         }, function (_commonDecorators) {
             generateBindables = _commonDecorators.generateBindables;
         }, function (_commonCommon) {
-            customAttribute = _commonCommon.customAttribute;
+            customElement = _commonCommon.customElement;
+            inlineView = _commonCommon.inlineView;
             inject = _commonCommon.inject;
-        }, function (_syncfusionEj2Calendars) {
-            DatePicker = _syncfusionEj2Calendars.DatePicker;
+        }, function (_syncfusionEj2Navigations) {
+            Accordion = _syncfusionEj2Navigations.Accordion;
         }],
         execute: function () {
             _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
@@ -64,26 +65,24 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 }return c > 3 && r && Object.defineProperty(target, key, r), r;
             };
 
-            _export("ej2DatePicker", ej2DatePicker = function (_Ej2WidgetBase) {
-                _inherits(ej2DatePicker, _Ej2WidgetBase);
+            _export("ej2Accordion", ej2Accordion = function (_Ej2WidgetBase) {
+                _inherits(ej2Accordion, _Ej2WidgetBase);
 
-                function ej2DatePicker(element) {
-                    _classCallCheck(this, ej2DatePicker);
+                function ej2Accordion(element) {
+                    _classCallCheck(this, ej2Accordion);
 
-                    var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, DatePicker));
+                    var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, Accordion));
 
-                    _this.isEditor = true;
                     _this.element = element;
                     return _this;
                 }
 
-                return ej2DatePicker;
+                return ej2Accordion;
             }(Ej2WidgetBase));
 
-            _export("ej2DatePicker", ej2DatePicker = __decorate([customAttribute(constants.ej2AttributePrefix + "date-picker"), generateBindables('ej2DatePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], { 'enableRTL': ['enableRtl'] }), inject(Element)], ej2DatePicker));
+            _export("ej2Accordion", ej2Accordion = __decorate([customElement(constants.ej2ElementPrefix + "accordion"), inlineView("" + constants.aureliaTemplateString), generateBindables('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }), inject(Element)], ej2Accordion));
 
-            _export("ej2DatePicker", ej2DatePicker);
+            _export("ej2Accordion", ej2Accordion);
         }
     };
 });
-//# sourceMappingURL=../../devbuild/dev/ej2/datepicker/datepicker.js.map
