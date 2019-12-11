@@ -39,6 +39,23 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
+  import {
+    Grid,
+    Group,
+    Filter,
+    Page,
+    Sort,
+    Search,
+    Toolbar,
+    Freeze,
+    Selection,
+    Aggregate,
+    DetailRow,
+    PdfExport,
+    ExcelExport,
+    ContextMenu,
+    Edit
+  } from '@syncfusion/ej2-grids';
   export class EjConfigBuilder {
     constructor();
     useAll(): any;
@@ -121,6 +138,8 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTemplate(): any;
     ej2DatePicker(): any;
     ej2Accordion(): any;
+    ej2Grid(): any;
+    ej2Template(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -171,6 +190,12 @@ declare module 'aurelia-syncfusion-bridge' {
   export const constants: any;
   export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any, observerCollection?: any): any;
   export function delayed(): any;
+  export {
+    Ej2TemplateProcessor
+  };
+  export {
+    Ej2Template
+  };
   export class Ej2WidgetBase {
     constructor(component?: any);
     createWidget(option?: any): any;
@@ -253,10 +278,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGrid
   };
   export {
-    ejGroupButton
+    ejHeatMap
   };
   export {
-    ejHeatMap
+    ejGroupButton
   };
   export {
     ejHeatMapLegend
@@ -277,13 +302,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListView
   };
   export {
-    ejMaskEdit
-  };
-  export {
     Layer
   };
   export {
     ejMap
+  };
+  export {
+    ejMaskEdit
   };
   export {
     ejMenu
@@ -446,5 +471,11 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2DatePicker
+  };
+  export {
+    Ej2Column
+  };
+  export {
+    Ej2Grid
   };
 }

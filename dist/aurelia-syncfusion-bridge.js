@@ -87,8 +87,10 @@ export class EjConfigBuilder {
             .ejTooltip()
             .ejSpellCheck()
             .ejTemplate()
+            .ej2Template()
             .ej2DatePicker()
-            .ej2Accordion();
+            .ej2Accordion()
+            .ej2Grid();
         return this;
     }
     withoutGlobalResources() {
@@ -417,6 +419,15 @@ export class EjConfigBuilder {
     }
     ej2Accordion() {
         this.resources.push(PLATFORM.moduleName('./ej2/accordion/accordion'));
+        return this;
+    }
+    ej2Grid() {
+        this.resources.push(PLATFORM.moduleName('./ej2/grid/grid'));
+        this.resources.push(PLATFORM.moduleName('./ej2/grid/column'));
+        return this;
+    }
+    ej2Template() {
+        this.resources.push(PLATFORM.moduleName('./common/ej2-template'));
         return this;
     }
 }
@@ -750,6 +761,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let Ej2TemplateProcessor = class Ej2TemplateProcessor {
+    constructor(context, templateEngine) {
+        this.context = context;
+        this.templatingEngine = templateEngine;
+        this.util = new Util();
+    }
+    initWidgetDependancies() {
+        this.compileTemplate(this.context.widget.element);
+    }
+    compileTemplate(element) {
+        let templates = $(element).find('.e-templatecell > :first-child');
+        for (let i = 0; i < templates.length; i++) {
+            let view = this.templatingEngine.enhance(templates[i]);
+            view.bind(this.context.widget.dataSource[i], this.context.parentCtx);
+        }
+    }
+};
+Ej2TemplateProcessor = __decorate([
+    inject(TemplatingEngine, Util)
+], Ej2TemplateProcessor);
+export { Ej2TemplateProcessor };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let Ej2Template = class Ej2Template {
+    constructor(target) {
+        this.template = target.elementInstruction.template;
+    }
+};
+__decorate([
+    bindable
+], Ej2Template.prototype, "template", void 0);
+Ej2Template = __decorate([
+    customElement(`${constants.ej2ElementPrefix}template`),
+    noView(),
+    processContent((compiler, resources, element, instruction) => {
+        let html = element.innerHTML;
+        if (html !== '') {
+            instruction.template = html;
+        }
+        element.innerHTML = '';
+    }),
+    inject(TargetInstruction)
+], Ej2Template);
+export { Ej2Template };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 export class Ej2WidgetBase {
     constructor(component) {
         this.component = component;
@@ -761,9 +828,9 @@ export class Ej2WidgetBase {
         }
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
-        if (this.templateProcessor) {
+        setTimeout(() => {
             this.templateProcessor.initWidgetDependancies();
-        }
+        }, 1000);
         if (this.isEditor) {
             this.widget.change = (arg) => {
                 if (arg && 'eValue' in this) {
@@ -840,6 +907,9 @@ export class Ej2WidgetBase {
         }
     }
     attached() {
+        if (this.templateProcessor) {
+            this[this.childPropertyName].forEach(template => template.setTemplates());
+        }
         this.util = new Util();
         this.createWidget({ element: this.element });
     }
@@ -1572,25 +1642,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejGroupButton = class ejGroupButton extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejGroupButton = __decorate([
-    customAttribute(`${constants.attributePrefix}group-button`),
-    generateBindables('ejGroupButton', ['cssClass', 'dataSource', 'enableRTL', 'enabled', 'fields', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'query', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejGroupButton);
-export { ejGroupButton };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejHeatMap = class ejHeatMap extends WidgetBase {
     constructor(element) {
         super();
@@ -1604,6 +1655,25 @@ ejHeatMap = __decorate([
     inject(Element)
 ], ejHeatMap);
 export { ejHeatMap };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejGroupButton = class ejGroupButton extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejGroupButton = __decorate([
+    customAttribute(`${constants.attributePrefix}group-button`),
+    generateBindables('ejGroupButton', ['cssClass', 'dataSource', 'enableRTL', 'enabled', 'fields', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'query', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejGroupButton);
+export { ejGroupButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1731,26 +1801,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejMaskEdit = class ejMaskEdit extends WidgetBase {
-    constructor(element) {
-        super();
-        this.isEditor = true;
-        this.element = element;
-    }
-};
-ejMaskEdit = __decorate([
-    customAttribute(`${constants.attributePrefix}mask-edit`),
-    generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']),
-    inject(Element)
-], ejMaskEdit);
-export { ejMaskEdit };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let Layer = class Layer {
 };
 Layer = __decorate([
@@ -1785,6 +1835,26 @@ ejMap = __decorate([
     inject(Element)
 ], ejMap);
 export { ejMap };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejMaskEdit = class ejMaskEdit extends WidgetBase {
+    constructor(element) {
+        super();
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ejMaskEdit = __decorate([
+    customAttribute(`${constants.attributePrefix}mask-edit`),
+    generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']),
+    inject(Element)
+], ejMaskEdit);
+export { ejMaskEdit };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2888,3 +2958,59 @@ ej2DatePicker = __decorate([
     inject(Element)
 ], ej2DatePicker);
 export { ej2DatePicker };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let Ej2Column = class Ej2Column {
+    constructor() {
+        this.template = [];
+    }
+    setTemplates() {
+        if (this.template[0]) {
+            let util = new Util();
+            this[util.getBindablePropertyName('template')] = this.template[0].template;
+        }
+    }
+};
+__decorate([
+    children(`${constants.ej2ElementPrefix}template`)
+], Ej2Column.prototype, "template", void 0);
+Ej2Column = __decorate([
+    inlineView(`${constants.aureliaTemplateString}`),
+    customElement(`${constants.ej2ElementPrefix}column`),
+    generateBindables('columns', ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowReordering', 'allowResizing', 'allowSearching', 'allowSorting', 'autoFit', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editTemplate', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'filterTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'headerTextAlign', 'hideAtMedia', 'index', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'lockColumn', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'], [], { 'headerTemplateID': ['headerTemplateId', 'headerTemplateID'] }, null)
+], Ej2Column);
+export { Ej2Column };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit } from '@syncfusion/ej2-grids';
+Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit);
+let Ej2Grid = class Ej2Grid extends Ej2WidgetBase {
+    constructor(element, templateEngine) {
+        super(Grid);
+        this.columns = [];
+        this.element = element;
+        this.hasChildProperty = true;
+        this.childPropertyName = 'columns';
+        this.templateProcessor = new Ej2TemplateProcessor(this, templateEngine);
+    }
+};
+__decorate([
+    children(`${constants.ej2ElementPrefix}column`)
+], Ej2Grid.prototype, "columns", void 0);
+Ej2Grid = __decorate([
+    customElement(`${constants.ej2ElementPrefix}grid`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ej2Grid', ['aggregates', 'allowExcelExport', 'allowFiltering', 'allowGrouping', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextWrap', 'childGrid', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'currencyCode', 'dataSource', 'detailTemplate', 'editSettings', 'enableAltRow', 'enableAutoFill', 'enableColumnVirtualization', 'enableHeaderFocus', 'enableHover', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'filterSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'groupSettings', 'height', 'hierarchyPrintMode', 'locale', 'pageSettings', 'pagerTemplate', 'printMode', 'query', 'queryString', 'rowDropSettings', 'rowHeight', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnChooser', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'toolbarTemplate', 'width'], { 'enableRTL': ['enableRtl'] }, ['dataSource'], null),
+    inject(Element, TemplatingEngine)
+], Ej2Grid);
+export { Ej2Grid };

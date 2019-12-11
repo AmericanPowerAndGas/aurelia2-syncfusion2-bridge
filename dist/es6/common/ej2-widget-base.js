@@ -18,9 +18,9 @@ export class Ej2WidgetBase {
         }
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
-        if (this.templateProcessor) {
+        setTimeout(() => {
             this.templateProcessor.initWidgetDependancies();
-        }
+        }, 1000);
         if (this.isEditor) {
             this.widget.change = (arg) => {
                 if (arg && 'eValue' in this) {
@@ -97,6 +97,9 @@ export class Ej2WidgetBase {
         }
     }
     attached() {
+        if (this.templateProcessor) {
+            this[this.childPropertyName].forEach(template => template.setTemplates());
+        }
         this.util = new Util();
         this.createWidget({ element: this.element });
     }

@@ -89,7 +89,10 @@ export class EjConfigBuilder {
       .ejTooltip()
       .ejSpellCheck()
       .ejTemplate()
-      .ej2DatePicker();
+      .ej2Template()
+      .ej2DatePicker()
+      .ej2Accordion()
+      .ej2Grid();
     return this;
   }
   /**
@@ -418,6 +421,19 @@ export class EjConfigBuilder {
   }
   ej2DatePicker(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/datepicker/datepicker'));
+    return this;
+  }
+  ej2Accordion(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/accordion/accordion'));
+    return this;
+  }
+  ej2Grid(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/grid/grid'));
+    this.resources.push(PLATFORM.moduleName('./ej2/grid/column'));
+    return this;
+  }
+  ej2Template(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./common/ej2-template'));
     return this;
   }
 }

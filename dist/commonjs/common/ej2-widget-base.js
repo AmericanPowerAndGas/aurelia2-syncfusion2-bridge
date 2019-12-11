@@ -40,9 +40,9 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
         }
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
-        if (this.templateProcessor) {
-            this.templateProcessor.initWidgetDependancies();
-        }
+        setTimeout(function () {
+            _this.templateProcessor.initWidgetDependancies();
+        }, 1000);
         if (this.isEditor) {
             this.widget.change = function (arg) {
                 if (arg && 'eValue' in _this) {
@@ -124,6 +124,11 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
     };
 
     Ej2WidgetBase.prototype.attached = function attached() {
+        if (this.templateProcessor) {
+            this[this.childPropertyName].forEach(function (template) {
+                return template.setTemplates();
+            });
+        }
         this.util = new _util.Util();
         this.createWidget({ element: this.element });
     };

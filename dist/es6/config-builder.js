@@ -81,8 +81,10 @@ export class EjConfigBuilder {
             .ejTooltip()
             .ejSpellCheck()
             .ejTemplate()
+            .ej2Template()
             .ej2DatePicker()
-            .ej2Accordion();
+            .ej2Accordion()
+            .ej2Grid();
         return this;
     }
     withoutGlobalResources() {
@@ -411,6 +413,15 @@ export class EjConfigBuilder {
     }
     ej2Accordion() {
         this.resources.push(PLATFORM.moduleName('./ej2/accordion/accordion'));
+        return this;
+    }
+    ej2Grid() {
+        this.resources.push(PLATFORM.moduleName('./ej2/grid/grid'));
+        this.resources.push(PLATFORM.moduleName('./ej2/grid/column'));
+        return this;
+    }
+    ej2Template() {
+        this.resources.push(PLATFORM.moduleName('./common/ej2-template'));
         return this;
     }
 }
