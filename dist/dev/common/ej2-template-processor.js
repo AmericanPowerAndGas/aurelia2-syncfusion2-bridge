@@ -44,16 +44,9 @@ System.register(["aurelia-dependency-injection", "../common/util", "aurelia-temp
                     this.util = new Util();
                 }
 
-                Ej2TemplateProcessor.prototype.initWidgetDependancies = function initWidgetDependancies() {
-                    this.compileTemplate(this.context.widget.element);
-                };
-
-                Ej2TemplateProcessor.prototype.compileTemplate = function compileTemplate(element) {
-                    var templates = $(element).find('.e-templatecell > :first-child');
-                    for (var i = 0; i < templates.length; i++) {
-                        var view = this.templatingEngine.enhance(templates[i]);
-                        view.bind(this.context.widget.dataSource[i], this.context.parentCtx);
-                    }
+                Ej2TemplateProcessor.prototype.bindView = function bindView(element, data) {
+                    var view = this.templatingEngine.enhance(element);
+                    view.bind(data, this.context.parentCtx);
                 };
 
                 return Ej2TemplateProcessor;

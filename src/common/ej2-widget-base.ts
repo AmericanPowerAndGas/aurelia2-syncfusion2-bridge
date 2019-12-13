@@ -19,9 +19,14 @@ export class Ej2WidgetBase {
 
     this.eWidget = this.widget = new this.component(this.allOption);
     this.widget.appendTo(option.element);
-    setTimeout(() => {
-      this.templateProcessor.initWidgetDependancies();
-    }, 1000);
+    this.widget.queryCellInfo = (arg) => {
+      if (arg.column && arg.column.template && arg.data) {
+        let elements = arg.cell.children;
+        for (let i = 0; i < elements.length; i++) {
+          this.templateProcessor.bindView(elements[i], arg.data);
+        }
+      }
+    };
     if (this.isEditor) {
       this.widget.change = (arg) => {
         if (arg && 'eValue' in this) {          

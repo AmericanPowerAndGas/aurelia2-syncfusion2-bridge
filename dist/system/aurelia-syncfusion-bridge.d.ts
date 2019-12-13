@@ -278,10 +278,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGrid
   };
   export {
-    ejHeatMap
+    ejGroupButton
   };
   export {
-    ejGroupButton
+    ejHeatMap
   };
   export {
     ejHeatMapLegend
@@ -458,10 +458,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTreeMap
   };
   export {
-    ejTreeView
+    ejUploadbox
   };
   export {
-    ejUploadbox
+    ejTreeView
   };
   export {
     ejWaitingPopup

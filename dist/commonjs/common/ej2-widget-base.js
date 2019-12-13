@@ -40,9 +40,14 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
         }
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
-        setTimeout(function () {
-            _this.templateProcessor.initWidgetDependancies();
-        }, 1000);
+        this.widget.queryCellInfo = function (arg) {
+            if (arg.column && arg.column.template && arg.data) {
+                var elements = arg.cell.children;
+                for (var i = 0; i < elements.length; i++) {
+                    _this.templateProcessor.bindView(elements[i], arg.data);
+                }
+            }
+        };
         if (this.isEditor) {
             this.widget.change = function (arg) {
                 if (arg && 'eValue' in _this) {

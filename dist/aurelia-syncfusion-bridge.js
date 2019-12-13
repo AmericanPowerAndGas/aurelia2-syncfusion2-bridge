@@ -767,15 +767,9 @@ let Ej2TemplateProcessor = class Ej2TemplateProcessor {
         this.templatingEngine = templateEngine;
         this.util = new Util();
     }
-    initWidgetDependancies() {
-        this.compileTemplate(this.context.widget.element);
-    }
-    compileTemplate(element) {
-        let templates = $(element).find('.e-templatecell > :first-child');
-        for (let i = 0; i < templates.length; i++) {
-            let view = this.templatingEngine.enhance(templates[i]);
-            view.bind(this.context.widget.dataSource[i], this.context.parentCtx);
-        }
+    bindView(element, data) {
+        let view = this.templatingEngine.enhance(element);
+        view.bind(data, this.context.parentCtx);
     }
 };
 Ej2TemplateProcessor = __decorate([
@@ -828,9 +822,14 @@ export class Ej2WidgetBase {
         }
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
-        setTimeout(() => {
-            this.templateProcessor.initWidgetDependancies();
-        }, 1000);
+        this.widget.queryCellInfo = (arg) => {
+            if (arg.column && arg.column.template && arg.data) {
+                let elements = arg.cell.children;
+                for (let i = 0; i < elements.length; i++) {
+                    this.templateProcessor.bindView(elements[i], arg.data);
+                }
+            }
+        };
         if (this.isEditor) {
             this.widget.change = (arg) => {
                 if (arg && 'eValue' in this) {
@@ -1642,6 +1641,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ejGroupButton = class ejGroupButton extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejGroupButton = __decorate([
+    customAttribute(`${constants.attributePrefix}group-button`),
+    generateBindables('ejGroupButton', ['cssClass', 'dataSource', 'enableRTL', 'enabled', 'fields', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'query', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejGroupButton);
+export { ejGroupButton };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let ejHeatMap = class ejHeatMap extends WidgetBase {
     constructor(element) {
         super();
@@ -1655,25 +1673,6 @@ ejHeatMap = __decorate([
     inject(Element)
 ], ejHeatMap);
 export { ejHeatMap };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-let ejGroupButton = class ejGroupButton extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejGroupButton = __decorate([
-    customAttribute(`${constants.attributePrefix}group-button`),
-    generateBindables('ejGroupButton', ['cssClass', 'dataSource', 'enableRTL', 'enabled', 'fields', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'query', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejGroupButton);
-export { ejGroupButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2865,25 +2864,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejTreeView = class ejTreeView extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejTreeView = __decorate([
-    customAttribute(`${constants.attributePrefix}tree-view`),
-    generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'allowMultiSelection', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'fullRowSelect', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'selectedNodes', 'showCheckbox', 'sortSettings', 'template', 'width'], [], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejTreeView);
-export { ejTreeView };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejUploadbox = class ejUploadbox extends WidgetBase {
     constructor(element) {
         super();
@@ -2897,6 +2877,25 @@ ejUploadbox = __decorate([
     inject(Element)
 ], ejUploadbox);
 export { ejUploadbox };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejTreeView = class ejTreeView extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejTreeView = __decorate([
+    customAttribute(`${constants.attributePrefix}tree-view`),
+    generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'allowMultiSelection', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'fullRowSelect', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'selectedNodes', 'showCheckbox', 'sortSettings', 'template', 'width'], [], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejTreeView);
+export { ejTreeView };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

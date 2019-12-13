@@ -13,15 +13,9 @@ let Ej2TemplateProcessor = class Ej2TemplateProcessor {
         this.templatingEngine = templateEngine;
         this.util = new Util();
     }
-    initWidgetDependancies() {
-        this.compileTemplate(this.context.widget.element);
-    }
-    compileTemplate(element) {
-        let templates = $(element).find('.e-templatecell > :first-child');
-        for (let i = 0; i < templates.length; i++) {
-            let view = this.templatingEngine.enhance(templates[i]);
-            view.bind(this.context.widget.dataSource[i], this.context.parentCtx);
-        }
+    bindView(element, data) {
+        let view = this.templatingEngine.enhance(element);
+        view.bind(data, this.context.parentCtx);
     }
 };
 Ej2TemplateProcessor = __decorate([
