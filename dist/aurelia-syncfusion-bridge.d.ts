@@ -36,6 +36,9 @@ declare module 'aurelia-syncfusion-bridge' {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
+    DateTimePicker
+  } from '@syncfusion/ej2-calendars';
+  import {
     Grid,
     Group,
     Filter,
@@ -136,6 +139,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Accordion(): any;
     ej2Grid(): any;
     ej2Template(): any;
+    ej2DateTimePicker(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -454,10 +458,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTreeMap
   };
   export {
-    ejUploadbox
+    ejTreeView
   };
   export {
-    ejTreeView
+    ejUploadbox
   };
   export {
     ejWaitingPopup
@@ -467,6 +471,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2DatePicker
+  };
+  export {
+    ej2DateTimePicker
   };
   export {
     Ej2Column

@@ -84,7 +84,8 @@ export class EjConfigBuilder {
             .ej2Template()
             .ej2DatePicker()
             .ej2Accordion()
-            .ej2Grid();
+            .ej2Grid()
+            .ej2DateTimePicker();
         return this;
     }
     withoutGlobalResources() {
@@ -422,6 +423,10 @@ export class EjConfigBuilder {
     }
     ej2Template() {
         this.resources.push(PLATFORM.moduleName('./common/ej2-template'));
+        return this;
+    }
+    ej2DateTimePicker() {
+        this.resources.push(PLATFORM.moduleName('./ej2/datetimepicker/datetimepicker'));
         return this;
     }
 }
