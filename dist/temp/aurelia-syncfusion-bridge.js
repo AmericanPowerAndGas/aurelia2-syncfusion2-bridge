@@ -1,8 +1,8 @@
 'use strict';
 
 exports.__esModule = true;
-exports.Ej2Grid = exports.Ej2Column = exports.ej2DateTimePicker = exports.ej2DatePicker = exports.ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
-exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
+exports.Ej2Grid = exports.Ej2Column = exports.ej2Diagram = exports.ej2DateTimePicker = exports.ej2DatePicker = exports.ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
+exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateRangePicker = exports.ejDateTimePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejAutocomplete = exports.ejBarcode = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -28,6 +28,8 @@ var _ej2Navigations = require('@syncfusion/ej2-navigations');
 
 var _ej2Calendars = require('@syncfusion/ej2-calendars');
 
+var _ej2Diagrams = require('@syncfusion/ej2-diagrams');
+
 var _ej2Grids = require('@syncfusion/ej2-grids');
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -45,7 +47,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     }
 
     EjConfigBuilder.prototype.useAll = function useAll() {
-        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker();
+        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram();
         return this;
     };
 
@@ -472,6 +474,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
         return this;
     };
 
+    EjConfigBuilder.prototype.ej2Diagram = function ej2Diagram() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/diagram/diagram'));
+        return this;
+    };
+
     return EjConfigBuilder;
 }();
 
@@ -520,11 +527,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejAutocomplete = function (_WidgetBase2) {
-    _inherits(ejAutocomplete, _WidgetBase2);
+var ejBarcode = function (_WidgetBase2) {
+    _inherits(ejBarcode, _WidgetBase2);
 
-    function ejAutocomplete(element) {
-        _classCallCheck(this, ejAutocomplete);
+    function ejBarcode(element) {
+        _classCallCheck(this, ejBarcode);
 
         var _this2 = _possibleConstructorReturn(this, _WidgetBase2.call(this));
 
@@ -532,10 +539,10 @@ var ejAutocomplete = function (_WidgetBase2) {
         return _this2;
     }
 
-    return ejAutocomplete;
+    return ejBarcode;
 }(WidgetBase);
-exports.ejAutocomplete = ejAutocomplete = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'autocomplete'), generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'ignoreAccent', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejAutocomplete);
-exports.ejAutocomplete = ejAutocomplete;
+exports.ejBarcode = ejBarcode = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'barcode'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension']), (0, _aureliaDependencyInjection.inject)(Element)], ejBarcode);
+exports.ejBarcode = ejBarcode;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -546,11 +553,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejBarcode = function (_WidgetBase3) {
-    _inherits(ejBarcode, _WidgetBase3);
+var ejAutocomplete = function (_WidgetBase3) {
+    _inherits(ejAutocomplete, _WidgetBase3);
 
-    function ejBarcode(element) {
-        _classCallCheck(this, ejBarcode);
+    function ejAutocomplete(element) {
+        _classCallCheck(this, ejAutocomplete);
 
         var _this3 = _possibleConstructorReturn(this, _WidgetBase3.call(this));
 
@@ -558,10 +565,10 @@ var ejBarcode = function (_WidgetBase3) {
         return _this3;
     }
 
-    return ejBarcode;
+    return ejAutocomplete;
 }(WidgetBase);
-exports.ejBarcode = ejBarcode = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'barcode'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension']), (0, _aureliaDependencyInjection.inject)(Element)], ejBarcode);
-exports.ejBarcode = ejBarcode;
+exports.ejAutocomplete = ejAutocomplete = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'autocomplete'), generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'ignoreAccent', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejAutocomplete);
+exports.ejAutocomplete = ejAutocomplete;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -1662,11 +1669,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejDateRangePicker = function (_WidgetBase13) {
-    _inherits(ejDateRangePicker, _WidgetBase13);
+var ejDateTimePicker = function (_WidgetBase13) {
+    _inherits(ejDateTimePicker, _WidgetBase13);
 
-    function ejDateRangePicker(element) {
-        _classCallCheck(this, ejDateRangePicker);
+    function ejDateTimePicker(element) {
+        _classCallCheck(this, ejDateTimePicker);
 
         var _this22 = _possibleConstructorReturn(this, _WidgetBase13.call(this));
 
@@ -1675,10 +1682,10 @@ var ejDateRangePicker = function (_WidgetBase13) {
         return _this22;
     }
 
-    return ejDateRangePicker;
+    return ejDateTimePicker;
 }(WidgetBase);
-exports.ejDateRangePicker = ejDateRangePicker = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-range-picker'), generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), (0, _aureliaDependencyInjection.inject)(Element)], ejDateRangePicker);
-exports.ejDateRangePicker = ejDateRangePicker;
+exports.ejDateTimePicker = ejDateTimePicker = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-time-picker'), generateBindables('ejDateTimePicker', ['allowEdit', 'buttonText', 'blackoutDates', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'disableTimeRanges', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejDateTimePicker);
+exports.ejDateTimePicker = ejDateTimePicker;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -1689,11 +1696,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejDateTimePicker = function (_WidgetBase14) {
-    _inherits(ejDateTimePicker, _WidgetBase14);
+var ejDateRangePicker = function (_WidgetBase14) {
+    _inherits(ejDateRangePicker, _WidgetBase14);
 
-    function ejDateTimePicker(element) {
-        _classCallCheck(this, ejDateTimePicker);
+    function ejDateRangePicker(element) {
+        _classCallCheck(this, ejDateRangePicker);
 
         var _this23 = _possibleConstructorReturn(this, _WidgetBase14.call(this));
 
@@ -1702,10 +1709,10 @@ var ejDateTimePicker = function (_WidgetBase14) {
         return _this23;
     }
 
-    return ejDateTimePicker;
+    return ejDateRangePicker;
 }(WidgetBase);
-exports.ejDateTimePicker = ejDateTimePicker = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-time-picker'), generateBindables('ejDateTimePicker', ['allowEdit', 'buttonText', 'blackoutDates', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'disableTimeRanges', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejDateTimePicker);
-exports.ejDateTimePicker = ejDateTimePicker;
+exports.ejDateRangePicker = ejDateRangePicker = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-range-picker'), generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), (0, _aureliaDependencyInjection.inject)(Element)], ejDateRangePicker);
+exports.ejDateRangePicker = ejDateRangePicker;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -3628,6 +3635,35 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+_ej2Diagrams.Diagram.Inject(_ej2Diagrams.DataBinding, _ej2Diagrams.HierarchicalTree);
+var ej2Diagram = function (_Ej2WidgetBase4) {
+    _inherits(ej2Diagram, _Ej2WidgetBase4);
+
+    function ej2Diagram(element) {
+        _classCallCheck(this, ej2Diagram);
+
+        var _this88 = _possibleConstructorReturn(this, _Ej2WidgetBase4.call(this, _ej2Diagrams.Diagram));
+
+        _this88.element = element;
+        if (_this88.element && !_this88.element.id) _this88.element.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        return _this88;
+    }
+
+    return ej2Diagram;
+}(Ej2WidgetBase);
+exports.ej2Diagram = ej2Diagram = __decorate([(0, _aureliaTemplating.customElement)(constants.ej2ElementPrefix + 'diagram'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ej2Diagram', ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width'], null, null, null), (0, _aureliaDependencyInjection.inject)(Element)], ej2Diagram);
+exports.ej2Diagram = ej2Diagram;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var Ej2Column = function () {
     function Ej2Column() {
         _classCallCheck(this, Ej2Column);
@@ -3659,20 +3695,20 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Grids.Grid.Inject(_ej2Grids.Group, _ej2Grids.Filter, _ej2Grids.Page, _ej2Grids.Sort, _ej2Grids.Search, _ej2Grids.Toolbar, _ej2Grids.Freeze, _ej2Grids.Selection, _ej2Grids.Aggregate, _ej2Grids.DetailRow, _ej2Grids.PdfExport, _ej2Grids.ExcelExport, _ej2Grids.ContextMenu, _ej2Grids.Edit);
-var Ej2Grid = function (_Ej2WidgetBase4) {
-    _inherits(Ej2Grid, _Ej2WidgetBase4);
+var Ej2Grid = function (_Ej2WidgetBase5) {
+    _inherits(Ej2Grid, _Ej2WidgetBase5);
 
     function Ej2Grid(element, templateEngine) {
         _classCallCheck(this, Ej2Grid);
 
-        var _this88 = _possibleConstructorReturn(this, _Ej2WidgetBase4.call(this, _ej2Grids.Grid));
+        var _this89 = _possibleConstructorReturn(this, _Ej2WidgetBase5.call(this, _ej2Grids.Grid));
 
-        _this88.columns = [];
-        _this88.element = element;
-        _this88.hasChildProperty = true;
-        _this88.childPropertyName = 'columns';
-        _this88.templateProcessor = new Ej2TemplateProcessor(_this88, templateEngine);
-        return _this88;
+        _this89.columns = [];
+        _this89.element = element;
+        _this89.hasChildProperty = true;
+        _this89.childPropertyName = 'columns';
+        _this89.templateProcessor = new Ej2TemplateProcessor(_this89, templateEngine);
+        return _this89;
     }
 
     return Ej2Grid;

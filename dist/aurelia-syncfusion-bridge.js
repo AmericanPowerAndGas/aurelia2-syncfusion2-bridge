@@ -91,7 +91,8 @@ export class EjConfigBuilder {
             .ej2DatePicker()
             .ej2Accordion()
             .ej2Grid()
-            .ej2DateTimePicker();
+            .ej2DateTimePicker()
+            .ej2Diagram();
         return this;
     }
     withoutGlobalResources() {
@@ -435,6 +436,10 @@ export class EjConfigBuilder {
         this.resources.push(PLATFORM.moduleName('./ej2/datetimepicker/datetimepicker'));
         return this;
     }
+    ej2Diagram() {
+        this.resources.push(PLATFORM.moduleName('./ej2/diagram/diagram'));
+        return this;
+    }
 }
 
 export function configure(aurelia, configCallback) {
@@ -474,25 +479,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejAutocomplete = class ejAutocomplete extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejAutocomplete = __decorate([
-    customAttribute(`${constants.attributePrefix}autocomplete`),
-    generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'ignoreAccent', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejAutocomplete);
-export { ejAutocomplete };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejBarcode = class ejBarcode extends WidgetBase {
     constructor(element) {
         super();
@@ -506,6 +492,25 @@ ejBarcode = __decorate([
     inject(Element)
 ], ejBarcode);
 export { ejBarcode };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejAutocomplete = class ejAutocomplete extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejAutocomplete = __decorate([
+    customAttribute(`${constants.attributePrefix}autocomplete`),
+    generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'ignoreAccent', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejAutocomplete);
+export { ejAutocomplete };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1431,26 +1436,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejDateRangePicker = class ejDateRangePicker extends WidgetBase {
-    constructor(element) {
-        super();
-        this.isEditor = true;
-        this.element = element;
-    }
-};
-ejDateRangePicker = __decorate([
-    customAttribute(`${constants.attributePrefix}date-range-picker`),
-    generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']),
-    inject(Element)
-], ejDateRangePicker);
-export { ejDateRangePicker };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejDateTimePicker = class ejDateTimePicker extends WidgetBase {
     constructor(element) {
         super();
@@ -1464,6 +1449,26 @@ ejDateTimePicker = __decorate([
     inject(Element)
 ], ejDateTimePicker);
 export { ejDateTimePicker };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejDateRangePicker = class ejDateRangePicker extends WidgetBase {
+    constructor(element) {
+        super();
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ejDateRangePicker = __decorate([
+    customAttribute(`${constants.attributePrefix}date-range-picker`),
+    generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']),
+    inject(Element)
+], ejDateRangePicker);
+export { ejDateRangePicker };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2983,6 +2988,31 @@ ej2DateTimePicker = __decorate([
     inject(Element)
 ], ej2DateTimePicker);
 export { ej2DateTimePicker };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Diagram, DataBinding, HierarchicalTree } from '@syncfusion/ej2-diagrams';
+Diagram.Inject(DataBinding, HierarchicalTree);
+let ej2Diagram = class ej2Diagram extends Ej2WidgetBase {
+    constructor(element) {
+        super(Diagram);
+        this.element = element;
+        if (this.element && !this.element.id)
+            this.element.id = Math.random().toString(36).substring(2, 15) +
+                Math.random().toString(36).substring(2, 15);
+    }
+};
+ej2Diagram = __decorate([
+    customElement(`${constants.ej2ElementPrefix}diagram`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ej2Diagram', ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width'], null, null, null),
+    inject(Element)
+], ej2Diagram);
+export { ej2Diagram };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

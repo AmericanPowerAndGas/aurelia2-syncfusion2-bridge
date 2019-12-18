@@ -39,6 +39,11 @@ declare module 'aurelia-syncfusion-bridge' {
     DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
+    Diagram,
+    DataBinding,
+    HierarchicalTree
+  } from '@syncfusion/ej2-diagrams';
+  import {
     Grid,
     Group,
     Filter,
@@ -140,16 +145,17 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Grid(): any;
     ej2Template(): any;
     ej2DateTimePicker(): any;
+    ej2Diagram(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
     ejAccordion
   };
   export {
-    ejAutocomplete
+    ejBarcode
   };
   export {
-    ejBarcode
+    ejAutocomplete
   };
   export {
     ejBulletGraph
@@ -248,10 +254,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDatePicker
   };
   export {
-    ejDateRangePicker
+    ejDateTimePicker
   };
   export {
-    ejDateTimePicker
+    ejDateRangePicker
   };
   export {
     ejDiagram
@@ -474,6 +480,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2DateTimePicker
+  };
+  export {
+    ej2Diagram
   };
   export {
     Ej2Column
