@@ -86,7 +86,8 @@ export class EjConfigBuilder {
             .ej2Accordion()
             .ej2Grid()
             .ej2DateTimePicker()
-            .ej2Diagram();
+            .ej2Diagram()
+            .ej2Overview();
         return this;
     }
     withoutGlobalResources() {
@@ -432,6 +433,10 @@ export class EjConfigBuilder {
     }
     ej2Diagram() {
         this.resources.push(PLATFORM.moduleName('./ej2/diagram/diagram'));
+        return this;
+    }
+    ej2Overview() {
+        this.resources.push(PLATFORM.moduleName('./ej2/overview/overview'));
         return this;
     }
 }

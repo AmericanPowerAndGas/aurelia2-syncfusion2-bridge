@@ -60,6 +60,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ContextMenu,
     Edit
   } from '@syncfusion/ej2-grids';
+  import {
+    Overview
+  } from '@syncfusion/ej2-diagrams';
   export class EjConfigBuilder {
     constructor();
     useAll(): any;
@@ -146,16 +149,17 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Template(): any;
     ej2DateTimePicker(): any;
     ej2Diagram(): any;
+    ej2Overview(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
     ejAccordion
   };
   export {
-    ejBarcode
+    ejAutocomplete
   };
   export {
-    ejAutocomplete
+    ejBarcode
   };
   export {
     ejBulletGraph
@@ -254,10 +258,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDatePicker
   };
   export {
-    ejDateTimePicker
+    ejDateRangePicker
   };
   export {
-    ejDateRangePicker
+    ejDateTimePicker
   };
   export {
     ejDiagram
@@ -489,5 +493,8 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2Grid
+  };
+  export {
+    ej2Overview
   };
 }
