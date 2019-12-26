@@ -63,6 +63,16 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     Overview
   } from '@syncfusion/ej2-diagrams';
+  import {
+    RichTextEditor,
+    Toolbar as rteToolbar,
+    Link,
+    Image,
+    Count,
+    HtmlEditor,
+    QuickToolbar,
+    Table
+  } from '@syncfusion/ej2-richtexteditor';
   export class EjConfigBuilder {
     constructor();
     useAll(): any;
@@ -150,16 +160,17 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2DateTimePicker(): any;
     ej2Diagram(): any;
     ej2Overview(): any;
+    ej2RTE(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
     ejAccordion
   };
   export {
-    ejAutocomplete
+    ejBarcode
   };
   export {
-    ejBarcode
+    ejAutocomplete
   };
   export {
     ejBulletGraph
@@ -258,10 +269,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDatePicker
   };
   export {
-    ejDateRangePicker
+    ejDateTimePicker
   };
   export {
-    ejDateTimePicker
+    ejDateRangePicker
   };
   export {
     ejDiagram
@@ -276,10 +287,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDropDownList
   };
   export {
-    ejFileExplorer
+    ejGantt
   };
   export {
-    ejGantt
+    ejFileExplorer
   };
   export {
     Column
@@ -288,10 +299,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGrid
   };
   export {
-    ejGroupButton
+    ejHeatMap
   };
   export {
-    ejHeatMap
+    ejGroupButton
   };
   export {
     ejHeatMapLegend
@@ -324,16 +335,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ejMenu
   };
   export {
-    ejNavigationDrawer
-  };
-  export {
     ejNumericTextbox
   };
   export {
-    ejOverview
+    ejNavigationDrawer
   };
   export {
     ejPager
+  };
+  export {
+    ejOverview
   };
   export {
     ejPdfViewer
@@ -378,10 +389,10 @@ declare module 'aurelia-syncfusion-bridge' {
     RangeSeries
   };
   export {
-    ejRating
+    ejReportViewer
   };
   export {
-    ejReportViewer
+    ejRating
   };
   export {
     ejRibbon
@@ -432,19 +443,19 @@ declare module 'aurelia-syncfusion-bridge' {
     SunburstLevels
   };
   export {
-    ejSymbolPalette
+    ejTab
   };
   export {
-    ejTab
+    ejSymbolPalette
   };
   export {
     ejTagCloud
   };
   export {
-    ejTile
+    ejTimePicker
   };
   export {
-    ejTimePicker
+    ejTile
   };
   export {
     ejToggleButton
@@ -496,5 +507,8 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Overview
+  };
+  export {
+    ej2Rte
   };
 }

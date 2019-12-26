@@ -18,19 +18,15 @@ export class Ej2WidgetBase {
         }
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
-        this.widget.queryCellInfo = (arg) => {
-            if (arg.column && arg.column.template && arg.data) {
-                let elements = arg.cell.children;
-                for (let i = 0; i < elements.length; i++) {
-                    this.templateProcessor.bindView(elements[i], arg.data);
-                }
-            }
-        };
-        if (this.isEditor) {
+        if (this.templateProcessor) {
+            this.templateProcessor.initWidgetDependancies();
+        }
+        if (this.isEditor || this.controlName == 'ej2RTE') {
             this.widget.change = (arg) => {
-                if (arg && 'eValue' in this) {
+                if (arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
-                }
+                else if (arg && 'eValue' in this)
+                    this[this.util.getBindablePropertyName('value')] = arg.value;
             };
         }
     }
@@ -51,9 +47,9 @@ export class Ej2WidgetBase {
     }
     addTwoways(prop) {
         let model = this;
-        let value = firstValue;
+        let value = window.firstValue;
         return function (newVal, isApp) {
-            if (value === firstValue) {
+            if (value === window.firstValue) {
                 let viewModelProp = model.util.getBindablePropertyName(prop);
                 value = model[viewModelProp];
                 if (value === undefined) {

@@ -95,7 +95,8 @@ export class EjConfigBuilder {
       .ej2Grid()
       .ej2DateTimePicker()
       .ej2Diagram()
-      .ej2Overview();
+      .ej2Overview()
+      .ej2RTE();
     return this;
   }
   /**
@@ -449,6 +450,10 @@ export class EjConfigBuilder {
   }
   ej2Overview(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/overview/overview'));
+    return this;
+  }
+  ej2RTE(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/rte/rte'));
     return this;
   }
 }

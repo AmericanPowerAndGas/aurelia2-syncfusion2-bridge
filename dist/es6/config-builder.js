@@ -439,4 +439,8 @@ export class EjConfigBuilder {
         this.resources.push(PLATFORM.moduleName('./ej2/overview/overview'));
         return this;
     }
+    ej2RTE() {
+        this.resources.push(PLATFORM.moduleName('./ej2/rte/rte'));
+        return this;
+    }
 }

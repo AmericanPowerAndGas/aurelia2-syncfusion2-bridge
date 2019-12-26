@@ -458,6 +458,11 @@ define(['exports', 'aurelia-pal'], function (exports, _aureliaPal) {
             return this;
         };
 
+        EjConfigBuilder.prototype.ej2RTE = function ej2RTE() {
+            this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/rte/rte'));
+            return this;
+        };
+
         return EjConfigBuilder;
     }();
 });

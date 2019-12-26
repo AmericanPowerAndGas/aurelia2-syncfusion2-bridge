@@ -51,19 +51,12 @@ System.register(["../common/decorators", "../common/events", "../common/util"], 
                     }
                     this.eWidget = this.widget = new this.component(this.allOption);
                     this.widget.appendTo(option.element);
-                    this.widget.queryCellInfo = function (arg) {
-                        if (arg.column && arg.column.template && arg.data) {
-                            var elements = arg.cell.children;
-                            for (var i = 0; i < elements.length; i++) {
-                                _this.templateProcessor.bindView(elements[i], arg.data);
-                            }
-                        }
-                    };
-                    if (this.isEditor) {
+                    if (this.templateProcessor) {
+                        this.templateProcessor.initWidgetDependancies();
+                    }
+                    if (this.isEditor || this.controlName == 'ej2RTE') {
                         this.widget.change = function (arg) {
-                            if (arg && 'eValue' in _this) {
-                                _this[_this.util.getBindablePropertyName('value')] = arg.element.value;
-                            }
+                            if (arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
                         };
                     }
                 };
@@ -87,9 +80,9 @@ System.register(["../common/decorators", "../common/events", "../common/util"], 
 
                 Ej2WidgetBase.prototype.addTwoways = function addTwoways(prop) {
                     var model = this;
-                    var value = firstValue;
+                    var value = window.firstValue;
                     return function (newVal, isApp) {
-                        if (value === firstValue) {
+                        if (value === window.firstValue) {
                             var viewModelProp = model.util.getBindablePropertyName(prop);
                             value = model[viewModelProp];
                             if (value === undefined) {

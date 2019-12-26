@@ -455,5 +455,10 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
         return this;
     };
 
+    EjConfigBuilder.prototype.ej2RTE = function ej2RTE() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/rte/rte'));
+        return this;
+    };
+
     return EjConfigBuilder;
 }();

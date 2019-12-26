@@ -462,6 +462,11 @@ System.register(['aurelia-pal'], function (_export, _context) {
                     return this;
                 };
 
+                EjConfigBuilder.prototype.ej2RTE = function ej2RTE() {
+                    this.resources.push(PLATFORM.moduleName('./ej2/rte/rte'));
+                    return this;
+                };
+
                 return EjConfigBuilder;
             }());
 
