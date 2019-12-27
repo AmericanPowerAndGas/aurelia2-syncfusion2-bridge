@@ -3,7 +3,7 @@
 System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-calendars"], function (_export, _context) {
     "use strict";
 
-    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, DatePicker, _typeof, __decorate, ej2DatePicker;
+    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, DatePicker, _typeof, __decorate, Ej2DatePicker;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -64,11 +64,11 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 }return c > 3 && r && Object.defineProperty(target, key, r), r;
             };
 
-            _export("ej2DatePicker", ej2DatePicker = function (_Ej2WidgetBase) {
-                _inherits(ej2DatePicker, _Ej2WidgetBase);
+            _export("Ej2DatePicker", Ej2DatePicker = function (_Ej2WidgetBase) {
+                _inherits(Ej2DatePicker, _Ej2WidgetBase);
 
-                function ej2DatePicker(element) {
-                    _classCallCheck(this, ej2DatePicker);
+                function Ej2DatePicker(element) {
+                    _classCallCheck(this, Ej2DatePicker);
 
                     var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, DatePicker));
 
@@ -77,12 +77,12 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                     return _this;
                 }
 
-                return ej2DatePicker;
+                return Ej2DatePicker;
             }(Ej2WidgetBase));
 
-            _export("ej2DatePicker", ej2DatePicker = __decorate([customAttribute(constants.ej2AttributePrefix + "date-picker"), generateBindables('ej2DatePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], { 'enableRTL': ['enableRtl'] }), inject(Element)], ej2DatePicker));
+            _export("Ej2DatePicker", Ej2DatePicker = __decorate([customAttribute(constants.ej2AttributePrefix + "date-picker"), generateBindables(constants.ej2ElementPrefix + 'DatePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], null, null), inject(Element)], Ej2DatePicker));
 
-            _export("ej2DatePicker", ej2DatePicker);
+            _export("Ej2DatePicker", Ej2DatePicker);
         }
     };
 });

@@ -61,12 +61,11 @@ define(["exports", "../../common/ej2-widget-base", "../../common/constants", "..
             var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Diagrams.Diagram));
 
             _this.element = element;
-            if (_this.element && !_this.element.id) _this.element.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
             return _this;
         }
 
         return ej2Diagram;
     }(_ej2WidgetBase.Ej2WidgetBase);
-    exports.ej2Diagram = ej2Diagram = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "diagram"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)('ej2Diagram', ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width'], null, null, null), (0, _common.inject)(Element)], ej2Diagram);
+    exports.ej2Diagram = ej2Diagram = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "diagram"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)(_constants.constants.ej2ElementPrefix + 'Diagram', ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width'], null, null, null), (0, _common.inject)(Element)], ej2Diagram);
     exports.ej2Diagram = ej2Diagram;
 });

@@ -3,7 +3,7 @@
 System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-navigations"], function (_export, _context) {
     "use strict";
 
-    var Ej2WidgetBase, constants, generateBindables, customElement, inlineView, inject, Accordion, _typeof, __decorate, ej2Accordion;
+    var Ej2WidgetBase, constants, generateBindables, customElement, inlineView, inject, Accordion, _typeof, __decorate, Ej2Accordion;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -65,11 +65,11 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 }return c > 3 && r && Object.defineProperty(target, key, r), r;
             };
 
-            _export("ej2Accordion", ej2Accordion = function (_Ej2WidgetBase) {
-                _inherits(ej2Accordion, _Ej2WidgetBase);
+            _export("Ej2Accordion", Ej2Accordion = function (_Ej2WidgetBase) {
+                _inherits(Ej2Accordion, _Ej2WidgetBase);
 
-                function ej2Accordion(element) {
-                    _classCallCheck(this, ej2Accordion);
+                function Ej2Accordion(element) {
+                    _classCallCheck(this, Ej2Accordion);
 
                     var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, Accordion));
 
@@ -77,12 +77,12 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                     return _this;
                 }
 
-                return ej2Accordion;
+                return Ej2Accordion;
             }(Ej2WidgetBase));
 
-            _export("ej2Accordion", ej2Accordion = __decorate([customElement(constants.ej2ElementPrefix + "accordion"), inlineView("" + constants.aureliaTemplateString), generateBindables('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }), inject(Element)], ej2Accordion));
+            _export("Ej2Accordion", Ej2Accordion = __decorate([customElement(constants.ej2ElementPrefix + "accordion"), inlineView("" + constants.aureliaTemplateString), generateBindables(constants.ej2ElementPrefix + 'Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], null, null), inject(Element)], Ej2Accordion));
 
-            _export("ej2Accordion", ej2Accordion);
+            _export("Ej2Accordion", Ej2Accordion);
         }
     };
 });

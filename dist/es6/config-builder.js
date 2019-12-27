@@ -87,7 +87,8 @@ export class EjConfigBuilder {
             .ej2Grid()
             .ej2DateTimePicker()
             .ej2Diagram()
-            .ej2Overview();
+            .ej2Overview()
+            .ej2RTE();
         return this;
     }
     withoutGlobalResources() {

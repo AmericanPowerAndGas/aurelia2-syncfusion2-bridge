@@ -9,16 +9,16 @@ import { constants } from '../../common/constants';
 import { generateBindables } from '../../common/decorators';
 import { customElement, inlineView, inject } from '../../common/common';
 import { Accordion } from '@syncfusion/ej2-navigations';
-let ej2Accordion = class ej2Accordion extends Ej2WidgetBase {
+let Ej2Accordion = class Ej2Accordion extends Ej2WidgetBase {
     constructor(element) {
         super(Accordion);
         this.element = element;
     }
 };
-ej2Accordion = __decorate([
+Ej2Accordion = __decorate([
     customElement(`${constants.ej2ElementPrefix}accordion`),
     inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }),
+    generateBindables(constants.ej2ElementPrefix + 'Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], null, null),
     inject(Element)
-], ej2Accordion);
-export { ej2Accordion };
+], Ej2Accordion);
+export { Ej2Accordion };

@@ -171,10 +171,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejAccordion
   };
   export {
-    ejBarcode
+    ejAutocomplete
   };
   export {
-    ejAutocomplete
+    ejBarcode
   };
   export {
     ejBulletGraph
@@ -192,10 +192,10 @@ declare module 'aurelia-syncfusion-bridge' {
     Series
   };
   export {
-    ejCheckBox
+    ejCircularGauge
   };
   export {
-    ejCircularGauge
+    ejCheckBox
   };
   export {
     ejColorPicker
@@ -285,25 +285,25 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDialog
   };
   export {
+    ejDropDownList
+  };
+  export {
     ejDigitalGauge
   };
   export {
-    ejDropDownList
+    ejFileExplorer
   };
   export {
     ejGantt
   };
   export {
-    ejFileExplorer
+    ejHeatMap
   };
   export {
     Column
   };
   export {
     ejGrid
-  };
-  export {
-    ejHeatMap
   };
   export {
     ejGroupButton
@@ -324,16 +324,19 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListBox
   };
   export {
-    ejListView
-  };
-  export {
     Layer
   };
   export {
     ejMap
   };
   export {
+    ejListView
+  };
+  export {
     ejMaskEdit
+  };
+  export {
+    ejNavigationDrawer
   };
   export {
     ejMenu
@@ -342,16 +345,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejNumericTextbox
   };
   export {
-    ejNavigationDrawer
-  };
-  export {
-    ejPager
-  };
-  export {
     ejOverview
   };
   export {
     ejPdfViewer
+  };
+  export {
+    ejPager
   };
   export {
     ejPercentageTextbox
@@ -360,10 +360,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotChart
   };
   export {
-    ejPivotGauge
+    ejPivotGrid
   };
   export {
-    ejPivotGrid
+    ejPivotGauge
   };
   export {
     ejPivotSchemaDesigner
@@ -372,19 +372,22 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotTreeMap
   };
   export {
-    ejProgressBar
-  };
-  export {
     Item
   };
   export {
     ejRadialMenu
   };
   export {
+    ejProgressBar
+  };
+  export {
     ejRadialSlider
   };
   export {
     ejRadioButton
+  };
+  export {
+    ejRating
   };
   export {
     ejRangeNavigator
@@ -396,28 +399,25 @@ declare module 'aurelia-syncfusion-bridge' {
     ejReportViewer
   };
   export {
-    ejRating
-  };
-  export {
     ejRibbon
   };
   export {
     ejRotator
   };
   export {
+    ejSignature
+  };
+  export {
     ejRte
+  };
+  export {
+    ejScroller
   };
   export {
     ejSchedule
   };
   export {
     ScheduleResource
-  };
-  export {
-    ejScroller
-  };
-  export {
-    ejSignature
   };
   export {
     ejSlider
@@ -447,25 +447,25 @@ declare module 'aurelia-syncfusion-bridge' {
     SunburstLevels
   };
   export {
-    ejTab
+    ejSymbolPalette
   };
   export {
-    ejSymbolPalette
+    ejTab
   };
   export {
     ejTagCloud
   };
   export {
-    ejTimePicker
-  };
-  export {
     ejTile
   };
   export {
-    ejToggleButton
+    ejTimePicker
   };
   export {
     ejToolbar
+  };
+  export {
+    ejToggleButton
   };
   export {
     ejTooltip
@@ -492,10 +492,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejWaitingPopup
   };
   export {
-    ej2Accordion
+    Ej2Accordion
   };
   export {
-    ej2DatePicker
+    Ej2DatePicker
   };
   export {
     ej2DateTimePicker

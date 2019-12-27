@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ej2DatePicker = undefined;
+exports.Ej2DatePicker = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -32,11 +32,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2DatePicker = function (_Ej2WidgetBase) {
-    _inherits(ej2DatePicker, _Ej2WidgetBase);
+var Ej2DatePicker = function (_Ej2WidgetBase) {
+    _inherits(Ej2DatePicker, _Ej2WidgetBase);
 
-    function ej2DatePicker(element) {
-        _classCallCheck(this, ej2DatePicker);
+    function Ej2DatePicker(element) {
+        _classCallCheck(this, Ej2DatePicker);
 
         var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Calendars.DatePicker));
 
@@ -45,7 +45,7 @@ var ej2DatePicker = function (_Ej2WidgetBase) {
         return _this;
     }
 
-    return ej2DatePicker;
+    return Ej2DatePicker;
 }(_ej2WidgetBase.Ej2WidgetBase);
-exports.ej2DatePicker = ej2DatePicker = __decorate([(0, _common.customAttribute)(_constants.constants.ej2AttributePrefix + "date-picker"), (0, _decorators.generateBindables)('ej2DatePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _common.inject)(Element)], ej2DatePicker);
-exports.ej2DatePicker = ej2DatePicker;
+exports.Ej2DatePicker = Ej2DatePicker = __decorate([(0, _common.customAttribute)(_constants.constants.ej2AttributePrefix + "date-picker"), (0, _decorators.generateBindables)(_constants.constants.ej2ElementPrefix + 'DatePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], null, null), (0, _common.inject)(Element)], Ej2DatePicker);
+exports.Ej2DatePicker = Ej2DatePicker;

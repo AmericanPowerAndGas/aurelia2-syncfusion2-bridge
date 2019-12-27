@@ -18,7 +18,7 @@ let ej2Overview = class ej2Overview extends Ej2WidgetBase {
 ej2Overview = __decorate([
     customElement(`${constants.ej2ElementPrefix}overview`),
     inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ej2Overview', ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width'], [], { 'sourceID': ['sourceId'] }, null),
+    generateBindables(constants.ej2ElementPrefix + 'Overview', ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width'], [], { 'sourceID': ['sourceId'] }, null),
     inject(Element)
 ], ej2Overview);
 export { ej2Overview };

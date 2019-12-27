@@ -80,7 +80,7 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 return ej2DateTimePicker;
             }(Ej2WidgetBase));
 
-            _export("ej2DateTimePicker", ej2DateTimePicker = __decorate([customAttribute(constants.ej2AttributePrefix + "date-time-picker"), generateBindables('ej2DateTimePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'scrollTo', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], { 'enableRTL': ['enableRtl'] }, null), inject(Element)], ej2DateTimePicker));
+            _export("ej2DateTimePicker", ej2DateTimePicker = __decorate([customAttribute(constants.ej2AttributePrefix + "date-time-picker"), generateBindables(constants.ej2ElementPrefix + 'DateTimePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'scrollTo', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex'], ['value'], null, null), inject(Element)], ej2DateTimePicker));
 
             _export("ej2DateTimePicker", ej2DateTimePicker);
         }

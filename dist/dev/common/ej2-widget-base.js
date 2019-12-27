@@ -1,9 +1,9 @@
 "use strict";
 
-System.register(["../common/decorators", "../common/events", "../common/util"], function (_export, _context) {
+System.register(["../common/decorators", "../common/events", "../common/util", "../common/constants"], function (_export, _context) {
     "use strict";
 
-    var delayed, getEventOption, Util, _typeof, __decorate, Ej2WidgetBase;
+    var delayed, getEventOption, Util, constants, _typeof, __decorate, Ej2WidgetBase;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -18,6 +18,8 @@ System.register(["../common/decorators", "../common/events", "../common/util"], 
             getEventOption = _commonEvents.getEventOption;
         }, function (_commonUtil) {
             Util = _commonUtil.Util;
+        }, function (_commonConstants) {
+            constants = _commonConstants.constants;
         }],
         execute: function () {
             _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
@@ -54,7 +56,7 @@ System.register(["../common/decorators", "../common/events", "../common/util"], 
                     if (this.templateProcessor) {
                         this.templateProcessor.initWidgetDependancies();
                     }
-                    if (this.isEditor || this.controlName == 'ej2RTE') {
+                    if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
                         this.widget.change = function (arg) {
                             if (arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
                         };

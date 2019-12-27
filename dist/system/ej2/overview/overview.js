@@ -80,7 +80,7 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 return ej2Overview;
             }(Ej2WidgetBase));
 
-            _export("ej2Overview", ej2Overview = __decorate([customElement(constants.ej2ElementPrefix + "overview"), inlineView("" + constants.aureliaTemplateString), generateBindables('ej2Overview', ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width'], [], { 'sourceID': ['sourceId'] }, null), inject(Element)], ej2Overview));
+            _export("ej2Overview", ej2Overview = __decorate([customElement(constants.ej2ElementPrefix + "overview"), inlineView("" + constants.aureliaTemplateString), generateBindables(constants.ej2ElementPrefix + 'Overview', ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width'], [], { 'sourceID': ['sourceId'] }, null), inject(Element)], ej2Overview));
 
             _export("ej2Overview", ej2Overview);
         }

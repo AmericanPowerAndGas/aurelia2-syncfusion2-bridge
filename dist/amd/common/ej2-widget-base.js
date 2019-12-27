@@ -1,4 +1,4 @@
-define(["exports", "../common/decorators", "../common/events", "../common/util"], function (exports, _decorators, _events, _util) {
+define(["exports", "../common/decorators", "../common/events", "../common/util", "../common/constants"], function (exports, _decorators, _events, _util, _constants) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -46,7 +46,7 @@ define(["exports", "../common/decorators", "../common/events", "../common/util"]
             if (this.templateProcessor) {
                 this.templateProcessor.initWidgetDependancies();
             }
-            if (this.isEditor || this.controlName == 'ej2RTE') {
+            if (this.isEditor || this.controlName == _constants.constants.ej2ElementPrefix + 'RTE') {
                 this.widget.change = function (arg) {
                     if (arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
                 };

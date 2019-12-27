@@ -65,6 +65,6 @@ define(["exports", "../../common/ej2-widget-base", "../../common/constants", "..
 
         return ej2Overview;
     }(_ej2WidgetBase.Ej2WidgetBase);
-    exports.ej2Overview = ej2Overview = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "overview"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)('ej2Overview', ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width'], [], { 'sourceID': ['sourceId'] }, null), (0, _common.inject)(Element)], ej2Overview);
+    exports.ej2Overview = ej2Overview = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "overview"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)(_constants.constants.ej2ElementPrefix + 'Overview', ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width'], [], { 'sourceID': ['sourceId'] }, null), (0, _common.inject)(Element)], ej2Overview);
     exports.ej2Overview = ej2Overview;
 });

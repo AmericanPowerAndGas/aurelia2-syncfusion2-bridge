@@ -1,6 +1,7 @@
 import { delayed } from '../common/decorators';
 import { getEventOption } from '../common/events';
 import { Util } from '../common/util';
+import { constants } from '../common/constants';
 
 export class Ej2WidgetBase {
     element: any;
@@ -43,7 +44,7 @@ export class Ej2WidgetBase {
             this.templateProcessor.initWidgetDependancies();
         }
 
-        if (this.isEditor || this.controlName == 'ej2RTE') {
+        if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
 
             this.widget.change = (arg) => {
                 if (arg && arg.element && 'eValue' in this)
@@ -74,7 +75,7 @@ export class Ej2WidgetBase {
 
     addTwoways(prop) {
         let model = this;
-        let value = (<any>window).firstValue;
+      let value = (<any>window).firstValue;
         return function (newVal, isApp) {
           if (value === (<any>window).firstValue) {
                 let viewModelProp = model.util.getBindablePropertyName(prop);

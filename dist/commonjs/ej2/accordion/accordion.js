@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ej2Accordion = undefined;
+exports.Ej2Accordion = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -32,11 +32,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Accordion = function (_Ej2WidgetBase) {
-    _inherits(ej2Accordion, _Ej2WidgetBase);
+var Ej2Accordion = function (_Ej2WidgetBase) {
+    _inherits(Ej2Accordion, _Ej2WidgetBase);
 
-    function ej2Accordion(element) {
-        _classCallCheck(this, ej2Accordion);
+    function Ej2Accordion(element) {
+        _classCallCheck(this, Ej2Accordion);
 
         var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Navigations.Accordion));
 
@@ -44,7 +44,7 @@ var ej2Accordion = function (_Ej2WidgetBase) {
         return _this;
     }
 
-    return ej2Accordion;
+    return Ej2Accordion;
 }(_ej2WidgetBase.Ej2WidgetBase);
-exports.ej2Accordion = ej2Accordion = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "accordion"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)('ej2Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], { 'enableRTL': ['enableRtl'] }), (0, _common.inject)(Element)], ej2Accordion);
-exports.ej2Accordion = ej2Accordion;
+exports.Ej2Accordion = Ej2Accordion = __decorate([(0, _common.customElement)(_constants.constants.ej2ElementPrefix + "accordion"), (0, _common.inlineView)("" + _constants.constants.aureliaTemplateString), (0, _decorators.generateBindables)(_constants.constants.ej2ElementPrefix + 'Accordion', ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width'], [], null, null), (0, _common.inject)(Element)], Ej2Accordion);
+exports.Ej2Accordion = Ej2Accordion;

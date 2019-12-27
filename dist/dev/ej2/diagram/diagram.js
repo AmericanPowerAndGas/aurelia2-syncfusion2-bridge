@@ -78,14 +78,13 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                     var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, Diagram));
 
                     _this.element = element;
-                    if (_this.element && !_this.element.id) _this.element.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
                     return _this;
                 }
 
                 return ej2Diagram;
             }(Ej2WidgetBase));
 
-            _export("ej2Diagram", ej2Diagram = __decorate([customElement(constants.ej2ElementPrefix + "diagram"), inlineView("" + constants.aureliaTemplateString), generateBindables('ej2Diagram', ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width'], null, null, null), inject(Element)], ej2Diagram));
+            _export("ej2Diagram", ej2Diagram = __decorate([customElement(constants.ej2ElementPrefix + "diagram"), inlineView("" + constants.aureliaTemplateString), generateBindables(constants.ej2ElementPrefix + 'Diagram', ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width'], null, null, null), inject(Element)], ej2Diagram));
 
             _export("ej2Diagram", ej2Diagram);
         }

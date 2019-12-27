@@ -13,6 +13,8 @@ var _events = require("../common/events");
 
 var _util = require("../common/util");
 
+var _constants = require("../common/constants");
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -43,7 +45,7 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
-        if (this.isEditor || this.controlName == 'ej2RTE') {
+        if (this.isEditor || this.controlName == _constants.constants.ej2ElementPrefix + 'RTE') {
             this.widget.change = function (arg) {
                 if (arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
             };

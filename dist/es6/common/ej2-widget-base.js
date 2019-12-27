@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { delayed } from '../common/decorators';
 import { getEventOption } from '../common/events';
 import { Util } from '../common/util';
+import { constants } from '../common/constants';
 export class Ej2WidgetBase {
     constructor(component) {
         this.component = component;
@@ -21,7 +22,7 @@ export class Ej2WidgetBase {
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
-        if (this.isEditor || this.controlName == 'ej2RTE') {
+        if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
             this.widget.change = (arg) => {
                 if (arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
