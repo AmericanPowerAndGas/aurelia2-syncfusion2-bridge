@@ -77,6 +77,9 @@ declare module 'aurelia-syncfusion-bridge' {
     QuickToolbar,
     Table
   } from '@syncfusion/ej2-richtexteditor';
+  import {
+    Tab
+  } from '@syncfusion/ej2-navigations';
   export class EjConfigBuilder {
     constructor();
     useAll(): any;
@@ -165,6 +168,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Diagram(): any;
     ej2Overview(): any;
     ej2RTE(): any;
+    ej2Tab(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -192,10 +196,10 @@ declare module 'aurelia-syncfusion-bridge' {
     Series
   };
   export {
-    ejCircularGauge
+    ejCheckBox
   };
   export {
-    ejCheckBox
+    ejCircularGauge
   };
   export {
     ejColorPicker
@@ -273,10 +277,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDatePicker
   };
   export {
-    ejDateTimePicker
+    ejDateRangePicker
   };
   export {
-    ejDateRangePicker
+    ejDateTimePicker
   };
   export {
     ejDiagram
@@ -285,19 +289,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDialog
   };
   export {
-    ejDropDownList
+    ejDigitalGauge
   };
   export {
-    ejDigitalGauge
+    ejDropDownList
   };
   export {
     ejFileExplorer
   };
   export {
     ejGantt
-  };
-  export {
-    ejHeatMap
   };
   export {
     Column
@@ -307,6 +308,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejGroupButton
+  };
+  export {
+    ejHeatMap
   };
   export {
     ejHeatMapLegend
@@ -324,22 +328,22 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListBox
   };
   export {
+    ejListView
+  };
+  export {
     Layer
   };
   export {
     ejMap
   };
   export {
-    ejListView
-  };
-  export {
     ejMaskEdit
   };
   export {
-    ejNavigationDrawer
+    ejMenu
   };
   export {
-    ejMenu
+    ejNavigationDrawer
   };
   export {
     ejNumericTextbox
@@ -348,10 +352,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejOverview
   };
   export {
-    ejPdfViewer
+    ejPager
   };
   export {
-    ejPager
+    ejPdfViewer
   };
   export {
     ejPercentageTextbox
@@ -360,10 +364,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotChart
   };
   export {
-    ejPivotGrid
+    ejPivotGauge
   };
   export {
-    ejPivotGauge
+    ejPivotGrid
   };
   export {
     ejPivotSchemaDesigner
@@ -372,13 +376,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotTreeMap
   };
   export {
+    ejProgressBar
+  };
+  export {
     Item
   };
   export {
     ejRadialMenu
-  };
-  export {
-    ejProgressBar
   };
   export {
     ejRadialSlider
@@ -387,13 +391,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRadioButton
   };
   export {
-    ejRating
-  };
-  export {
     ejRangeNavigator
   };
   export {
     RangeSeries
+  };
+  export {
+    ejRating
   };
   export {
     ejReportViewer
@@ -405,19 +409,19 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRotator
   };
   export {
-    ejSignature
-  };
-  export {
     ejRte
-  };
-  export {
-    ejScroller
   };
   export {
     ejSchedule
   };
   export {
     ScheduleResource
+  };
+  export {
+    ejScroller
+  };
+  export {
+    ejSignature
   };
   export {
     ejSlider
@@ -462,10 +466,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTimePicker
   };
   export {
-    ejToolbar
+    ejToggleButton
   };
   export {
-    ejToggleButton
+    ejToolbar
   };
   export {
     ejTooltip
@@ -514,5 +518,8 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Rte
+  };
+  export {
+    ej2Tab
   };
 }
