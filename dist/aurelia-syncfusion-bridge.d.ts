@@ -64,6 +64,19 @@ declare module 'aurelia-syncfusion-bridge' {
     Overview
   } from '@syncfusion/ej2-diagrams';
   import {
+    PdfViewer,
+    Toolbar as PdfToolbar,
+    Magnification,
+    Navigation,
+    LinkAnnotation,
+    BookmarkView,
+    ThumbnailView,
+    Print,
+    TextSelection,
+    TextSearch,
+    Annotation
+  } from '@syncfusion/ej2-pdfviewer';
+  import {
     RichTextEditor,
     Toolbar as rteToolbar,
     Link,
@@ -165,6 +178,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Overview(): any;
     ej2RTE(): any;
     ej2Tab(): any;
+    ej2PdfViewer(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -511,6 +525,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Overview
+  };
+  export {
+    ej2PdfViewer
   };
   export {
     ej2Rte

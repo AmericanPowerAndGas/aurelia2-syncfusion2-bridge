@@ -97,7 +97,8 @@ export class EjConfigBuilder {
       .ej2Diagram()
       .ej2Overview()
       .ej2RTE()
-      .ej2Tab();
+      .ej2Tab()
+      .ej2PdfViewer();
     return this;
   }
   /**
@@ -459,6 +460,10 @@ export class EjConfigBuilder {
   }
   ej2Tab(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/tab/tab'));
+    return this;
+  }
+  ej2PdfViewer(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/pdfviewer/pdfviewer'));
     return this;
   }
 }
