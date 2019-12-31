@@ -61,6 +61,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Edit
   } from '@syncfusion/ej2-grids';
   import {
+    LinearGauge
+  } from '@syncfusion/ej2-lineargauge';
+  import {
     Overview
   } from '@syncfusion/ej2-diagrams';
   import {
@@ -179,6 +182,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2RTE(): any;
     ej2Tab(): any;
     ej2PdfViewer(): any;
+    ej2LinearGauge(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -522,6 +526,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2Grid
+  };
+  export {
+    ej2LinearGauge
   };
   export {
     ej2Overview

@@ -1,7 +1,7 @@
 'use strict';
 
 exports.__esModule = true;
-exports.ej2Tab = exports.ej2Rte = exports.ej2PdfViewer = exports.ej2Overview = exports.Ej2Grid = exports.Ej2Column = exports.ej2Diagram = exports.ej2DateTimePicker = exports.Ej2DatePicker = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
+exports.ej2Tab = exports.ej2Rte = exports.ej2PdfViewer = exports.ej2Overview = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.ej2Diagram = exports.ej2DateTimePicker = exports.Ej2DatePicker = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
 exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -32,6 +32,8 @@ var _ej2Diagrams = require('@syncfusion/ej2-diagrams');
 
 var _ej2Grids = require('@syncfusion/ej2-grids');
 
+var _ej2Lineargauge = require('@syncfusion/ej2-lineargauge');
+
 var _ej2Pdfviewer = require('@syncfusion/ej2-pdfviewer');
 
 var _ej2Richtexteditor = require('@syncfusion/ej2-richtexteditor');
@@ -51,7 +53,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     }
 
     EjConfigBuilder.prototype.useAll = function useAll() {
-        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer();
+        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge();
         return this;
     };
 
@@ -500,6 +502,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
 
     EjConfigBuilder.prototype.ej2PdfViewer = function ej2PdfViewer() {
         this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/pdfviewer/pdfviewer'));
+        return this;
+    };
+
+    EjConfigBuilder.prototype.ej2LinearGauge = function ej2LinearGauge() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/lineargauge/lineargauge'));
         return this;
     };
 
@@ -3773,16 +3780,43 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Overview = function (_Ej2WidgetBase6) {
-    _inherits(ej2Overview, _Ej2WidgetBase6);
+var ej2LinearGauge = function (_Ej2WidgetBase6) {
+    _inherits(ej2LinearGauge, _Ej2WidgetBase6);
+
+    function ej2LinearGauge(element) {
+        _classCallCheck(this, ej2LinearGauge);
+
+        var _this91 = _possibleConstructorReturn(this, _Ej2WidgetBase6.call(this, _ej2Lineargauge.LinearGauge));
+
+        _this91.element = element;
+        return _this91;
+    }
+
+    return ej2LinearGauge;
+}(Ej2WidgetBase);
+exports.ej2LinearGauge = ej2LinearGauge = __decorate([(0, _aureliaTemplating.customElement)(constants.ej2ElementPrefix + 'linear-gauge'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables(constants.ej2ElementPrefix + 'LinearGauge', ['annotations', 'axes', 'background', 'border', 'container', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'locale', 'margin', 'orientation', 'rangePalettes', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width'], [], [], null), (0, _aureliaDependencyInjection.inject)(Element)], ej2LinearGauge);
+exports.ej2LinearGauge = ej2LinearGauge;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ej2Overview = function (_Ej2WidgetBase7) {
+    _inherits(ej2Overview, _Ej2WidgetBase7);
 
     function ej2Overview(element) {
         _classCallCheck(this, ej2Overview);
 
-        var _this91 = _possibleConstructorReturn(this, _Ej2WidgetBase6.call(this, _ej2Diagrams.Overview));
+        var _this92 = _possibleConstructorReturn(this, _Ej2WidgetBase7.call(this, _ej2Diagrams.Overview));
 
-        _this91.element = element;
-        return _this91;
+        _this92.element = element;
+        return _this92;
     }
 
     return ej2Overview;
@@ -3801,16 +3835,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Pdfviewer.PdfViewer.Inject(_ej2Pdfviewer.Toolbar, _ej2Pdfviewer.Magnification, _ej2Pdfviewer.Navigation, _ej2Pdfviewer.LinkAnnotation, _ej2Pdfviewer.BookmarkView, _ej2Pdfviewer.ThumbnailView, _ej2Pdfviewer.Print, _ej2Pdfviewer.TextSelection, _ej2Pdfviewer.TextSearch, _ej2Pdfviewer.Annotation);
-var ej2PdfViewer = function (_Ej2WidgetBase7) {
-    _inherits(ej2PdfViewer, _Ej2WidgetBase7);
+var ej2PdfViewer = function (_Ej2WidgetBase8) {
+    _inherits(ej2PdfViewer, _Ej2WidgetBase8);
 
     function ej2PdfViewer(element) {
         _classCallCheck(this, ej2PdfViewer);
 
-        var _this92 = _possibleConstructorReturn(this, _Ej2WidgetBase7.call(this, _ej2Pdfviewer.PdfViewer));
+        var _this93 = _possibleConstructorReturn(this, _Ej2WidgetBase8.call(this, _ej2Pdfviewer.PdfViewer));
 
-        _this92.element = element;
-        return _this92;
+        _this93.element = element;
+        return _this93;
     }
 
     return ej2PdfViewer;
@@ -3829,16 +3863,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Richtexteditor.RichTextEditor.Inject(_ej2Richtexteditor.Toolbar, _ej2Richtexteditor.Link, _ej2Richtexteditor.Image, _ej2Richtexteditor.Count, _ej2Richtexteditor.HtmlEditor, _ej2Richtexteditor.QuickToolbar, _ej2Richtexteditor.Table);
-var ej2Rte = function (_Ej2WidgetBase8) {
-    _inherits(ej2Rte, _Ej2WidgetBase8);
+var ej2Rte = function (_Ej2WidgetBase9) {
+    _inherits(ej2Rte, _Ej2WidgetBase9);
 
     function ej2Rte(element) {
         _classCallCheck(this, ej2Rte);
 
-        var _this93 = _possibleConstructorReturn(this, _Ej2WidgetBase8.call(this, _ej2Richtexteditor.RichTextEditor));
+        var _this94 = _possibleConstructorReturn(this, _Ej2WidgetBase9.call(this, _ej2Richtexteditor.RichTextEditor));
 
-        _this93.element = element;
-        return _this93;
+        _this94.element = element;
+        return _this94;
     }
 
     return ej2Rte;
@@ -3856,16 +3890,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Tab = function (_Ej2WidgetBase9) {
-    _inherits(ej2Tab, _Ej2WidgetBase9);
+var ej2Tab = function (_Ej2WidgetBase10) {
+    _inherits(ej2Tab, _Ej2WidgetBase10);
 
     function ej2Tab(element) {
         _classCallCheck(this, ej2Tab);
 
-        var _this94 = _possibleConstructorReturn(this, _Ej2WidgetBase9.call(this, _ej2Navigations.Tab));
+        var _this95 = _possibleConstructorReturn(this, _Ej2WidgetBase10.call(this, _ej2Navigations.Tab));
 
-        _this94.element = element;
-        return _this94;
+        _this95.element = element;
+        return _this95;
     }
 
     return ej2Tab;

@@ -96,7 +96,8 @@ export class EjConfigBuilder {
             .ej2Overview()
             .ej2RTE()
             .ej2Tab()
-            .ej2PdfViewer();
+            .ej2PdfViewer()
+            .ej2LinearGauge();
         return this;
     }
     withoutGlobalResources() {
@@ -458,6 +459,10 @@ export class EjConfigBuilder {
     }
     ej2PdfViewer() {
         this.resources.push(PLATFORM.moduleName('./ej2/pdfviewer/pdfviewer'));
+        return this;
+    }
+    ej2LinearGauge() {
+        this.resources.push(PLATFORM.moduleName('./ej2/lineargauge/lineargauge'));
         return this;
     }
 }
@@ -3107,6 +3112,27 @@ Ej2Grid = __decorate([
     inject(Element, TemplatingEngine)
 ], Ej2Grid);
 export { Ej2Grid };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { LinearGauge } from '@syncfusion/ej2-lineargauge';
+let ej2LinearGauge = class ej2LinearGauge extends Ej2WidgetBase {
+    constructor(element) {
+        super(LinearGauge);
+        this.element = element;
+    }
+};
+ej2LinearGauge = __decorate([
+    customElement(`${constants.ej2ElementPrefix}linear-gauge`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables(constants.ej2ElementPrefix + 'LinearGauge', ['annotations', 'axes', 'background', 'border', 'container', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'locale', 'margin', 'orientation', 'rangePalettes', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width'], [], [], null),
+    inject(Element)
+], ej2LinearGauge);
+export { ej2LinearGauge };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

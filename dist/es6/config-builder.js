@@ -90,7 +90,8 @@ export class EjConfigBuilder {
             .ej2Overview()
             .ej2RTE()
             .ej2Tab()
-            .ej2PdfViewer();
+            .ej2PdfViewer()
+            .ej2LinearGauge();
         return this;
     }
     withoutGlobalResources() {
@@ -452,6 +453,10 @@ export class EjConfigBuilder {
     }
     ej2PdfViewer() {
         this.resources.push(PLATFORM.moduleName('./ej2/pdfviewer/pdfviewer'));
+        return this;
+    }
+    ej2LinearGauge() {
+        this.resources.push(PLATFORM.moduleName('./ej2/lineargauge/lineargauge'));
         return this;
     }
 }
