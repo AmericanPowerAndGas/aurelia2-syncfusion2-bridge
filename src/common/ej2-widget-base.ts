@@ -31,9 +31,9 @@ export class Ej2WidgetBase {
     * To Create an widget
     * @param option Object which contains  Element in which  widget will be created
     */
-    createWidget(option) {
-        this.allOption = this.getWidgetOptions(option.element);
-
+    createWidget(option) {       
+      this.allOption = this.getWidgetOptions(option.element);  
+      
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
@@ -110,20 +110,22 @@ export class Ej2WidgetBase {
         } else {
             propOptions = this.util.getOptions(this, this.controlProperties);
         }
-        let eventOption = getEventOption(element);
+        let eventOption = getEventOption(element);       
         if (this.hasChildProperty) {
-            this.getChildProperties(propOptions);
+            this.getChildProperties(propOptions);           
         }
         return Object.assign({}, propOptions, eventOption);
     }
-    getChildProperties(options) {
-        let PropertyName = this.childPropertyName;
-        let childCollection = this[PropertyName];
-        let len = childCollection.length;
+    getChildProperties(options) {       
+        let PropertyName = this.childPropertyName; 
+        if (PropertyName == 'series')
+            this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map((x: any) => x.au.controller.viewModel);
+        let childCollection = this[PropertyName];           
+        let len = childCollection.length;       
         if (len) {
             options[PropertyName] = [];
-            let childProperties = childCollection[0].controlProperties;
-            for (let i = 0; i < len; i++) {
+            let childProperties = childCollection[0].controlProperties;            
+            for (let i = 0; i < len; i++) {               
                 options[PropertyName].push(this.util.getOptions(childCollection[i], childProperties));
             }
         }

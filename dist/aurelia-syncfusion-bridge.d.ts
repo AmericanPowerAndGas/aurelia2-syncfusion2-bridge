@@ -33,6 +33,30 @@ declare module 'aurelia-syncfusion-bridge' {
     Accordion
   } from '@syncfusion/ej2-navigations';
   import {
+    Chart,
+    Category,
+    Legend,
+    Tooltip,
+    StackingLineSeries,
+    BarSeries,
+    StackingBarSeries,
+    LineSeries,
+    StepLineSeries,
+    SplineSeries,
+    MultiColoredLineSeries,
+    AreaSeries,
+    RangeAreaSeries,
+    DateTime,
+    StackingAreaSeries,
+    StepAreaSeries,
+    MultiColoredAreaSeries,
+    ColumnSeries,
+    StackingColumnSeries,
+    RangeColumnSeries,
+    ScatterSeries,
+    BubbleSeries
+  } from '@syncfusion/ej2-charts';
+  import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
@@ -183,6 +207,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Tab(): any;
     ej2PdfViewer(): any;
     ej2LinearGauge(): any;
+    ej2Chart(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -210,10 +235,10 @@ declare module 'aurelia-syncfusion-bridge' {
     Series
   };
   export {
-    ejCheckBox
+    ejCircularGauge
   };
   export {
-    ejCircularGauge
+    ejCheckBox
   };
   export {
     ejColorPicker
@@ -285,10 +310,10 @@ declare module 'aurelia-syncfusion-bridge' {
     detached(): any;
   }
   export {
-    ejCurrencyTextbox
+    ejDatePicker
   };
   export {
-    ejDatePicker
+    ejCurrencyTextbox
   };
   export {
     ejDateRangePicker
@@ -315,13 +340,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGantt
   };
   export {
+    ejGroupButton
+  };
+  export {
     Column
   };
   export {
     ejGrid
-  };
-  export {
-    ejGroupButton
   };
   export {
     ejHeatMap
@@ -363,10 +388,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejNumericTextbox
   };
   export {
-    ejOverview
+    ejPager
   };
   export {
-    ejPager
+    ejOverview
   };
   export {
     ejPdfViewer
@@ -423,13 +448,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRotator
   };
   export {
-    ejRte
-  };
-  export {
     ejSchedule
   };
   export {
     ScheduleResource
+  };
+  export {
+    ejRte
   };
   export {
     ejScroller
@@ -501,16 +526,22 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTreeMap
   };
   export {
-    ejTreeView
+    ejUploadbox
   };
   export {
-    ejUploadbox
+    ejTreeView
   };
   export {
     ejWaitingPopup
   };
   export {
     Ej2Accordion
+  };
+  export {
+    ej2Chart
+  };
+  export {
+    SeriesVM
   };
   export {
     Ej2DatePicker

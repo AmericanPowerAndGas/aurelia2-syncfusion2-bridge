@@ -112,6 +112,9 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
 
     Ej2WidgetBase.prototype.getChildProperties = function getChildProperties(options) {
         var PropertyName = this.childPropertyName;
+        if (PropertyName == 'series') this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map(function (x) {
+            return x.au.controller.viewModel;
+        });
         var childCollection = this[PropertyName];
         var len = childCollection.length;
         if (len) {

@@ -91,7 +91,8 @@ export class EjConfigBuilder {
             .ej2RTE()
             .ej2Tab()
             .ej2PdfViewer()
-            .ej2LinearGauge();
+            .ej2LinearGauge()
+            .ej2Chart();
         return this;
     }
     withoutGlobalResources() {
@@ -457,6 +458,11 @@ export class EjConfigBuilder {
     }
     ej2LinearGauge() {
         this.resources.push(PLATFORM.moduleName('./ej2/lineargauge/lineargauge'));
+        return this;
+    }
+    ej2Chart() {
+        this.resources.push(PLATFORM.moduleName('./ej2/chart/chart'));
+        this.resources.push(PLATFORM.moduleName('./ej2/chart/series'));
         return this;
     }
 }
