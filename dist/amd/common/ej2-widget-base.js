@@ -41,6 +41,7 @@ define(["exports", "../common/decorators", "../common/events", "../common/util",
             if (!this.ejOptions && !this.isEditor) {
                 this.createTwoWays();
             }
+            if (this.controlName == _constants.constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value) this.allOption.value = this.allOption.value.toString();
             this.eWidget = this.widget = new this.component(this.allOption);
             this.widget.appendTo(option.element);
             if (this.templateProcessor) {
@@ -180,7 +181,7 @@ define(["exports", "../common/decorators", "../common/events", "../common/util",
                             this.widget[prop] = newValue;
                         }
                     } else {
-                        this.widget.option(newValue);
+                        this.widget['value'] = newValue;
                     }
                 }
             }

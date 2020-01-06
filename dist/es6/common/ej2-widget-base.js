@@ -17,6 +17,8 @@ export class Ej2WidgetBase {
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
+        if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
+            this.allOption.value = this.allOption.value.toString();
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
         if (this.templateProcessor) {
@@ -148,7 +150,7 @@ export class Ej2WidgetBase {
                     }
                 }
                 else {
-                    this.widget.option(newValue);
+                    this.widget['value'] = newValue;
                 }
             }
         }

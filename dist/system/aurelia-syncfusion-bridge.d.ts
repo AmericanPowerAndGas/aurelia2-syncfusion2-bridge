@@ -92,6 +92,9 @@ declare module 'aurelia-syncfusion-bridge' {
     LinearGauge
   } from '@syncfusion/ej2-lineargauge';
   import {
+    MaskedTextBox
+  } from '@syncfusion/ej2-inputs';
+  import {
     Overview
   } from '@syncfusion/ej2-diagrams';
   import {
@@ -212,6 +215,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2PdfViewer(): any;
     ej2LinearGauge(): any;
     ej2Chart(): any;
+    ej2MaskEdit(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -230,19 +234,19 @@ declare module 'aurelia-syncfusion-bridge' {
     QualitativeRange
   };
   export {
-    ejButton
-  };
-  export {
     ejChart
   };
   export {
     Series
   };
   export {
-    ejCircularGauge
+    ejButton
   };
   export {
     ejCheckBox
+  };
+  export {
+    ejCircularGauge
   };
   export {
     ejColorPicker
@@ -314,10 +318,10 @@ declare module 'aurelia-syncfusion-bridge' {
     detached(): any;
   }
   export {
-    ejDatePicker
+    ejCurrencyTextbox
   };
   export {
-    ejCurrencyTextbox
+    ejDatePicker
   };
   export {
     ejDateRangePicker
@@ -392,10 +396,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejNumericTextbox
   };
   export {
-    ejPager
+    ejOverview
   };
   export {
-    ejOverview
+    ejPager
   };
   export {
     ejPdfViewer
@@ -416,16 +420,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotSchemaDesigner
   };
   export {
-    ejPivotTreeMap
-  };
-  export {
     ejProgressBar
   };
   export {
-    Item
-  };
-  export {
-    ejRadialMenu
+    ejPivotTreeMap
   };
   export {
     ejRadialSlider
@@ -452,13 +450,19 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRotator
   };
   export {
+    Item
+  };
+  export {
+    ejRadialMenu
+  };
+  export {
+    ejRte
+  };
+  export {
     ejSchedule
   };
   export {
     ScheduleResource
-  };
-  export {
-    ejRte
   };
   export {
     ejScroller
@@ -470,10 +474,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSlider
   };
   export {
-    ejSparkline
+    ejSpellCheck
   };
   export {
-    ejSpellCheck
+    ejSparkline
   };
   export {
     ejSplitButton
@@ -518,22 +522,22 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTooltip
   };
   export {
-    ejTreeGrid
-  };
-  export {
-    TreeGridColumn
-  };
-  export {
     Level
   };
   export {
     ejTreeMap
   };
   export {
-    ejUploadbox
+    ejTreeGrid
+  };
+  export {
+    TreeGridColumn
   };
   export {
     ejTreeView
+  };
+  export {
+    ejUploadbox
   };
   export {
     ejWaitingPopup
@@ -564,6 +568,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2LinearGauge
+  };
+  export {
+    ej2MaskEdit
   };
   export {
     ej2Overview

@@ -32,11 +32,12 @@ export class Ej2WidgetBase {
     * @param option Object which contains  Element in which  widget will be created
     */
     createWidget(option) {       
-      this.allOption = this.getWidgetOptions(option.element);  
-      
+        this.allOption = this.getWidgetOptions(option.element);       
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
+        if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
+            this.allOption.value = this.allOption.value.toString();
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
 
@@ -46,11 +47,11 @@ export class Ej2WidgetBase {
 
         if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
 
-            this.widget.change = (arg) => {
+            this.widget.change = (arg) => {               
                 if (arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
-                else if (arg && 'eValue' in this)
-                    this[this.util.getBindablePropertyName('value')] = arg.value;
+                else if (arg && 'eValue' in this)                    
+                    this[this.util.getBindablePropertyName('value')] = arg.value;                   
             };
 
         }       
@@ -185,7 +186,7 @@ export class Ej2WidgetBase {
                         this.widget[prop] = newValue;
                     }
                 } else {
-                    this.widget.option(newValue);
+                    this.widget['value']=newValue;
                 }
             }
         }

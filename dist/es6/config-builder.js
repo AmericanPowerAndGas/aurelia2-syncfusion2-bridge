@@ -92,7 +92,8 @@ export class EjConfigBuilder {
             .ej2Tab()
             .ej2PdfViewer()
             .ej2LinearGauge()
-            .ej2Chart();
+            .ej2Chart()
+            .ej2MaskEdit();
         return this;
     }
     withoutGlobalResources() {
@@ -463,6 +464,10 @@ export class EjConfigBuilder {
     ej2Chart() {
         this.resources.push(PLATFORM.moduleName('./ej2/chart/chart'));
         this.resources.push(PLATFORM.moduleName('./ej2/chart/series'));
+        return this;
+    }
+    ej2MaskEdit() {
+        this.resources.push(PLATFORM.moduleName('./ej2/maskedit/maskedit'));
         return this;
     }
 }
