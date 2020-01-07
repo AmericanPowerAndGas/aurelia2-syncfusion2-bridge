@@ -101,7 +101,8 @@ export class EjConfigBuilder {
       .ej2PdfViewer()
       .ej2LinearGauge()
       .ej2Chart()
-      .ej2MaskEdit();
+      .ej2MaskEdit()
+      .ej2Button();
     return this;
   }
   /**
@@ -480,6 +481,10 @@ export class EjConfigBuilder {
   }
   ej2MaskEdit(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/maskedit/maskedit'));
+    return this;
+  }
+  ej2Button(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/button/button'));
     return this;
   }
 }

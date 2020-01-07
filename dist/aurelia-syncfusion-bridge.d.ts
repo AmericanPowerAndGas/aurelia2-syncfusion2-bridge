@@ -33,6 +33,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Accordion
   } from '@syncfusion/ej2-navigations';
   import {
+    Button
+  } from '@syncfusion/ej2-buttons';
+  import {
     Chart,
     Category,
     Legend,
@@ -212,6 +215,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2LinearGauge(): any;
     ej2Chart(): any;
     ej2MaskEdit(): any;
+    ej2Button(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -230,13 +234,13 @@ declare module 'aurelia-syncfusion-bridge' {
     QualitativeRange
   };
   export {
+    ejButton
+  };
+  export {
     ejChart
   };
   export {
     Series
-  };
-  export {
-    ejButton
   };
   export {
     ejCheckBox
@@ -344,13 +348,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGantt
   };
   export {
-    ejGroupButton
-  };
-  export {
     Column
   };
   export {
     ejGrid
+  };
+  export {
+    ejGroupButton
   };
   export {
     ejHeatMap
@@ -416,10 +420,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotSchemaDesigner
   };
   export {
+    ejPivotTreeMap
+  };
+  export {
     ejProgressBar
   };
   export {
-    ejPivotTreeMap
+    Item
+  };
+  export {
+    ejRadialMenu
   };
   export {
     ejRadialSlider
@@ -446,12 +456,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRotator
   };
   export {
-    Item
-  };
-  export {
-    ejRadialMenu
-  };
-  export {
     ejRte
   };
   export {
@@ -470,10 +474,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSlider
   };
   export {
-    ejSpellCheck
+    ejSparkline
   };
   export {
-    ejSparkline
+    ejSpellCheck
   };
   export {
     ejSplitButton
@@ -518,16 +522,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTooltip
   };
   export {
-    Level
-  };
-  export {
-    ejTreeMap
-  };
-  export {
     ejTreeGrid
   };
   export {
     TreeGridColumn
+  };
+  export {
+    Level
+  };
+  export {
+    ejTreeMap
   };
   export {
     ejTreeView
@@ -540,6 +544,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2Accordion
+  };
+  export {
+    ej2Button
   };
   export {
     ej2Chart
