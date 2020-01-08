@@ -75,6 +75,9 @@ declare module 'aurelia-syncfusion-bridge' {
     HierarchicalTree
   } from '@syncfusion/ej2-diagrams';
   import {
+    DropDownButton
+  } from '@syncfusion/ej2-splitbuttons';
+  import {
     Grid,
     Group,
     Filter,
@@ -220,6 +223,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Chart(): any;
     ej2MaskEdit(): any;
     ej2Button(): any;
+    ej2DropDownButton(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -566,6 +570,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Diagram
+  };
+  export {
+    ej2DropDownButton
   };
   export {
     Ej2Column

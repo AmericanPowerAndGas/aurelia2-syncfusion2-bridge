@@ -102,7 +102,8 @@ export class EjConfigBuilder {
       .ej2LinearGauge()
       .ej2Chart()
       .ej2MaskEdit()
-      .ej2Button();
+      .ej2Button()
+      .ej2DropDownButton();
     return this;
   }
   /**
@@ -485,6 +486,10 @@ export class EjConfigBuilder {
   }
   ej2Button(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/button/button'));
+    return this;
+  }
+  ej2DropDownButton(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/dropdownbutton/dropdownbutton'));
     return this;
   }
 }
