@@ -101,7 +101,8 @@ export class EjConfigBuilder {
             .ej2Chart()
             .ej2MaskEdit()
             .ej2Button()
-            .ej2DropDownButton();
+            .ej2DropDownButton()
+            .ej2ProgressButton();
         return this;
     }
     withoutGlobalResources() {
@@ -484,6 +485,10 @@ export class EjConfigBuilder {
     }
     ej2DropDownButton() {
         this.resources.push(PLATFORM.moduleName('./ej2/dropdownbutton/dropdownbutton'));
+        return this;
+    }
+    ej2ProgressButton() {
+        this.resources.push(PLATFORM.moduleName('./ej2/progressbutton/progressbutton'));
         return this;
     }
 }
@@ -3155,7 +3160,6 @@ import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
 let ej2DropDownButton = class ej2DropDownButton extends Ej2WidgetBase {
     constructor(element) {
         super(DropDownButton);
-        this.isEditor = true;
         this.element = element;
     }
 };
@@ -3306,6 +3310,26 @@ ej2PdfViewer = __decorate([
     inject(Element)
 ], ej2PdfViewer);
 export { ej2PdfViewer };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { ProgressButton } from '@syncfusion/ej2-splitbuttons';
+let ej2ProgressButton = class ej2ProgressButton extends Ej2WidgetBase {
+    constructor(element) {
+        super(ProgressButton);
+        this.element = element;
+    }
+};
+ej2ProgressButton = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}progress-button`),
+    generateBindables(constants.ej2ElementPrefix + 'ProgressButton', ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings'], [], null, null),
+    inject(Element)
+], ej2ProgressButton);
+export { ej2ProgressButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

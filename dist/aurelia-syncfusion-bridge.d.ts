@@ -113,6 +113,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Annotation
   } from '@syncfusion/ej2-pdfviewer';
   import {
+    ProgressButton
+  } from '@syncfusion/ej2-splitbuttons';
+  import {
     RichTextEditor,
     Toolbar as rteToolbar,
     Link,
@@ -220,6 +223,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2MaskEdit(): any;
     ej2Button(): any;
     ej2DropDownButton(): any;
+    ej2ProgressButton(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -587,6 +591,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2PdfViewer
+  };
+  export {
+    ej2ProgressButton
   };
   export {
     ej2Rte

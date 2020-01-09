@@ -1,7 +1,7 @@
 'use strict';
 
 exports.__esModule = true;
-exports.ej2Tab = exports.ej2Rte = exports.ej2PdfViewer = exports.ej2Overview = exports.ej2MaskEdit = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.ej2DropDownButton = exports.ej2Diagram = exports.ej2DateTimePicker = exports.Ej2DatePicker = exports.SeriesVM = exports.ej2Chart = exports.ej2Button = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
+exports.ej2Tab = exports.ej2Rte = exports.ej2ProgressButton = exports.ej2PdfViewer = exports.ej2Overview = exports.ej2MaskEdit = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.ej2DropDownButton = exports.ej2Diagram = exports.ej2DateTimePicker = exports.Ej2DatePicker = exports.SeriesVM = exports.ej2Chart = exports.ej2Button = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
 exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -61,7 +61,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     }
 
     EjConfigBuilder.prototype.useAll = function useAll() {
-        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge().ej2Chart().ej2MaskEdit().ej2Button().ej2DropDownButton();
+        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge().ej2Chart().ej2MaskEdit().ej2Button().ej2DropDownButton().ej2ProgressButton();
         return this;
     };
 
@@ -536,6 +536,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
 
     EjConfigBuilder.prototype.ej2DropDownButton = function ej2DropDownButton() {
         this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/dropdownbutton/dropdownbutton'));
+        return this;
+    };
+
+    EjConfigBuilder.prototype.ej2ProgressButton = function ej2ProgressButton() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/progressbutton/progressbutton'));
         return this;
     };
 
@@ -3833,7 +3838,6 @@ var ej2DropDownButton = function (_Ej2WidgetBase7) {
 
         var _this92 = _possibleConstructorReturn(this, _Ej2WidgetBase7.call(this, _ej2Splitbuttons.DropDownButton));
 
-        _this92.isEditor = true;
         _this92.element = element;
         return _this92;
     }
@@ -4025,17 +4029,44 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
+var ej2ProgressButton = function (_Ej2WidgetBase13) {
+    _inherits(ej2ProgressButton, _Ej2WidgetBase13);
+
+    function ej2ProgressButton(element) {
+        _classCallCheck(this, ej2ProgressButton);
+
+        var _this98 = _possibleConstructorReturn(this, _Ej2WidgetBase13.call(this, _ej2Splitbuttons.ProgressButton));
+
+        _this98.element = element;
+        return _this98;
+    }
+
+    return ej2ProgressButton;
+}(Ej2WidgetBase);
+exports.ej2ProgressButton = ej2ProgressButton = __decorate([(0, _aureliaTemplating.customAttribute)(constants.ej2AttributePrefix + 'progress-button'), generateBindables(constants.ej2ElementPrefix + 'ProgressButton', ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings'], [], null, null), (0, _aureliaDependencyInjection.inject)(Element)], ej2ProgressButton);
+exports.ej2ProgressButton = ej2ProgressButton;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
 _ej2Richtexteditor.RichTextEditor.Inject(_ej2Richtexteditor.Toolbar, _ej2Richtexteditor.Link, _ej2Richtexteditor.Image, _ej2Richtexteditor.Count, _ej2Richtexteditor.HtmlEditor, _ej2Richtexteditor.QuickToolbar, _ej2Richtexteditor.Table);
-var ej2Rte = function (_Ej2WidgetBase13) {
-    _inherits(ej2Rte, _Ej2WidgetBase13);
+var ej2Rte = function (_Ej2WidgetBase14) {
+    _inherits(ej2Rte, _Ej2WidgetBase14);
 
     function ej2Rte(element) {
         _classCallCheck(this, ej2Rte);
 
-        var _this98 = _possibleConstructorReturn(this, _Ej2WidgetBase13.call(this, _ej2Richtexteditor.RichTextEditor));
+        var _this99 = _possibleConstructorReturn(this, _Ej2WidgetBase14.call(this, _ej2Richtexteditor.RichTextEditor));
 
-        _this98.element = element;
-        return _this98;
+        _this99.element = element;
+        return _this99;
     }
 
     return ej2Rte;
@@ -4053,16 +4084,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Tab = function (_Ej2WidgetBase14) {
-    _inherits(ej2Tab, _Ej2WidgetBase14);
+var ej2Tab = function (_Ej2WidgetBase15) {
+    _inherits(ej2Tab, _Ej2WidgetBase15);
 
     function ej2Tab(element) {
         _classCallCheck(this, ej2Tab);
 
-        var _this99 = _possibleConstructorReturn(this, _Ej2WidgetBase14.call(this, _ej2Navigations.Tab));
+        var _this100 = _possibleConstructorReturn(this, _Ej2WidgetBase15.call(this, _ej2Navigations.Tab));
 
-        _this99.element = element;
-        return _this99;
+        _this100.element = element;
+        return _this100;
     }
 
     return ej2Tab;

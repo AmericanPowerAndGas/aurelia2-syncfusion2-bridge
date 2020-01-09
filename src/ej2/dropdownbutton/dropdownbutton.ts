@@ -9,8 +9,7 @@ import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
 @inject(Element)
 export class ej2DropDownButton extends Ej2WidgetBase {
     constructor(element) {
-        super(DropDownButton);
-        this.isEditor = true;
+        super(DropDownButton);        
         this.element = element;
     }
 }

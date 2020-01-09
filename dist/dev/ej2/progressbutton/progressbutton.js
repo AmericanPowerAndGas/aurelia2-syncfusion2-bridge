@@ -3,7 +3,7 @@
 System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "@syncfusion/ej2-splitbuttons"], function (_export, _context) {
     "use strict";
 
-    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, DropDownButton, _typeof, __decorate, ej2DropDownButton;
+    var Ej2WidgetBase, constants, generateBindables, customAttribute, inject, ProgressButton, _typeof, __decorate, ej2ProgressButton;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -46,7 +46,7 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
             customAttribute = _commonCommon.customAttribute;
             inject = _commonCommon.inject;
         }, function (_syncfusionEj2Splitbuttons) {
-            DropDownButton = _syncfusionEj2Splitbuttons.DropDownButton;
+            ProgressButton = _syncfusionEj2Splitbuttons.ProgressButton;
         }],
         execute: function () {
             _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
@@ -64,24 +64,25 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 }return c > 3 && r && Object.defineProperty(target, key, r), r;
             };
 
-            _export("ej2DropDownButton", ej2DropDownButton = function (_Ej2WidgetBase) {
-                _inherits(ej2DropDownButton, _Ej2WidgetBase);
+            _export("ej2ProgressButton", ej2ProgressButton = function (_Ej2WidgetBase) {
+                _inherits(ej2ProgressButton, _Ej2WidgetBase);
 
-                function ej2DropDownButton(element) {
-                    _classCallCheck(this, ej2DropDownButton);
+                function ej2ProgressButton(element) {
+                    _classCallCheck(this, ej2ProgressButton);
 
-                    var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, DropDownButton));
+                    var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, ProgressButton));
 
                     _this.element = element;
                     return _this;
                 }
 
-                return ej2DropDownButton;
+                return ej2ProgressButton;
             }(Ej2WidgetBase));
 
-            _export("ej2DropDownButton", ej2DropDownButton = __decorate([customAttribute(constants.ej2AttributePrefix + "drop-down-button"), generateBindables(constants.ej2ElementPrefix + 'DropDownButton', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target'], [], null, null), inject(Element)], ej2DropDownButton));
+            _export("ej2ProgressButton", ej2ProgressButton = __decorate([customAttribute(constants.ej2AttributePrefix + "progress-button"), generateBindables(constants.ej2ElementPrefix + 'ProgressButton', ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings'], [], null, null), inject(Element)], ej2ProgressButton));
 
-            _export("ej2DropDownButton", ej2DropDownButton);
+            _export("ej2ProgressButton", ej2ProgressButton);
         }
     };
 });
+//# sourceMappingURL=../../devbuild/dev/ej2/progressbutton/progressbutton.js.map

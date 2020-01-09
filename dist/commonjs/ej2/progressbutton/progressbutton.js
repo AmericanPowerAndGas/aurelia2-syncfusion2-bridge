@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ej2DropDownButton = undefined;
+exports.ej2ProgressButton = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -32,19 +32,19 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2DropDownButton = function (_Ej2WidgetBase) {
-    _inherits(ej2DropDownButton, _Ej2WidgetBase);
+var ej2ProgressButton = function (_Ej2WidgetBase) {
+    _inherits(ej2ProgressButton, _Ej2WidgetBase);
 
-    function ej2DropDownButton(element) {
-        _classCallCheck(this, ej2DropDownButton);
+    function ej2ProgressButton(element) {
+        _classCallCheck(this, ej2ProgressButton);
 
-        var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Splitbuttons.DropDownButton));
+        var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, _ej2Splitbuttons.ProgressButton));
 
         _this.element = element;
         return _this;
     }
 
-    return ej2DropDownButton;
+    return ej2ProgressButton;
 }(_ej2WidgetBase.Ej2WidgetBase);
-exports.ej2DropDownButton = ej2DropDownButton = __decorate([(0, _common.customAttribute)(_constants.constants.ej2AttributePrefix + "drop-down-button"), (0, _decorators.generateBindables)(_constants.constants.ej2ElementPrefix + 'DropDownButton', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target'], [], null, null), (0, _common.inject)(Element)], ej2DropDownButton);
-exports.ej2DropDownButton = ej2DropDownButton;
+exports.ej2ProgressButton = ej2ProgressButton = __decorate([(0, _common.customAttribute)(_constants.constants.ej2AttributePrefix + "progress-button"), (0, _decorators.generateBindables)(_constants.constants.ej2ElementPrefix + 'ProgressButton', ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings'], [], null, null), (0, _common.inject)(Element)], ej2ProgressButton);
+exports.ej2ProgressButton = ej2ProgressButton;

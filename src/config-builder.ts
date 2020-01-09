@@ -103,7 +103,8 @@ export class EjConfigBuilder {
       .ej2Chart()
       .ej2MaskEdit()
       .ej2Button()
-      .ej2DropDownButton();
+      .ej2DropDownButton()
+      .ej2ProgressButton();
     return this;
   }
   /**
@@ -490,6 +491,10 @@ export class EjConfigBuilder {
   }
   ej2DropDownButton(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/dropdownbutton/dropdownbutton'));
+    return this;
+  }
+  ej2ProgressButton(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/progressbutton/progressbutton'));
     return this;
   }
 }

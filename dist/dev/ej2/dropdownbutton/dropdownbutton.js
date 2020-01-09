@@ -72,7 +72,6 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
 
                     var _this = _possibleConstructorReturn(this, _Ej2WidgetBase.call(this, DropDownButton));
 
-                    _this.isEditor = true;
                     _this.element = element;
                     return _this;
                 }
