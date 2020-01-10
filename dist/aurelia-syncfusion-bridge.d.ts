@@ -126,6 +126,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Table
   } from '@syncfusion/ej2-richtexteditor';
   import {
+    SplitButton
+  } from '@syncfusion/ej2-splitbuttons';
+  import {
     Tab
   } from '@syncfusion/ej2-navigations';
   export class EjConfigBuilder {
@@ -224,6 +227,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Button(): any;
     ej2DropDownButton(): any;
     ej2ProgressButton(): any;
+    ej2SplitButton(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -252,9 +256,6 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejCheckBox
-  };
-  export {
-    ejCircularGauge
   };
   export {
     ejColorPicker
@@ -378,6 +379,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejLinearGauge
+  };
+  export {
+    ejCircularGauge
   };
   export {
     ejListBox
@@ -536,16 +540,16 @@ declare module 'aurelia-syncfusion-bridge' {
     TreeGridColumn
   };
   export {
-    Level
-  };
-  export {
-    ejTreeMap
-  };
-  export {
     ejTreeView
   };
   export {
     ejUploadbox
+  };
+  export {
+    Level
+  };
+  export {
+    ejTreeMap
   };
   export {
     ejWaitingPopup
@@ -597,6 +601,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Rte
+  };
+  export {
+    ej2SplitButton
   };
   export {
     ej2Tab

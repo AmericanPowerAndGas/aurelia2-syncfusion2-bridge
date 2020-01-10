@@ -104,7 +104,8 @@ export class EjConfigBuilder {
       .ej2MaskEdit()
       .ej2Button()
       .ej2DropDownButton()
-      .ej2ProgressButton();
+      .ej2ProgressButton()
+      .ej2SplitButton();
     return this;
   }
   /**
@@ -495,6 +496,10 @@ export class EjConfigBuilder {
   }
   ej2ProgressButton(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/progressbutton/progressbutton'));
+    return this;
+  }
+  ej2SplitButton(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/splitbutton/splitbutton'));
     return this;
   }
 }
