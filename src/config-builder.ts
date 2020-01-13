@@ -105,7 +105,8 @@ export class EjConfigBuilder {
       .ej2Button()
       .ej2DropDownButton()
       .ej2ProgressButton()
-      .ej2SplitButton();
+      .ej2SplitButton()
+      .ej2ChipList();
     return this;
   }
   /**
@@ -500,6 +501,11 @@ export class EjConfigBuilder {
   }
   ej2SplitButton(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/splitbutton/splitbutton'));
+    return this;
+  }
+  ej2ChipList(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/chips/chiplist'));
+    this.resources.push(PLATFORM.moduleName('./ej2/chips/chips'));
     return this;
   }
 }

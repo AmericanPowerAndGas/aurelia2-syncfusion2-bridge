@@ -32,12 +32,12 @@ export class Ej2WidgetBase {
     * @param option Object which contains  Element in which  widget will be created
     */
     createWidget(option) {       
-        this.allOption = this.getWidgetOptions(option.element);       
+        this.allOption = this.getWidgetOptions(option.element);        
         if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
         }
         if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
-            this.allOption.value = this.allOption.value.toString();
+            this.allOption.value = this.allOption.value.toString();        
         this.eWidget = this.widget = new this.component(this.allOption);
         this.widget.appendTo(option.element);
 
@@ -117,10 +117,12 @@ export class Ej2WidgetBase {
         }
         return Object.assign({}, propOptions, eventOption);
     }
-    getChildProperties(options) {       
+    getChildProperties(options) {           
         let PropertyName = this.childPropertyName; 
         if (PropertyName == 'series')
             this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map((x: any) => x.au.controller.viewModel);
+        if (PropertyName == 'chips')
+            this[PropertyName] = Array.from(this.element.querySelectorAll('e-chips > e-chip')).map((x: any) => x.au.controller.viewModel);        
         let childCollection = this[PropertyName];           
         let len = childCollection.length;       
         if (len) {

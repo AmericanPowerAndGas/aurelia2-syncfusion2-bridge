@@ -64,19 +64,22 @@ declare module 'aurelia-syncfusion-bridge' {
     BubbleSeries
   } from '@syncfusion/ej2-charts';
   import {
+    ChipList
+  } from '@syncfusion/ej2-buttons';
+  import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
     DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
+    DropDownButton
+  } from '@syncfusion/ej2-splitbuttons';
+  import {
     Diagram,
     DataBinding,
     HierarchicalTree
   } from '@syncfusion/ej2-diagrams';
-  import {
-    DropDownButton
-  } from '@syncfusion/ej2-splitbuttons';
   import {
     Grid,
     Group,
@@ -117,9 +120,6 @@ declare module 'aurelia-syncfusion-bridge' {
     Annotation
   } from '@syncfusion/ej2-pdfviewer';
   import {
-    ProgressButton
-  } from '@syncfusion/ej2-splitbuttons';
-  import {
     RichTextEditor,
     Toolbar as rteToolbar,
     Link,
@@ -131,6 +131,9 @@ declare module 'aurelia-syncfusion-bridge' {
   } from '@syncfusion/ej2-richtexteditor';
   import {
     SplitButton
+  } from '@syncfusion/ej2-splitbuttons';
+  import {
+    ProgressButton
   } from '@syncfusion/ej2-splitbuttons';
   import {
     Tab
@@ -232,6 +235,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2DropDownButton(): any;
     ej2ProgressButton(): any;
     ej2SplitButton(): any;
+    ej2ChipList(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -260,6 +264,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejCheckBox
+  };
+  export {
+    ejCircularGauge
   };
   export {
     ejColorPicker
@@ -385,9 +392,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejLinearGauge
   };
   export {
-    ejCircularGauge
-  };
-  export {
     ejListBox
   };
   export {
@@ -415,10 +419,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejOverview
   };
   export {
-    ejPager
+    ejPdfViewer
   };
   export {
-    ejPdfViewer
+    ejPager
   };
   export {
     ejPercentageTextbox
@@ -544,16 +548,16 @@ declare module 'aurelia-syncfusion-bridge' {
     TreeGridColumn
   };
   export {
-    ejTreeView
-  };
-  export {
-    ejUploadbox
-  };
-  export {
     Level
   };
   export {
     ejTreeMap
+  };
+  export {
+    ejTreeView
+  };
+  export {
+    ejUploadbox
   };
   export {
     ejWaitingPopup
@@ -571,16 +575,22 @@ declare module 'aurelia-syncfusion-bridge' {
     SeriesVM
   };
   export {
+    ej2ChipList
+  };
+  export {
+    Chips
+  };
+  export {
     Ej2DatePicker
   };
   export {
     ej2DateTimePicker
   };
   export {
-    ej2Diagram
+    ej2DropDownButton
   };
   export {
-    ej2DropDownButton
+    ej2Diagram
   };
   export {
     Ej2Column
@@ -601,13 +611,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2PdfViewer
   };
   export {
-    ej2ProgressButton
-  };
-  export {
     ej2Rte
   };
   export {
     ej2SplitButton
+  };
+  export {
+    ej2ProgressButton
   };
   export {
     ej2Tab

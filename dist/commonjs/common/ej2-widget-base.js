@@ -116,6 +116,9 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
         if (PropertyName == 'series') this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map(function (x) {
             return x.au.controller.viewModel;
         });
+        if (PropertyName == 'chips') this[PropertyName] = Array.from(this.element.querySelectorAll('e-chips > e-chip')).map(function (x) {
+            return x.au.controller.viewModel;
+        });
         var childCollection = this[PropertyName];
         var len = childCollection.length;
         if (len) {
