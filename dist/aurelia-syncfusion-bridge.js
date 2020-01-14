@@ -104,7 +104,8 @@ export class EjConfigBuilder {
             .ej2DropDownButton()
             .ej2ProgressButton()
             .ej2SplitButton()
-            .ej2ChipList();
+            .ej2ChipList()
+            .ej2AutoComplete();
         return this;
     }
     withoutGlobalResources() {
@@ -500,6 +501,10 @@ export class EjConfigBuilder {
     ej2ChipList() {
         this.resources.push(PLATFORM.moduleName('./ej2/chips/chiplist'));
         this.resources.push(PLATFORM.moduleName('./ej2/chips/chips'));
+        return this;
+    }
+    ej2AutoComplete() {
+        this.resources.push(PLATFORM.moduleName('./ej2/autocomplete/autocomplete'));
         return this;
     }
 }
@@ -909,8 +914,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 export class Ej2WidgetBase {
-    constructor(component) {
-        this.component = component;
+    constructor(componentBaseRef) {
+        this.componentBaseRef = componentBaseRef;
     }
     createWidget(option) {
         this.allOption = this.getWidgetOptions(option.element);
@@ -919,14 +924,14 @@ export class Ej2WidgetBase {
         }
         if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
             this.allOption.value = this.allOption.value.toString();
-        this.eWidget = this.widget = new this.component(this.allOption);
+        this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
         this.widget.appendTo(option.element);
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
         if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
             this.widget.change = (arg) => {
-                if (arg && arg.element && 'eValue' in this)
+                if (this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
                 else if (arg && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.value;
@@ -2039,26 +2044,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejPdfViewer = class ejPdfViewer extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejPdfViewer = __decorate([
-    customElement(`${constants.elementPrefix}pdf-viewer`),
-    inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'serverActionSettings', 'serviceUrl', 'documentPath', 'enableTextMarkupAnnotations', 'enableHighlightAnnotation', 'enableUnderlineAnnotation', 'enableStrikethroughAnnotation', 'enableSignature', 'strikethroughSettings', 'underlineSettings', 'highlightSettings', 'signatureSettings', 'textSelectionContextMenu', 'annotationContextMenu', 'annotationType', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService', 'interactionMode', 'bufferingMode', 'hyperlinkOpenState', 'enableHyperlink', 'enableTextSelection', 'isResponsive', 'isDocumentEdited', 'allowClientBuffering', 'fileName']),
-    inject(Element)
-], ejPdfViewer);
-export { ejPdfViewer };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejPager = class ejPager extends WidgetBase {
     constructor(element) {
         super();
@@ -2072,6 +2057,26 @@ ejPager = __decorate([
     inject(Element)
 ], ejPager);
 export { ejPager };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejPdfViewer = class ejPdfViewer extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejPdfViewer = __decorate([
+    customElement(`${constants.elementPrefix}pdf-viewer`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'serverActionSettings', 'serviceUrl', 'documentPath', 'enableTextMarkupAnnotations', 'enableHighlightAnnotation', 'enableUnderlineAnnotation', 'enableStrikethroughAnnotation', 'enableSignature', 'strikethroughSettings', 'underlineSettings', 'highlightSettings', 'signatureSettings', 'textSelectionContextMenu', 'annotationContextMenu', 'annotationType', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService', 'interactionMode', 'bufferingMode', 'hyperlinkOpenState', 'enableHyperlink', 'enableTextSelection', 'isResponsive', 'isDocumentEdited', 'allowClientBuffering', 'fileName']),
+    inject(Element)
+], ejPdfViewer);
+export { ejPdfViewer };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3042,6 +3047,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { AutoComplete } from '@syncfusion/ej2-dropdowns';
+let Ej2AutoComplete = class Ej2AutoComplete extends Ej2WidgetBase {
+    constructor(element) {
+        super(AutoComplete);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+Ej2AutoComplete = __decorate([
+    customElement(`${constants.ej2AttributePrefix}auto-complete`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables(constants.ej2ElementPrefix + 'AutoComplete', ['actionFailureTemplate', 'allowCustom', 'allowFiltering', 'autofill', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'highlight', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'index', 'itemTemplate', 'locale', 'minLength', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'showPopupButton', 'sortOrder', 'suggestionCount', 'text', 'value', 'valueTemplate', 'width', 'zIndex'], ['value'], null, null),
+    inject(Element)
+], Ej2AutoComplete);
+export { Ej2AutoComplete };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 import { Button } from '@syncfusion/ej2-buttons';
 let ej2Button = class ej2Button extends Ej2WidgetBase {
     constructor(element) {
@@ -3189,26 +3216,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
-let ej2DropDownButton = class ej2DropDownButton extends Ej2WidgetBase {
-    constructor(element) {
-        super(DropDownButton);
-        this.element = element;
-    }
-};
-ej2DropDownButton = __decorate([
-    customAttribute(`${constants.ej2AttributePrefix}drop-down-button`),
-    generateBindables(constants.ej2ElementPrefix + 'DropDownButton', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target'], [], null, null),
-    inject(Element)
-], ej2DropDownButton);
-export { ej2DropDownButton };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 import { Diagram, DataBinding, HierarchicalTree } from '@syncfusion/ej2-diagrams';
 Diagram.Inject(DataBinding, HierarchicalTree);
 let ej2Diagram = class ej2Diagram extends Ej2WidgetBase {
@@ -3224,6 +3231,26 @@ ej2Diagram = __decorate([
     inject(Element)
 ], ej2Diagram);
 export { ej2Diagram };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
+let ej2DropDownButton = class ej2DropDownButton extends Ej2WidgetBase {
+    constructor(element) {
+        super(DropDownButton);
+        this.element = element;
+    }
+};
+ej2DropDownButton = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}drop-down-button`),
+    generateBindables(constants.ej2ElementPrefix + 'DropDownButton', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target'], [], null, null),
+    inject(Element)
+], ej2DropDownButton);
+export { ej2DropDownButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3372,6 +3399,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { ProgressButton } from '@syncfusion/ej2-splitbuttons';
+let ej2ProgressButton = class ej2ProgressButton extends Ej2WidgetBase {
+    constructor(element) {
+        super(ProgressButton);
+        this.element = element;
+    }
+};
+ej2ProgressButton = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}progress-button`),
+    generateBindables(constants.ej2ElementPrefix + 'ProgressButton', ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings'], [], null, null),
+    inject(Element)
+], ej2ProgressButton);
+export { ej2ProgressButton };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 import { RichTextEditor, Toolbar as rteToolbar, Link, Image, Count, HtmlEditor, QuickToolbar, Table } from '@syncfusion/ej2-richtexteditor';
 RichTextEditor.Inject(rteToolbar, Link, Image, Count, HtmlEditor, QuickToolbar, Table);
 let ej2Rte = class ej2Rte extends Ej2WidgetBase {
@@ -3407,26 +3454,6 @@ ej2SplitButton = __decorate([
     inject(Element)
 ], ej2SplitButton);
 export { ej2SplitButton };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-import { ProgressButton } from '@syncfusion/ej2-splitbuttons';
-let ej2ProgressButton = class ej2ProgressButton extends Ej2WidgetBase {
-    constructor(element) {
-        super(ProgressButton);
-        this.element = element;
-    }
-};
-ej2ProgressButton = __decorate([
-    customAttribute(`${constants.ej2AttributePrefix}progress-button`),
-    generateBindables(constants.ej2ElementPrefix + 'ProgressButton', ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings'], [], null, null),
-    inject(Element)
-], ej2ProgressButton);
-export { ej2ProgressButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

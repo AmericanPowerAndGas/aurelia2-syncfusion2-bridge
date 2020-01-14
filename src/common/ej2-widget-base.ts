@@ -20,12 +20,12 @@ export class Ej2WidgetBase {
     bindingInstance: any;
     eValue: any;
     parentCtx: any;
-    component: any;
+    componentBaseRef: any;
     controlName: any;
     templateProcessor: any;
     defaults: any;
-    constructor(component) {
-        this.component = component;
+    constructor(componentBaseRef) {
+        this.componentBaseRef = componentBaseRef;
     }
     /**
     * To Create an widget
@@ -38,7 +38,7 @@ export class Ej2WidgetBase {
         }
         if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
             this.allOption.value = this.allOption.value.toString();        
-        this.eWidget = this.widget = new this.component(this.allOption);
+        this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
         this.widget.appendTo(option.element);
 
         if (this.templateProcessor) {
@@ -48,7 +48,7 @@ export class Ej2WidgetBase {
         if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
 
             this.widget.change = (arg) => {               
-                if (arg && arg.element && 'eValue' in this)
+                if (this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
                 else if (arg && 'eValue' in this)                    
                     this[this.util.getBindablePropertyName('value')] = arg.value;                   

@@ -37,6 +37,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Accordion
   } from '@syncfusion/ej2-navigations';
   import {
+    AutoComplete
+  } from '@syncfusion/ej2-dropdowns';
+  import {
     Button
   } from '@syncfusion/ej2-buttons';
   import {
@@ -73,13 +76,13 @@ declare module 'aurelia-syncfusion-bridge' {
     DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
-    DropDownButton
-  } from '@syncfusion/ej2-splitbuttons';
-  import {
     Diagram,
     DataBinding,
     HierarchicalTree
   } from '@syncfusion/ej2-diagrams';
+  import {
+    DropDownButton
+  } from '@syncfusion/ej2-splitbuttons';
   import {
     Grid,
     Group,
@@ -120,6 +123,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Annotation
   } from '@syncfusion/ej2-pdfviewer';
   import {
+    ProgressButton
+  } from '@syncfusion/ej2-splitbuttons';
+  import {
     RichTextEditor,
     Toolbar as rteToolbar,
     Link,
@@ -131,9 +137,6 @@ declare module 'aurelia-syncfusion-bridge' {
   } from '@syncfusion/ej2-richtexteditor';
   import {
     SplitButton
-  } from '@syncfusion/ej2-splitbuttons';
-  import {
-    ProgressButton
   } from '@syncfusion/ej2-splitbuttons';
   import {
     Tab
@@ -236,6 +239,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ProgressButton(): any;
     ej2SplitButton(): any;
     ej2ChipList(): any;
+    ej2AutoComplete(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -293,7 +297,7 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2Template
   };
   export class Ej2WidgetBase {
-    constructor(component?: any);
+    constructor(componentBaseRef?: any);
     createWidget(option?: any): any;
     bind(ctx?: any, overrideCtx?: any): any;
     createTwoWays(): any;
@@ -419,10 +423,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejOverview
   };
   export {
-    ejPdfViewer
+    ejPager
   };
   export {
-    ejPager
+    ejPdfViewer
   };
   export {
     ejPercentageTextbox
@@ -566,6 +570,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2Accordion
   };
   export {
+    Ej2AutoComplete
+  };
+  export {
     ej2Button
   };
   export {
@@ -587,10 +594,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2DateTimePicker
   };
   export {
-    ej2DropDownButton
+    ej2Diagram
   };
   export {
-    ej2Diagram
+    ej2DropDownButton
   };
   export {
     Ej2Column
@@ -611,13 +618,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2PdfViewer
   };
   export {
+    ej2ProgressButton
+  };
+  export {
     ej2Rte
   };
   export {
     ej2SplitButton
-  };
-  export {
-    ej2ProgressButton
   };
   export {
     ej2Tab

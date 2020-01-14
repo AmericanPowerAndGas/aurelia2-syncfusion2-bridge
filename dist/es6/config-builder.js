@@ -98,7 +98,8 @@ export class EjConfigBuilder {
             .ej2DropDownButton()
             .ej2ProgressButton()
             .ej2SplitButton()
-            .ej2ChipList();
+            .ej2ChipList()
+            .ej2AutoComplete();
         return this;
     }
     withoutGlobalResources() {
@@ -494,6 +495,10 @@ export class EjConfigBuilder {
     ej2ChipList() {
         this.resources.push(PLATFORM.moduleName('./ej2/chips/chiplist'));
         this.resources.push(PLATFORM.moduleName('./ej2/chips/chips'));
+        return this;
+    }
+    ej2AutoComplete() {
+        this.resources.push(PLATFORM.moduleName('./ej2/autocomplete/autocomplete'));
         return this;
     }
 }

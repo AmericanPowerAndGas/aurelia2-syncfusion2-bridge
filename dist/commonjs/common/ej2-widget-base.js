@@ -27,10 +27,10 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
-    function Ej2WidgetBase(component) {
+    function Ej2WidgetBase(componentBaseRef) {
         _classCallCheck(this, Ej2WidgetBase);
 
-        this.component = component;
+        this.componentBaseRef = componentBaseRef;
     }
 
     Ej2WidgetBase.prototype.createWidget = function createWidget(option) {
@@ -41,14 +41,14 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
             this.createTwoWays();
         }
         if (this.controlName == _constants.constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value) this.allOption.value = this.allOption.value.toString();
-        this.eWidget = this.widget = new this.component(this.allOption);
+        this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
         this.widget.appendTo(option.element);
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
         if (this.isEditor || this.controlName == _constants.constants.ej2ElementPrefix + 'RTE') {
             this.widget.change = function (arg) {
-                if (arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
+                if (_this.controlName == _constants.constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
             };
         }
     };
