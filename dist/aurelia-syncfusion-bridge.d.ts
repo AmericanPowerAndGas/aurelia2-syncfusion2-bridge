@@ -66,6 +66,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ChipList
   } from '@syncfusion/ej2-buttons';
   import {
+    ComboBox
+  } from '@syncfusion/ej2-dropdowns';
+  import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
@@ -236,6 +239,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2SplitButton(): any;
     ej2ChipList(): any;
     ej2AutoComplete(): any;
+    ej2ComboBox(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -582,6 +586,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Chips
+  };
+  export {
+    Ej2ComboBox
   };
   export {
     Ej2DatePicker
