@@ -39,6 +39,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Button
   } from '@syncfusion/ej2-buttons';
   import {
+    ChipList
+  } from '@syncfusion/ej2-buttons';
+  import {
     Chart,
     Category,
     Legend,
@@ -63,9 +66,6 @@ declare module 'aurelia-syncfusion-bridge' {
     BubbleSeries
   } from '@syncfusion/ej2-charts';
   import {
-    ChipList
-  } from '@syncfusion/ej2-buttons';
-  import {
     ComboBox
   } from '@syncfusion/ej2-dropdowns';
   import {
@@ -82,6 +82,9 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     DropDownButton
   } from '@syncfusion/ej2-splitbuttons';
+  import {
+    DropDownList
+  } from '@syncfusion/ej2-dropdowns';
   import {
     Grid,
     Group,
@@ -240,6 +243,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ChipList(): any;
     ej2AutoComplete(): any;
     ej2ComboBox(): any;
+    ej2DropDownList(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -252,13 +256,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejBarcode
   };
   export {
+    ejButton
+  };
+  export {
     ejBulletGraph
   };
   export {
     QualitativeRange
-  };
-  export {
-    ejButton
   };
   export {
     ejChart
@@ -354,10 +358,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDateTimePicker
   };
   export {
-    ejDiagram
+    ejDialog
   };
   export {
-    ejDialog
+    ejDiagram
   };
   export {
     ejDigitalGauge
@@ -417,10 +421,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejNavigationDrawer
   };
   export {
-    ejNumericTextbox
+    ejOverview
   };
   export {
-    ejOverview
+    ejNumericTextbox
   };
   export {
     ejPager
@@ -432,10 +436,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPercentageTextbox
   };
   export {
-    ejPivotChart
+    ejPivotGauge
   };
   export {
-    ejPivotGauge
+    ejPivotChart
   };
   export {
     ejPivotGrid
@@ -459,13 +463,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRadialSlider
   };
   export {
-    ejRadioButton
-  };
-  export {
     ejRangeNavigator
   };
   export {
     RangeSeries
+  };
+  export {
+    ejRadioButton
   };
   export {
     ejRating
@@ -504,10 +508,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSpellCheck
   };
   export {
-    ejSplitButton
+    ejSplitter
   };
   export {
-    ejSplitter
+    ejSplitButton
   };
   export {
     Sheet
@@ -546,12 +550,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTooltip
   };
   export {
-    ejTreeGrid
-  };
-  export {
-    TreeGridColumn
-  };
-  export {
     Level
   };
   export {
@@ -559,6 +557,12 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejTreeView
+  };
+  export {
+    ejTreeGrid
+  };
+  export {
+    TreeGridColumn
   };
   export {
     ejUploadbox
@@ -576,16 +580,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Button
   };
   export {
-    ej2Chart
-  };
-  export {
-    SeriesVM
-  };
-  export {
     ej2ChipList
   };
   export {
     Chips
+  };
+  export {
+    ej2Chart
+  };
+  export {
+    SeriesVM
   };
   export {
     Ej2ComboBox
@@ -601,6 +605,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2DropDownButton
+  };
+  export {
+    Ej2DropDownList
   };
   export {
     Ej2Column

@@ -108,7 +108,8 @@ export class EjConfigBuilder {
       .ej2SplitButton()
       .ej2ChipList()
       .ej2AutoComplete()
-      .ej2ComboBox();
+      .ej2ComboBox()
+      .ej2DropDownList();
     return this;
   }
   /**
@@ -516,6 +517,10 @@ export class EjConfigBuilder {
   }
   ej2ComboBox(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/combobox/combobox'));
+    return this;
+  }
+  ej2DropDownList(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/dropdownlist/dropdownlist'));
     return this;
   }
 }
