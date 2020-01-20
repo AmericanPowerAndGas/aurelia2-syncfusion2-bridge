@@ -40,12 +40,6 @@ declare module 'aurelia-syncfusion-bridge' {
     AutoComplete
   } from '@syncfusion/ej2-dropdowns';
   import {
-    Button
-  } from '@syncfusion/ej2-buttons';
-  import {
-    ChipList
-  } from '@syncfusion/ej2-buttons';
-  import {
     Chart,
     Category,
     Legend,
@@ -70,13 +64,19 @@ declare module 'aurelia-syncfusion-bridge' {
     BubbleSeries
   } from '@syncfusion/ej2-charts';
   import {
+    Button
+  } from '@syncfusion/ej2-buttons';
+  import {
+    ChipList
+  } from '@syncfusion/ej2-buttons';
+  import {
     ComboBox
   } from '@syncfusion/ej2-dropdowns';
   import {
-    DatePicker
+    DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
-    DateTimePicker
+    DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
     Diagram,
@@ -89,6 +89,9 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     DropDownList
   } from '@syncfusion/ej2-dropdowns';
+  import {
+    LinearGauge
+  } from '@syncfusion/ej2-lineargauge';
   import {
     Grid,
     Group,
@@ -107,8 +110,8 @@ declare module 'aurelia-syncfusion-bridge' {
     Edit
   } from '@syncfusion/ej2-grids';
   import {
-    LinearGauge
-  } from '@syncfusion/ej2-lineargauge';
+    MultiSelect
+  } from '@syncfusion/ej2-dropdowns';
   import {
     MaskedTextBox
   } from '@syncfusion/ej2-inputs';
@@ -248,6 +251,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2AutoComplete(): any;
     ej2ComboBox(): any;
     ej2DropDownList(): any;
+    ej2MultiSelect(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -260,13 +264,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejBarcode
   };
   export {
-    ejButton
-  };
-  export {
     ejBulletGraph
   };
   export {
     QualitativeRange
+  };
+  export {
+    ejButton
   };
   export {
     ejChart
@@ -362,10 +366,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDateTimePicker
   };
   export {
-    ejDialog
+    ejDiagram
   };
   export {
-    ejDiagram
+    ejDialog
   };
   export {
     ejDigitalGauge
@@ -425,10 +429,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejNavigationDrawer
   };
   export {
-    ejOverview
+    ejNumericTextbox
   };
   export {
-    ejNumericTextbox
+    ejOverview
   };
   export {
     ejPager
@@ -440,10 +444,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPercentageTextbox
   };
   export {
-    ejPivotGauge
+    ejPivotChart
   };
   export {
-    ejPivotChart
+    ejPivotGauge
   };
   export {
     ejPivotGrid
@@ -467,13 +471,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRadialSlider
   };
   export {
+    ejRadioButton
+  };
+  export {
     ejRangeNavigator
   };
   export {
     RangeSeries
-  };
-  export {
-    ejRadioButton
   };
   export {
     ejRating
@@ -512,10 +516,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSpellCheck
   };
   export {
-    ejSplitter
+    ejSplitButton
   };
   export {
-    ejSplitButton
+    ejSplitter
   };
   export {
     Sheet
@@ -554,6 +558,12 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTooltip
   };
   export {
+    ejTreeGrid
+  };
+  export {
+    TreeGridColumn
+  };
+  export {
     Level
   };
   export {
@@ -561,12 +571,6 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejTreeView
-  };
-  export {
-    ejTreeGrid
-  };
-  export {
-    TreeGridColumn
   };
   export {
     ejUploadbox
@@ -581,6 +585,12 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2AutoComplete
   };
   export {
+    ej2Chart
+  };
+  export {
+    SeriesVM
+  };
+  export {
     ej2Button
   };
   export {
@@ -590,19 +600,13 @@ declare module 'aurelia-syncfusion-bridge' {
     Chips
   };
   export {
-    ej2Chart
-  };
-  export {
-    SeriesVM
-  };
-  export {
     Ej2ComboBox
   };
   export {
-    Ej2DatePicker
+    ej2DateTimePicker
   };
   export {
-    ej2DateTimePicker
+    Ej2DatePicker
   };
   export {
     ej2Diagram
@@ -614,13 +618,16 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2DropDownList
   };
   export {
+    ej2LinearGauge
+  };
+  export {
     Ej2Column
   };
   export {
     Ej2Grid
   };
   export {
-    ej2LinearGauge
+    Ej2MultiSelect
   };
   export {
     ej2MaskEdit

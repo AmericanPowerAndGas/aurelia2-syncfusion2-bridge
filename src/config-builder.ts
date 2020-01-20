@@ -109,7 +109,8 @@ export class EjConfigBuilder {
       .ej2ChipList()
       .ej2AutoComplete()
       .ej2ComboBox()
-      .ej2DropDownList();
+      .ej2DropDownList()
+      .ej2MultiSelect();
     return this;
   }
   /**
@@ -521,6 +522,10 @@ export class EjConfigBuilder {
   }
   ej2DropDownList(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/dropdownlist/dropdownlist'));
+    return this;
+  }
+  ej2MultiSelect(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/multiselect/multiselect'));
     return this;
   }
 }
