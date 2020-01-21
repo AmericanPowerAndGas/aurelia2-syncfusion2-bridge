@@ -102,7 +102,8 @@ export class EjConfigBuilder {
             .ej2AutoComplete()
             .ej2ComboBox()
             .ej2DropDownList()
-            .ej2MultiSelect();
+            .ej2MultiSelect()
+            .ej2ListBox();
         return this;
     }
     withoutGlobalResources() {
@@ -514,6 +515,10 @@ export class EjConfigBuilder {
     }
     ej2MultiSelect() {
         this.resources.push(PLATFORM.moduleName('./ej2/multiselect/multiselect'));
+        return this;
+    }
+    ej2ListBox() {
+        this.resources.push(PLATFORM.moduleName('./ej2/listbox/listbox'));
         return this;
     }
 }

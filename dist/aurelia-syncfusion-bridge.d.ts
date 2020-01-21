@@ -36,6 +36,9 @@ declare module 'aurelia-syncfusion-bridge' {
     AutoComplete
   } from '@syncfusion/ej2-dropdowns';
   import {
+    Button
+  } from '@syncfusion/ej2-buttons';
+  import {
     Chart,
     Category,
     Legend,
@@ -60,19 +63,16 @@ declare module 'aurelia-syncfusion-bridge' {
     BubbleSeries
   } from '@syncfusion/ej2-charts';
   import {
-    Button
-  } from '@syncfusion/ej2-buttons';
-  import {
     ChipList
   } from '@syncfusion/ej2-buttons';
   import {
     ComboBox
   } from '@syncfusion/ej2-dropdowns';
   import {
-    DateTimePicker
+    DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
-    DatePicker
+    DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
     Diagram,
@@ -85,9 +85,6 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     DropDownList
   } from '@syncfusion/ej2-dropdowns';
-  import {
-    LinearGauge
-  } from '@syncfusion/ej2-lineargauge';
   import {
     Grid,
     Group,
@@ -106,11 +103,18 @@ declare module 'aurelia-syncfusion-bridge' {
     Edit
   } from '@syncfusion/ej2-grids';
   import {
-    MultiSelect
+    LinearGauge
+  } from '@syncfusion/ej2-lineargauge';
+  import {
+    ListBox,
+    CheckBoxSelection
   } from '@syncfusion/ej2-dropdowns';
   import {
     MaskedTextBox
   } from '@syncfusion/ej2-inputs';
+  import {
+    MultiSelect
+  } from '@syncfusion/ej2-dropdowns';
   import {
     Overview
   } from '@syncfusion/ej2-diagrams';
@@ -248,6 +252,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ComboBox(): any;
     ej2DropDownList(): any;
     ej2MultiSelect(): any;
+    ej2ListBox(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -581,13 +586,13 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2AutoComplete
   };
   export {
+    ej2Button
+  };
+  export {
     ej2Chart
   };
   export {
     SeriesVM
-  };
-  export {
-    ej2Button
   };
   export {
     ej2ChipList
@@ -599,10 +604,10 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2ComboBox
   };
   export {
-    ej2DateTimePicker
+    Ej2DatePicker
   };
   export {
-    Ej2DatePicker
+    ej2DateTimePicker
   };
   export {
     ej2Diagram
@@ -614,19 +619,22 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2DropDownList
   };
   export {
-    ej2LinearGauge
-  };
-  export {
     Ej2Column
   };
   export {
     Ej2Grid
   };
   export {
-    Ej2MultiSelect
+    ej2LinearGauge
+  };
+  export {
+    Ej2ListBox
   };
   export {
     ej2MaskEdit
+  };
+  export {
+    Ej2MultiSelect
   };
   export {
     ej2Overview
