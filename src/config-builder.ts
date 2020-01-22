@@ -111,7 +111,8 @@ export class EjConfigBuilder {
       .ej2ComboBox()
       .ej2DropDownList()
       .ej2MultiSelect()
-      .ej2ListBox();
+      .ej2ListBox()
+      .ej2TextBox();
     return this;
   }
   /**
@@ -531,6 +532,10 @@ export class EjConfigBuilder {
   }
   ej2ListBox(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/listbox/listbox'));
+    return this;
+  }
+  ej2TextBox(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/textbox/textbox'));
     return this;
   }
 }

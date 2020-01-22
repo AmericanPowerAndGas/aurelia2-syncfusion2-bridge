@@ -154,6 +154,9 @@ declare module 'aurelia-syncfusion-bridge' {
   import {
     Tab
   } from '@syncfusion/ej2-navigations';
+  import {
+    TextBox
+  } from '@syncfusion/ej2-inputs';
   export class EjConfigBuilder {
     constructor();
     useAll(): any;
@@ -257,6 +260,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2DropDownList(): any;
     ej2MultiSelect(): any;
     ej2ListBox(): any;
+    ej2TextBox(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -657,5 +661,8 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Tab
+  };
+  export {
+    Ej2TextBox
   };
 }
