@@ -120,6 +120,9 @@ declare module 'aurelia-syncfusion-bridge' {
     MultiSelect
   } from '@syncfusion/ej2-dropdowns';
   import {
+    NumericTextBox
+  } from '@syncfusion/ej2-inputs';
+  import {
     Overview
   } from '@syncfusion/ej2-diagrams';
   import {
@@ -261,6 +264,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2MultiSelect(): any;
     ej2ListBox(): any;
     ej2TextBox(): any;
+    ej2NumericTextBox(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -270,13 +274,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejAutocomplete
   };
   export {
-    ejBarcode
-  };
-  export {
     ejBulletGraph
   };
   export {
     QualitativeRange
+  };
+  export {
+    ejBarcode
   };
   export {
     ejButton
@@ -291,10 +295,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejCheckBox
   };
   export {
-    ejCircularGauge
+    ejColorPicker
   };
   export {
-    ejColorPicker
+    ejCircularGauge
   };
   export {
     ejComboBox
@@ -414,10 +418,10 @@ declare module 'aurelia-syncfusion-bridge' {
     KanbanColumn
   };
   export {
-    ejLinearGauge
+    ejListBox
   };
   export {
-    ejListBox
+    ejLinearGauge
   };
   export {
     ejListView
@@ -537,12 +541,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSpreadsheet
   };
   export {
-    ejSunburstChart
-  };
-  export {
-    SunburstLevels
-  };
-  export {
     ejSymbolPalette
   };
   export {
@@ -586,6 +584,12 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejWaitingPopup
+  };
+  export {
+    ejSunburstChart
+  };
+  export {
+    SunburstLevels
   };
   export {
     Ej2Accordion
@@ -643,6 +647,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2MultiSelect
+  };
+  export {
+    Ej2NumericTextBox
   };
   export {
     ej2Overview

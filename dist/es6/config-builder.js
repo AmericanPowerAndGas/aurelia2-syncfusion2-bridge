@@ -104,7 +104,8 @@ export class EjConfigBuilder {
             .ej2DropDownList()
             .ej2MultiSelect()
             .ej2ListBox()
-            .ej2TextBox();
+            .ej2TextBox()
+            .ej2NumericTextBox();
         return this;
     }
     withoutGlobalResources() {
@@ -524,6 +525,10 @@ export class EjConfigBuilder {
     }
     ej2TextBox() {
         this.resources.push(PLATFORM.moduleName('./ej2/textbox/textbox'));
+        return this;
+    }
+    ej2NumericTextBox() {
+        this.resources.push(PLATFORM.moduleName('./ej2/numerictextbox/numerictextbox'));
         return this;
     }
 }
