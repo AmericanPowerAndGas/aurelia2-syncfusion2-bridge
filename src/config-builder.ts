@@ -113,7 +113,8 @@ export class EjConfigBuilder {
       .ej2MultiSelect()
       .ej2ListBox()
       .ej2TextBox()
-      .ej2NumericTextBox();
+      .ej2NumericTextBox()
+      .ej2RadioButton();
     return this;
   }
   /**
@@ -541,6 +542,10 @@ export class EjConfigBuilder {
   }
   ej2NumericTextBox(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/numerictextbox/numerictextbox'));
+    return this;
+  }
+  ej2RadioButton(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/radiobutton/radiobutton'));
     return this;
   }
 }

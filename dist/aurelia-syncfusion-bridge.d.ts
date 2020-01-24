@@ -138,6 +138,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ProgressButton
   } from '@syncfusion/ej2-splitbuttons';
   import {
+    RadioButton
+  } from '@syncfusion/ej2-buttons';
+  import {
     RichTextEditor,
     Toolbar as rteToolbar,
     Link,
@@ -261,6 +264,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ListBox(): any;
     ej2TextBox(): any;
     ej2NumericTextBox(): any;
+    ej2RadioButton(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -270,13 +274,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejAutocomplete
   };
   export {
+    ejBarcode
+  };
+  export {
     ejBulletGraph
   };
   export {
     QualitativeRange
-  };
-  export {
-    ejBarcode
   };
   export {
     ejButton
@@ -291,10 +295,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejCheckBox
   };
   export {
-    ejColorPicker
+    ejCircularGauge
   };
   export {
-    ejCircularGauge
+    ejColorPicker
   };
   export {
     ejComboBox
@@ -414,10 +418,10 @@ declare module 'aurelia-syncfusion-bridge' {
     KanbanColumn
   };
   export {
-    ejListBox
+    ejLinearGauge
   };
   export {
-    ejLinearGauge
+    ejListBox
   };
   export {
     ejListView
@@ -537,6 +541,12 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSpreadsheet
   };
   export {
+    ejSunburstChart
+  };
+  export {
+    SunburstLevels
+  };
+  export {
     ejSymbolPalette
   };
   export {
@@ -580,12 +590,6 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejWaitingPopup
-  };
-  export {
-    ejSunburstChart
-  };
-  export {
-    SunburstLevels
   };
   export {
     Ej2Accordion
@@ -655,6 +659,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2ProgressButton
+  };
+  export {
+    Ej2RadioButton
   };
   export {
     ej2Rte
