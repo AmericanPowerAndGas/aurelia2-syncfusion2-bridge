@@ -1,7 +1,7 @@
 'use strict';
 
 exports.__esModule = true;
-exports.Ej2TextBox = exports.ej2Tab = exports.ej2SplitButton = exports.ej2Rte = exports.Ej2RadioButton = exports.ej2ProgressButton = exports.ej2PdfViewer = exports.ej2Overview = exports.Ej2NumericTextBox = exports.Ej2MultiSelect = exports.ej2MaskEdit = exports.Ej2ListBox = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.Ej2DropDownList = exports.ej2DropDownButton = exports.ej2Diagram = exports.ej2DateTimePicker = exports.Ej2DatePicker = exports.Ej2ComboBox = exports.Chips = exports.ej2ChipList = exports.SeriesVM = exports.ej2Chart = exports.ej2Button = exports.Ej2AutoComplete = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
+exports.Ej2TextBox = exports.ej2Tab = exports.ej2SplitButton = exports.ej2Rte = exports.Ej2RadioButton = exports.ej2ProgressButton = exports.ej2PdfViewer = exports.ej2Overview = exports.Ej2NumericTextBox = exports.Ej2MultiSelect = exports.ej2MaskEdit = exports.Ej2ListBox = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.Ej2DropDownList = exports.ej2DropDownButton = exports.ej2Diagram = exports.ej2DateTimePicker = exports.Ej2DatePicker = exports.Ej2ComboBox = exports.Chips = exports.ej2ChipList = exports.Ej2CheckBox = exports.SeriesVM = exports.ej2Chart = exports.ej2Button = exports.Ej2AutoComplete = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
 exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -63,7 +63,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     }
 
     EjConfigBuilder.prototype.useAll = function useAll() {
-        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge().ej2Chart().ej2MaskEdit().ej2Button().ej2DropDownButton().ej2ProgressButton().ej2SplitButton().ej2ChipList().ej2AutoComplete().ej2ComboBox().ej2DropDownList().ej2MultiSelect().ej2ListBox().ej2TextBox().ej2NumericTextBox().ej2RadioButton();
+        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge().ej2Chart().ej2MaskEdit().ej2Button().ej2DropDownButton().ej2ProgressButton().ej2SplitButton().ej2ChipList().ej2AutoComplete().ej2ComboBox().ej2DropDownList().ej2MultiSelect().ej2ListBox().ej2TextBox().ej2NumericTextBox().ej2RadioButton().ej2CheckBox();
         return this;
     };
 
@@ -594,6 +594,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
 
     EjConfigBuilder.prototype.ej2RadioButton = function ej2RadioButton() {
         this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/radiobutton/radiobutton'));
+        return this;
+    };
+
+    EjConfigBuilder.prototype.ej2CheckBox = function ej2CheckBox() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/checkbox/checkbox'));
         return this;
     };
 
@@ -3830,19 +3835,47 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2ChipList = function (_Ej2WidgetBase5) {
-    _inherits(ej2ChipList, _Ej2WidgetBase5);
+var Ej2CheckBox = function (_Ej2WidgetBase5) {
+    _inherits(Ej2CheckBox, _Ej2WidgetBase5);
+
+    function Ej2CheckBox(element) {
+        _classCallCheck(this, Ej2CheckBox);
+
+        var _this90 = _possibleConstructorReturn(this, _Ej2WidgetBase5.call(this, _ej2Buttons.CheckBox));
+
+        _this90.isEditor = true;
+        _this90.element = element;
+        return _this90;
+    }
+
+    return Ej2CheckBox;
+}(Ej2WidgetBase);
+exports.Ej2CheckBox = Ej2CheckBox = __decorate([(0, _aureliaTemplating.customAttribute)(constants.ej2AttributePrefix + 'check-box'), generateBindables(constants.ej2ElementPrefix + 'CheckBox', ['checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value'], ['checked', 'indeterminate'], null, null), (0, _aureliaDependencyInjection.inject)(Element)], Ej2CheckBox);
+exports.Ej2CheckBox = Ej2CheckBox;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ej2ChipList = function (_Ej2WidgetBase6) {
+    _inherits(ej2ChipList, _Ej2WidgetBase6);
 
     function ej2ChipList(element) {
         _classCallCheck(this, ej2ChipList);
 
-        var _this90 = _possibleConstructorReturn(this, _Ej2WidgetBase5.call(this, _ej2Buttons.ChipList));
+        var _this91 = _possibleConstructorReturn(this, _Ej2WidgetBase6.call(this, _ej2Buttons.ChipList));
 
-        _this90.chips = [];
-        _this90.element = element;
-        _this90.hasChildProperty = true;
-        _this90.childPropertyName = 'chips';
-        return _this90;
+        _this91.chips = [];
+        _this91.element = element;
+        _this91.hasChildProperty = true;
+        _this91.childPropertyName = 'chips';
+        return _this91;
     }
 
     return ej2ChipList;
@@ -3876,17 +3909,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2ComboBox = function (_Ej2WidgetBase6) {
-    _inherits(Ej2ComboBox, _Ej2WidgetBase6);
+var Ej2ComboBox = function (_Ej2WidgetBase7) {
+    _inherits(Ej2ComboBox, _Ej2WidgetBase7);
 
     function Ej2ComboBox(element) {
         _classCallCheck(this, Ej2ComboBox);
 
-        var _this91 = _possibleConstructorReturn(this, _Ej2WidgetBase6.call(this, _ej2Dropdowns.ComboBox));
+        var _this92 = _possibleConstructorReturn(this, _Ej2WidgetBase7.call(this, _ej2Dropdowns.ComboBox));
 
-        _this91.isEditor = true;
-        _this91.element = element;
-        return _this91;
+        _this92.isEditor = true;
+        _this92.element = element;
+        return _this92;
     }
 
     return Ej2ComboBox;
@@ -3904,17 +3937,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2DatePicker = function (_Ej2WidgetBase7) {
-    _inherits(Ej2DatePicker, _Ej2WidgetBase7);
+var Ej2DatePicker = function (_Ej2WidgetBase8) {
+    _inherits(Ej2DatePicker, _Ej2WidgetBase8);
 
     function Ej2DatePicker(element) {
         _classCallCheck(this, Ej2DatePicker);
 
-        var _this92 = _possibleConstructorReturn(this, _Ej2WidgetBase7.call(this, _ej2Calendars.DatePicker));
+        var _this93 = _possibleConstructorReturn(this, _Ej2WidgetBase8.call(this, _ej2Calendars.DatePicker));
 
-        _this92.isEditor = true;
-        _this92.element = element;
-        return _this92;
+        _this93.isEditor = true;
+        _this93.element = element;
+        return _this93;
     }
 
     return Ej2DatePicker;
@@ -3932,17 +3965,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2DateTimePicker = function (_Ej2WidgetBase8) {
-    _inherits(ej2DateTimePicker, _Ej2WidgetBase8);
+var ej2DateTimePicker = function (_Ej2WidgetBase9) {
+    _inherits(ej2DateTimePicker, _Ej2WidgetBase9);
 
     function ej2DateTimePicker(element) {
         _classCallCheck(this, ej2DateTimePicker);
 
-        var _this93 = _possibleConstructorReturn(this, _Ej2WidgetBase8.call(this, _ej2Calendars.DateTimePicker));
+        var _this94 = _possibleConstructorReturn(this, _Ej2WidgetBase9.call(this, _ej2Calendars.DateTimePicker));
 
-        _this93.isEditor = true;
-        _this93.element = element;
-        return _this93;
+        _this94.isEditor = true;
+        _this94.element = element;
+        return _this94;
     }
 
     return ej2DateTimePicker;
@@ -3961,16 +3994,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Diagrams.Diagram.Inject(_ej2Diagrams.DataBinding, _ej2Diagrams.HierarchicalTree);
-var ej2Diagram = function (_Ej2WidgetBase9) {
-    _inherits(ej2Diagram, _Ej2WidgetBase9);
+var ej2Diagram = function (_Ej2WidgetBase10) {
+    _inherits(ej2Diagram, _Ej2WidgetBase10);
 
     function ej2Diagram(element) {
         _classCallCheck(this, ej2Diagram);
 
-        var _this94 = _possibleConstructorReturn(this, _Ej2WidgetBase9.call(this, _ej2Diagrams.Diagram));
+        var _this95 = _possibleConstructorReturn(this, _Ej2WidgetBase10.call(this, _ej2Diagrams.Diagram));
 
-        _this94.element = element;
-        return _this94;
+        _this95.element = element;
+        return _this95;
     }
 
     return ej2Diagram;
@@ -3988,16 +4021,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2DropDownButton = function (_Ej2WidgetBase10) {
-    _inherits(ej2DropDownButton, _Ej2WidgetBase10);
+var ej2DropDownButton = function (_Ej2WidgetBase11) {
+    _inherits(ej2DropDownButton, _Ej2WidgetBase11);
 
     function ej2DropDownButton(element) {
         _classCallCheck(this, ej2DropDownButton);
 
-        var _this95 = _possibleConstructorReturn(this, _Ej2WidgetBase10.call(this, _ej2Splitbuttons.DropDownButton));
+        var _this96 = _possibleConstructorReturn(this, _Ej2WidgetBase11.call(this, _ej2Splitbuttons.DropDownButton));
 
-        _this95.element = element;
-        return _this95;
+        _this96.element = element;
+        return _this96;
     }
 
     return ej2DropDownButton;
@@ -4015,17 +4048,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2DropDownList = function (_Ej2WidgetBase11) {
-    _inherits(Ej2DropDownList, _Ej2WidgetBase11);
+var Ej2DropDownList = function (_Ej2WidgetBase12) {
+    _inherits(Ej2DropDownList, _Ej2WidgetBase12);
 
     function Ej2DropDownList(element) {
         _classCallCheck(this, Ej2DropDownList);
 
-        var _this96 = _possibleConstructorReturn(this, _Ej2WidgetBase11.call(this, _ej2Dropdowns.DropDownList));
+        var _this97 = _possibleConstructorReturn(this, _Ej2WidgetBase12.call(this, _ej2Dropdowns.DropDownList));
 
-        _this96.isEditor = true;
-        _this96.element = element;
-        return _this96;
+        _this97.isEditor = true;
+        _this97.element = element;
+        return _this97;
     }
 
     return Ej2DropDownList;
@@ -4073,20 +4106,20 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Grids.Grid.Inject(_ej2Grids.Group, _ej2Grids.Filter, _ej2Grids.Page, _ej2Grids.Sort, _ej2Grids.Search, _ej2Grids.Toolbar, _ej2Grids.Freeze, _ej2Grids.Selection, _ej2Grids.Aggregate, _ej2Grids.DetailRow, _ej2Grids.PdfExport, _ej2Grids.ExcelExport, _ej2Grids.ContextMenu, _ej2Grids.Edit);
-var Ej2Grid = function (_Ej2WidgetBase12) {
-    _inherits(Ej2Grid, _Ej2WidgetBase12);
+var Ej2Grid = function (_Ej2WidgetBase13) {
+    _inherits(Ej2Grid, _Ej2WidgetBase13);
 
     function Ej2Grid(element, templateEngine) {
         _classCallCheck(this, Ej2Grid);
 
-        var _this97 = _possibleConstructorReturn(this, _Ej2WidgetBase12.call(this, _ej2Grids.Grid));
+        var _this98 = _possibleConstructorReturn(this, _Ej2WidgetBase13.call(this, _ej2Grids.Grid));
 
-        _this97.columns = [];
-        _this97.element = element;
-        _this97.hasChildProperty = true;
-        _this97.childPropertyName = 'columns';
-        _this97.templateProcessor = new Ej2TemplateProcessor(_this97, templateEngine);
-        return _this97;
+        _this98.columns = [];
+        _this98.element = element;
+        _this98.hasChildProperty = true;
+        _this98.childPropertyName = 'columns';
+        _this98.templateProcessor = new Ej2TemplateProcessor(_this98, templateEngine);
+        return _this98;
     }
 
     return Ej2Grid;
@@ -4105,16 +4138,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2LinearGauge = function (_Ej2WidgetBase13) {
-    _inherits(ej2LinearGauge, _Ej2WidgetBase13);
+var ej2LinearGauge = function (_Ej2WidgetBase14) {
+    _inherits(ej2LinearGauge, _Ej2WidgetBase14);
 
     function ej2LinearGauge(element) {
         _classCallCheck(this, ej2LinearGauge);
 
-        var _this98 = _possibleConstructorReturn(this, _Ej2WidgetBase13.call(this, _ej2Lineargauge.LinearGauge));
+        var _this99 = _possibleConstructorReturn(this, _Ej2WidgetBase14.call(this, _ej2Lineargauge.LinearGauge));
 
-        _this98.element = element;
-        return _this98;
+        _this99.element = element;
+        return _this99;
     }
 
     return ej2LinearGauge;
@@ -4133,17 +4166,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Dropdowns.ListBox.Inject(_ej2Dropdowns.CheckBoxSelection);
-var Ej2ListBox = function (_Ej2WidgetBase14) {
-    _inherits(Ej2ListBox, _Ej2WidgetBase14);
+var Ej2ListBox = function (_Ej2WidgetBase15) {
+    _inherits(Ej2ListBox, _Ej2WidgetBase15);
 
     function Ej2ListBox(element) {
         _classCallCheck(this, Ej2ListBox);
 
-        var _this99 = _possibleConstructorReturn(this, _Ej2WidgetBase14.call(this, _ej2Dropdowns.ListBox));
+        var _this100 = _possibleConstructorReturn(this, _Ej2WidgetBase15.call(this, _ej2Dropdowns.ListBox));
 
-        _this99.isEditor = true;
-        _this99.element = element;
-        return _this99;
+        _this100.isEditor = true;
+        _this100.element = element;
+        return _this100;
     }
 
     return Ej2ListBox;
@@ -4161,17 +4194,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2MaskEdit = function (_Ej2WidgetBase15) {
-    _inherits(ej2MaskEdit, _Ej2WidgetBase15);
+var ej2MaskEdit = function (_Ej2WidgetBase16) {
+    _inherits(ej2MaskEdit, _Ej2WidgetBase16);
 
     function ej2MaskEdit(element) {
         _classCallCheck(this, ej2MaskEdit);
 
-        var _this100 = _possibleConstructorReturn(this, _Ej2WidgetBase15.call(this, _ej2Inputs.MaskedTextBox));
+        var _this101 = _possibleConstructorReturn(this, _Ej2WidgetBase16.call(this, _ej2Inputs.MaskedTextBox));
 
-        _this100.isEditor = true;
-        _this100.element = element;
-        return _this100;
+        _this101.isEditor = true;
+        _this101.element = element;
+        return _this101;
     }
 
     return ej2MaskEdit;
@@ -4189,17 +4222,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2MultiSelect = function (_Ej2WidgetBase16) {
-    _inherits(Ej2MultiSelect, _Ej2WidgetBase16);
+var Ej2MultiSelect = function (_Ej2WidgetBase17) {
+    _inherits(Ej2MultiSelect, _Ej2WidgetBase17);
 
     function Ej2MultiSelect(element) {
         _classCallCheck(this, Ej2MultiSelect);
 
-        var _this101 = _possibleConstructorReturn(this, _Ej2WidgetBase16.call(this, _ej2Dropdowns.MultiSelect));
+        var _this102 = _possibleConstructorReturn(this, _Ej2WidgetBase17.call(this, _ej2Dropdowns.MultiSelect));
 
-        _this101.isEditor = true;
-        _this101.element = element;
-        return _this101;
+        _this102.isEditor = true;
+        _this102.element = element;
+        return _this102;
     }
 
     return Ej2MultiSelect;
@@ -4217,17 +4250,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2NumericTextBox = function (_Ej2WidgetBase17) {
-    _inherits(Ej2NumericTextBox, _Ej2WidgetBase17);
+var Ej2NumericTextBox = function (_Ej2WidgetBase18) {
+    _inherits(Ej2NumericTextBox, _Ej2WidgetBase18);
 
     function Ej2NumericTextBox(element) {
         _classCallCheck(this, Ej2NumericTextBox);
 
-        var _this102 = _possibleConstructorReturn(this, _Ej2WidgetBase17.call(this, _ej2Inputs.NumericTextBox));
+        var _this103 = _possibleConstructorReturn(this, _Ej2WidgetBase18.call(this, _ej2Inputs.NumericTextBox));
 
-        _this102.isEditor = true;
-        _this102.element = element;
-        return _this102;
+        _this103.isEditor = true;
+        _this103.element = element;
+        return _this103;
     }
 
     return Ej2NumericTextBox;
@@ -4245,16 +4278,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Overview = function (_Ej2WidgetBase18) {
-    _inherits(ej2Overview, _Ej2WidgetBase18);
+var ej2Overview = function (_Ej2WidgetBase19) {
+    _inherits(ej2Overview, _Ej2WidgetBase19);
 
     function ej2Overview(element) {
         _classCallCheck(this, ej2Overview);
 
-        var _this103 = _possibleConstructorReturn(this, _Ej2WidgetBase18.call(this, _ej2Diagrams.Overview));
+        var _this104 = _possibleConstructorReturn(this, _Ej2WidgetBase19.call(this, _ej2Diagrams.Overview));
 
-        _this103.element = element;
-        return _this103;
+        _this104.element = element;
+        return _this104;
     }
 
     return ej2Overview;
@@ -4273,16 +4306,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Pdfviewer.PdfViewer.Inject(_ej2Pdfviewer.Toolbar, _ej2Pdfviewer.Magnification, _ej2Pdfviewer.Navigation, _ej2Pdfviewer.LinkAnnotation, _ej2Pdfviewer.BookmarkView, _ej2Pdfviewer.ThumbnailView, _ej2Pdfviewer.Print, _ej2Pdfviewer.TextSelection, _ej2Pdfviewer.TextSearch, _ej2Pdfviewer.Annotation);
-var ej2PdfViewer = function (_Ej2WidgetBase19) {
-    _inherits(ej2PdfViewer, _Ej2WidgetBase19);
+var ej2PdfViewer = function (_Ej2WidgetBase20) {
+    _inherits(ej2PdfViewer, _Ej2WidgetBase20);
 
     function ej2PdfViewer(element) {
         _classCallCheck(this, ej2PdfViewer);
 
-        var _this104 = _possibleConstructorReturn(this, _Ej2WidgetBase19.call(this, _ej2Pdfviewer.PdfViewer));
+        var _this105 = _possibleConstructorReturn(this, _Ej2WidgetBase20.call(this, _ej2Pdfviewer.PdfViewer));
 
-        _this104.element = element;
-        return _this104;
+        _this105.element = element;
+        return _this105;
     }
 
     return ej2PdfViewer;
@@ -4300,16 +4333,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2ProgressButton = function (_Ej2WidgetBase20) {
-    _inherits(ej2ProgressButton, _Ej2WidgetBase20);
+var ej2ProgressButton = function (_Ej2WidgetBase21) {
+    _inherits(ej2ProgressButton, _Ej2WidgetBase21);
 
     function ej2ProgressButton(element) {
         _classCallCheck(this, ej2ProgressButton);
 
-        var _this105 = _possibleConstructorReturn(this, _Ej2WidgetBase20.call(this, _ej2Splitbuttons.ProgressButton));
+        var _this106 = _possibleConstructorReturn(this, _Ej2WidgetBase21.call(this, _ej2Splitbuttons.ProgressButton));
 
-        _this105.element = element;
-        return _this105;
+        _this106.element = element;
+        return _this106;
     }
 
     return ej2ProgressButton;
@@ -4327,17 +4360,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2RadioButton = function (_Ej2WidgetBase21) {
-    _inherits(Ej2RadioButton, _Ej2WidgetBase21);
+var Ej2RadioButton = function (_Ej2WidgetBase22) {
+    _inherits(Ej2RadioButton, _Ej2WidgetBase22);
 
     function Ej2RadioButton(element) {
         _classCallCheck(this, Ej2RadioButton);
 
-        var _this106 = _possibleConstructorReturn(this, _Ej2WidgetBase21.call(this, _ej2Buttons.RadioButton));
+        var _this107 = _possibleConstructorReturn(this, _Ej2WidgetBase22.call(this, _ej2Buttons.RadioButton));
 
-        _this106.isEditor = true;
-        _this106.element = element;
-        return _this106;
+        _this107.isEditor = true;
+        _this107.element = element;
+        return _this107;
     }
 
     return Ej2RadioButton;
@@ -4356,16 +4389,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 _ej2Richtexteditor.RichTextEditor.Inject(_ej2Richtexteditor.Toolbar, _ej2Richtexteditor.Link, _ej2Richtexteditor.Image, _ej2Richtexteditor.Count, _ej2Richtexteditor.HtmlEditor, _ej2Richtexteditor.QuickToolbar, _ej2Richtexteditor.Table);
-var ej2Rte = function (_Ej2WidgetBase22) {
-    _inherits(ej2Rte, _Ej2WidgetBase22);
+var ej2Rte = function (_Ej2WidgetBase23) {
+    _inherits(ej2Rte, _Ej2WidgetBase23);
 
     function ej2Rte(element) {
         _classCallCheck(this, ej2Rte);
 
-        var _this107 = _possibleConstructorReturn(this, _Ej2WidgetBase22.call(this, _ej2Richtexteditor.RichTextEditor));
+        var _this108 = _possibleConstructorReturn(this, _Ej2WidgetBase23.call(this, _ej2Richtexteditor.RichTextEditor));
 
-        _this107.element = element;
-        return _this107;
+        _this108.element = element;
+        return _this108;
     }
 
     return ej2Rte;
@@ -4383,16 +4416,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2SplitButton = function (_Ej2WidgetBase23) {
-    _inherits(ej2SplitButton, _Ej2WidgetBase23);
+var ej2SplitButton = function (_Ej2WidgetBase24) {
+    _inherits(ej2SplitButton, _Ej2WidgetBase24);
 
     function ej2SplitButton(element) {
         _classCallCheck(this, ej2SplitButton);
 
-        var _this108 = _possibleConstructorReturn(this, _Ej2WidgetBase23.call(this, _ej2Splitbuttons.SplitButton));
+        var _this109 = _possibleConstructorReturn(this, _Ej2WidgetBase24.call(this, _ej2Splitbuttons.SplitButton));
 
-        _this108.element = element;
-        return _this108;
+        _this109.element = element;
+        return _this109;
     }
 
     return ej2SplitButton;
@@ -4410,16 +4443,16 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Tab = function (_Ej2WidgetBase24) {
-    _inherits(ej2Tab, _Ej2WidgetBase24);
+var ej2Tab = function (_Ej2WidgetBase25) {
+    _inherits(ej2Tab, _Ej2WidgetBase25);
 
     function ej2Tab(element) {
         _classCallCheck(this, ej2Tab);
 
-        var _this109 = _possibleConstructorReturn(this, _Ej2WidgetBase24.call(this, _ej2Navigations.Tab));
+        var _this110 = _possibleConstructorReturn(this, _Ej2WidgetBase25.call(this, _ej2Navigations.Tab));
 
-        _this109.element = element;
-        return _this109;
+        _this110.element = element;
+        return _this110;
     }
 
     return ej2Tab;
@@ -4437,17 +4470,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2TextBox = function (_Ej2WidgetBase25) {
-    _inherits(Ej2TextBox, _Ej2WidgetBase25);
+var Ej2TextBox = function (_Ej2WidgetBase26) {
+    _inherits(Ej2TextBox, _Ej2WidgetBase26);
 
     function Ej2TextBox(element) {
         _classCallCheck(this, Ej2TextBox);
 
-        var _this110 = _possibleConstructorReturn(this, _Ej2WidgetBase25.call(this, _ej2Inputs.TextBox));
+        var _this111 = _possibleConstructorReturn(this, _Ej2WidgetBase26.call(this, _ej2Inputs.TextBox));
 
-        _this110.isEditor = true;
-        _this110.element = element;
-        return _this110;
+        _this111.isEditor = true;
+        _this111.element = element;
+        return _this111;
     }
 
     return Ej2TextBox;

@@ -106,7 +106,8 @@ export class EjConfigBuilder {
             .ej2ListBox()
             .ej2TextBox()
             .ej2NumericTextBox()
-            .ej2RadioButton();
+            .ej2RadioButton()
+            .ej2CheckBox();
         return this;
     }
     withoutGlobalResources() {
@@ -534,6 +535,10 @@ export class EjConfigBuilder {
     }
     ej2RadioButton() {
         this.resources.push(PLATFORM.moduleName('./ej2/radiobutton/radiobutton'));
+        return this;
+    }
+    ej2CheckBox() {
+        this.resources.push(PLATFORM.moduleName('./ej2/checkbox/checkbox'));
         return this;
     }
 }

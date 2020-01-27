@@ -112,7 +112,8 @@ export class EjConfigBuilder {
             .ej2ListBox()
             .ej2TextBox()
             .ej2NumericTextBox()
-            .ej2RadioButton();
+            .ej2RadioButton()
+            .ej2CheckBox();
         return this;
     }
     withoutGlobalResources() {
@@ -540,6 +541,10 @@ export class EjConfigBuilder {
     }
     ej2RadioButton() {
         this.resources.push(PLATFORM.moduleName('./ej2/radiobutton/radiobutton'));
+        return this;
+    }
+    ej2CheckBox() {
+        this.resources.push(PLATFORM.moduleName('./ej2/checkbox/checkbox'));
         return this;
     }
 }
@@ -3160,6 +3165,27 @@ SeriesVM = __decorate([
     generateBindables('series', ['animation', 'bearFillColor', 'binInterval', 'border', 'boxPlotMode', 'bullFillColor', 'cardinalSplineTension', 'close', 'columnSpacing', 'columnWidth', 'connector', 'cornerRadius', 'dashArray', 'dataSource', 'dragSettings', 'drawType', 'emptyPointSettings', 'enableComplexProperty', 'enableSolidCandles', 'enableTooltip', 'errorBar', 'fill', 'high', 'intermediateSumIndexes', 'isClosed', 'legendShape', 'low', 'marker', 'maxRadius', 'minRadius', 'name', 'negativeFillColor', 'opacity', 'open', 'pointColorMapping', 'query', 'segmentAxis', 'segments', 'selectionStyle', 'showMean', 'showNormalDistribution', 'size', 'splineType', 'stackingGroup', 'sumIndexes', 'summaryFillColor', 'tooltipFormat', 'tooltipMappingName', 'trendlines', 'type', 'visible', 'volume', 'width', 'xAxisName', 'xName', 'yAxisName', 'yName', 'zOrder'], [], null, null)
 ], SeriesVM);
 export { SeriesVM };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { CheckBox } from '@syncfusion/ej2-buttons';
+let Ej2CheckBox = class Ej2CheckBox extends Ej2WidgetBase {
+    constructor(element) {
+        super(CheckBox);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+Ej2CheckBox = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}check-box`),
+    generateBindables(constants.ej2ElementPrefix + 'CheckBox', ['checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value'], ['checked', 'indeterminate'], null, null),
+    inject(Element)
+], Ej2CheckBox);
+export { Ej2CheckBox };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

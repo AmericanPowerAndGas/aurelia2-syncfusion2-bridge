@@ -63,6 +63,9 @@ declare module 'aurelia-syncfusion-bridge' {
     BubbleSeries
   } from '@syncfusion/ej2-charts';
   import {
+    CheckBox
+  } from '@syncfusion/ej2-buttons';
+  import {
     ChipList
   } from '@syncfusion/ej2-buttons';
   import {
@@ -265,6 +268,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2TextBox(): any;
     ej2NumericTextBox(): any;
     ej2RadioButton(): any;
+    ej2CheckBox(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -605,6 +609,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     SeriesVM
+  };
+  export {
+    Ej2CheckBox
   };
   export {
     ej2ChipList
