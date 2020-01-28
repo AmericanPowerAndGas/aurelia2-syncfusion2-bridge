@@ -107,7 +107,8 @@ export class EjConfigBuilder {
             .ej2TextBox()
             .ej2NumericTextBox()
             .ej2RadioButton()
-            .ej2CheckBox();
+            .ej2CheckBox()
+            .ej2ColorPicker();
         return this;
     }
     withoutGlobalResources() {
@@ -539,6 +540,10 @@ export class EjConfigBuilder {
     }
     ej2CheckBox() {
         this.resources.push(PLATFORM.moduleName('./ej2/checkbox/checkbox'));
+        return this;
+    }
+    ej2ColorPicker() {
+        this.resources.push(PLATFORM.moduleName('./ej2/colorpicker/colorpicker'));
         return this;
     }
 }

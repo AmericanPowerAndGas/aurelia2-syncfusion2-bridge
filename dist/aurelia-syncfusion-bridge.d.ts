@@ -69,6 +69,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ChipList
   } from '@syncfusion/ej2-buttons';
   import {
+    ColorPicker
+  } from '@syncfusion/ej2-inputs';
+  import {
     ComboBox
   } from '@syncfusion/ej2-dropdowns';
   import {
@@ -109,21 +112,21 @@ declare module 'aurelia-syncfusion-bridge' {
     LinearGauge
   } from '@syncfusion/ej2-lineargauge';
   import {
+    MaskedTextBox
+  } from '@syncfusion/ej2-inputs';
+  import {
     ListBox,
     CheckBoxSelection
   } from '@syncfusion/ej2-dropdowns';
   import {
-    MaskedTextBox
-  } from '@syncfusion/ej2-inputs';
-  import {
     MultiSelect
   } from '@syncfusion/ej2-dropdowns';
   import {
-    NumericTextBox
-  } from '@syncfusion/ej2-inputs';
-  import {
     Overview
   } from '@syncfusion/ej2-diagrams';
+  import {
+    NumericTextBox
+  } from '@syncfusion/ej2-inputs';
   import {
     PdfViewer,
     Toolbar as PdfToolbar,
@@ -269,6 +272,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2NumericTextBox(): any;
     ej2RadioButton(): any;
     ej2CheckBox(): any;
+    ej2ColorPicker(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -296,10 +300,10 @@ declare module 'aurelia-syncfusion-bridge' {
     Series
   };
   export {
-    ejCheckBox
+    ejCircularGauge
   };
   export {
-    ejCircularGauge
+    ejCheckBox
   };
   export {
     ejColorPicker
@@ -380,10 +384,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDateRangePicker
   };
   export {
-    ejDateTimePicker
+    ejDiagram
   };
   export {
-    ejDiagram
+    ejDateTimePicker
   };
   export {
     ejDialog
@@ -431,13 +435,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListView
   };
   export {
+    ejMaskEdit
+  };
+  export {
     Layer
   };
   export {
     ejMap
-  };
-  export {
-    ejMaskEdit
   };
   export {
     ejMenu
@@ -530,10 +534,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSparkline
   };
   export {
-    ejSpellCheck
+    ejSplitButton
   };
   export {
-    ejSplitButton
+    ejSpellCheck
   };
   export {
     ejSplitter
@@ -551,10 +555,10 @@ declare module 'aurelia-syncfusion-bridge' {
     SunburstLevels
   };
   export {
-    ejSymbolPalette
+    ejTab
   };
   export {
-    ejTab
+    ejSymbolPalette
   };
   export {
     ejTagCloud
@@ -620,6 +624,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Chips
   };
   export {
+    Ej2ColorPicker
+  };
+  export {
     Ej2ComboBox
   };
   export {
@@ -647,19 +654,19 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2LinearGauge
   };
   export {
-    Ej2ListBox
+    ej2MaskEdit
   };
   export {
-    ej2MaskEdit
+    Ej2ListBox
   };
   export {
     Ej2MultiSelect
   };
   export {
-    Ej2NumericTextBox
+    ej2Overview
   };
   export {
-    ej2Overview
+    Ej2NumericTextBox
   };
   export {
     ej2PdfViewer
