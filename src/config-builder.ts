@@ -116,7 +116,8 @@ export class EjConfigBuilder {
       .ej2NumericTextBox()
       .ej2RadioButton()
       .ej2CheckBox()
-      .ej2ColorPicker();
+      .ej2ColorPicker()
+      .ej2Uploader();
     return this;
   }
   /**
@@ -556,6 +557,10 @@ export class EjConfigBuilder {
   }
   ej2ColorPicker(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/colorpicker/colorpicker'));
+    return this;
+  }
+  ej2Uploader(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/uploader/uploader'));
     return this;
   }
 }
