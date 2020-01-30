@@ -117,7 +117,8 @@ export class EjConfigBuilder {
       .ej2RadioButton()
       .ej2CheckBox()
       .ej2ColorPicker()
-      .ej2Uploader();
+      .ej2Uploader()
+      .ej2Slider();
     return this;
   }
   /**
@@ -561,6 +562,10 @@ export class EjConfigBuilder {
   }
   ej2Uploader(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/uploader/uploader'));
+    return this;
+  }
+  ej2Slider(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/slider/slider'));
     return this;
   }
 }
