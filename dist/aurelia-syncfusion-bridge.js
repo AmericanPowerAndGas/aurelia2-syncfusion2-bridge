@@ -116,7 +116,8 @@ export class EjConfigBuilder {
             .ej2CheckBox()
             .ej2ColorPicker()
             .ej2Uploader()
-            .ej2Slider();
+            .ej2Slider()
+            .ej2Switch();
         return this;
     }
     withoutGlobalResources() {
@@ -562,6 +563,10 @@ export class EjConfigBuilder {
         this.resources.push(PLATFORM.moduleName('./ej2/slider/slider'));
         return this;
     }
+    ej2Switch() {
+        this.resources.push(PLATFORM.moduleName('./ej2/switch/switch'));
+        return this;
+    }
 }
 
 export function configure(aurelia, configCallback) {
@@ -574,25 +579,6 @@ export function configure(aurelia, configCallback) {
         aurelia.globalResources(resources);
     }
 }
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-let ejAutocomplete = class ejAutocomplete extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejAutocomplete = __decorate([
-    customAttribute(`${constants.attributePrefix}autocomplete`),
-    generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'ignoreAccent', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejAutocomplete);
-export { ejAutocomplete };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -613,6 +599,25 @@ ejAccordion = __decorate([
     inject(Element)
 ], ejAccordion);
 export { ejAccordion };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejAutocomplete = class ejAutocomplete extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejAutocomplete = __decorate([
+    customAttribute(`${constants.attributePrefix}autocomplete`),
+    generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'ignoreAccent', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejAutocomplete);
+export { ejAutocomplete };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -760,25 +765,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejColorPicker = class ejColorPicker extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejColorPicker = __decorate([
-    customAttribute(`${constants.attributePrefix}color-picker`),
-    generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'locale', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue']),
-    inject(Element)
-], ejColorPicker);
-export { ejColorPicker };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejCircularGauge = class ejCircularGauge extends WidgetBase {
     constructor(element) {
         super();
@@ -792,6 +778,25 @@ ejCircularGauge = __decorate([
     inject(Element)
 ], ejCircularGauge);
 export { ejCircularGauge };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejColorPicker = class ejColorPicker extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejColorPicker = __decorate([
+    customAttribute(`${constants.attributePrefix}color-picker`),
+    generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'locale', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue']),
+    inject(Element)
+], ejColorPicker);
+export { ejColorPicker };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -988,6 +993,8 @@ export class Ej2WidgetBase {
             this.widget.change = (arg) => {
                 if (this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
+                else if (this.controlName == constants.ej2ElementPrefix + 'Switch' && arg)
+                    this[this.util.getBindablePropertyName('checked')] = arg.checked;
                 else if (arg && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.value;
             };
@@ -3102,26 +3109,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Button } from '@syncfusion/ej2-buttons';
-let ej2Button = class ej2Button extends Ej2WidgetBase {
-    constructor(element) {
-        super(Button);
-        this.element = element;
-    }
-};
-ej2Button = __decorate([
-    customAttribute(`${constants.ej2AttributePrefix}button`),
-    generateBindables(constants.ej2AttributePrefix + 'Button', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale'], [], null, null),
-    inject(Element)
-], ej2Button);
-export { ej2Button };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 import { AutoComplete } from '@syncfusion/ej2-dropdowns';
 let Ej2AutoComplete = class Ej2AutoComplete extends Ej2WidgetBase {
     constructor(element) {
@@ -3137,6 +3124,26 @@ Ej2AutoComplete = __decorate([
     inject(Element)
 ], Ej2AutoComplete);
 export { Ej2AutoComplete };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Button } from '@syncfusion/ej2-buttons';
+let ej2Button = class ej2Button extends Ej2WidgetBase {
+    constructor(element) {
+        super(Button);
+        this.element = element;
+    }
+};
+ej2Button = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}button`),
+    generateBindables(constants.ej2AttributePrefix + 'Button', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale'], [], null, null),
+    inject(Element)
+], ej2Button);
+export { ej2Button };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3700,6 +3707,28 @@ ej2SplitButton = __decorate([
     inject(Element)
 ], ej2SplitButton);
 export { ej2SplitButton };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Switch } from '@syncfusion/ej2-buttons';
+let Ej2Switch = class Ej2Switch extends Ej2WidgetBase {
+    constructor(element) {
+        super(Switch);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+Ej2Switch = __decorate([
+    customElement(`${constants.ej2ElementPrefix}switch`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables(constants.ej2ElementPrefix + 'Switch', ['checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'locale', 'name', 'offLabel', 'onLabel', 'value'], ['checked'], null, null),
+    inject(Element)
+], Ej2Switch);
+export { Ej2Switch };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

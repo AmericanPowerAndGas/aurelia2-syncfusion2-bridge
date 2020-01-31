@@ -28,6 +28,8 @@ export class Ej2WidgetBase {
             this.widget.change = (arg) => {
                 if (this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
+                else if (this.controlName == constants.ej2ElementPrefix + 'Switch' && arg)
+                    this[this.util.getBindablePropertyName('checked')] = arg.checked;
                 else if (arg && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.value;
             };

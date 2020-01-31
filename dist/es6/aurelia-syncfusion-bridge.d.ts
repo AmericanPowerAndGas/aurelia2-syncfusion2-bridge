@@ -37,11 +37,11 @@ declare module 'aurelia-syncfusion-bridge' {
     Accordion
   } from '@syncfusion/ej2-navigations';
   import {
-    Button
-  } from '@syncfusion/ej2-buttons';
-  import {
     AutoComplete
   } from '@syncfusion/ej2-dropdowns';
+  import {
+    Button
+  } from '@syncfusion/ej2-buttons';
   import {
     Chart,
     Category,
@@ -167,6 +167,9 @@ declare module 'aurelia-syncfusion-bridge' {
     SplitButton
   } from '@syncfusion/ej2-splitbuttons';
   import {
+    Switch
+  } from '@syncfusion/ej2-buttons';
+  import {
     Tab
   } from '@syncfusion/ej2-navigations';
   import {
@@ -285,13 +288,14 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ColorPicker(): any;
     ej2Uploader(): any;
     ej2Slider(): any;
+    ej2Switch(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
-    ejAutocomplete
+    ejAccordion
   };
   export {
-    ejAccordion
+    ejAutocomplete
   };
   export {
     ejBarcode
@@ -315,10 +319,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejCheckBox
   };
   export {
-    ejColorPicker
+    ejCircularGauge
   };
   export {
-    ejCircularGauge
+    ejColorPicker
   };
   export {
     ejComboBox
@@ -615,10 +619,10 @@ declare module 'aurelia-syncfusion-bridge' {
     Ej2Accordion
   };
   export {
-    ej2Button
+    Ej2AutoComplete
   };
   export {
-    Ej2AutoComplete
+    ej2Button
   };
   export {
     ej2Chart
@@ -697,6 +701,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2SplitButton
+  };
+  export {
+    Ej2Switch
   };
   export {
     ej2Tab

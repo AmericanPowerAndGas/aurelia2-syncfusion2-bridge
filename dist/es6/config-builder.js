@@ -110,7 +110,8 @@ export class EjConfigBuilder {
             .ej2CheckBox()
             .ej2ColorPicker()
             .ej2Uploader()
-            .ej2Slider();
+            .ej2Slider()
+            .ej2Switch();
         return this;
     }
     withoutGlobalResources() {
@@ -554,6 +555,10 @@ export class EjConfigBuilder {
     }
     ej2Slider() {
         this.resources.push(PLATFORM.moduleName('./ej2/slider/slider'));
+        return this;
+    }
+    ej2Switch() {
+        this.resources.push(PLATFORM.moduleName('./ej2/switch/switch'));
         return this;
     }
 }

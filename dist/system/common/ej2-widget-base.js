@@ -59,7 +59,7 @@ System.register(["../common/decorators", "../common/events", "../common/util", "
                     }
                     if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
                         this.widget.change = function (arg) {
-                            if (_this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
+                            if (_this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.element.value;else if (_this.controlName == constants.ej2ElementPrefix + 'Switch' && arg) _this[_this.util.getBindablePropertyName('checked')] = arg.checked;else if (arg && 'eValue' in _this) _this[_this.util.getBindablePropertyName('value')] = arg.value;
                         };
                     }
                 };

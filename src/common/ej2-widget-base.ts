@@ -40,7 +40,7 @@ export class Ej2WidgetBase {
             this.allOption.value = this.allOption.value.toString();        
         this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
         this.widget.appendTo(option.element);
-
+        
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
@@ -50,8 +50,10 @@ export class Ej2WidgetBase {
             this.widget.change = (arg) => {               
                 if (this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
-                else if (arg && 'eValue' in this)                    
-                    this[this.util.getBindablePropertyName('value')] = arg.value;                   
+                else if (this.controlName == constants.ej2ElementPrefix + 'Switch' && arg)
+                    this[this.util.getBindablePropertyName('checked')] = arg.checked;                   
+                else if (arg && 'eValue' in this)
+                    this[this.util.getBindablePropertyName('value')] = arg.value;                      
             };
 
         }       
@@ -104,13 +106,13 @@ export class Ej2WidgetBase {
    * To get property and event options from the element
    * @param element Element from which options are acquired
    */
-    getWidgetOptions(element) {
+    getWidgetOptions(element) {       
         let propOptions;
         if (this.ejOptions) {
             propOptions = this.ejOptions;
         } else {
             propOptions = this.util.getOptions(this, this.controlProperties);
-        }
+        }        
         let eventOption = getEventOption(element);       
         if (this.hasChildProperty) {
             this.getChildProperties(propOptions);           
@@ -218,10 +220,10 @@ export class Ej2WidgetBase {
     detached() {
         if (this.templateProcessor) {
             this.templateProcessor.clearTempalte();
-        }
+        }        
         if (this.widget) {
             this.widget.destroy();
-        }
+        }        
     }
 
 }
