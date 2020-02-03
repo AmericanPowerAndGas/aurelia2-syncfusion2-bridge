@@ -119,7 +119,8 @@ export class EjConfigBuilder {
       .ej2ColorPicker()
       .ej2Uploader()
       .ej2Slider()
-      .ej2Switch();
+      .ej2Switch()
+      .ej2Toast();
     return this;
   }
   /**
@@ -571,6 +572,10 @@ export class EjConfigBuilder {
   }
   ej2Switch(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/switch/switch'));
+    return this;
+  }
+  ej2Toast(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/toast/toast'));
     return this;
   }
 }

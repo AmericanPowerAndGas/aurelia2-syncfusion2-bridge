@@ -172,6 +172,9 @@ declare module 'aurelia-syncfusion-bridge' {
     TextBox
   } from '@syncfusion/ej2-inputs';
   import {
+    Toast
+  } from '@syncfusion/ej2-notifications';
+  import {
     Uploader
   } from '@syncfusion/ej2-inputs';
   export class EjConfigBuilder {
@@ -285,6 +288,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Uploader(): any;
     ej2Slider(): any;
     ej2Switch(): any;
+    ej2Toast(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -706,6 +710,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2TextBox
+  };
+  export {
+    ej2Toast
   };
   export {
     Ej2Uploader
