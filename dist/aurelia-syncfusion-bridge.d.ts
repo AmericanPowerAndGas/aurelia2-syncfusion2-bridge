@@ -157,6 +157,16 @@ declare module 'aurelia-syncfusion-bridge' {
     Table
   } from '@syncfusion/ej2-richtexteditor';
   import {
+    Schedule,
+    Day,
+    Week,
+    WorkWeek,
+    Month,
+    Agenda,
+    Resize,
+    DragAndDrop
+  } from '@syncfusion/ej2-schedule';
+  import {
     Slider
   } from '@syncfusion/ej2-inputs';
   import {
@@ -289,6 +299,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Slider(): any;
     ej2Switch(): any;
     ej2Toast(): any;
+    ej2Schedule(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -695,6 +706,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Rte
+  };
+  export {
+    ej2Schedule
   };
   export {
     Ej2Slider

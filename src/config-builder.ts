@@ -120,7 +120,8 @@ export class EjConfigBuilder {
       .ej2Uploader()
       .ej2Slider()
       .ej2Switch()
-      .ej2Toast();
+      .ej2Toast()
+      .ej2Schedule();
     return this;
   }
   /**
@@ -576,6 +577,10 @@ export class EjConfigBuilder {
   }
   ej2Toast(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/toast/toast'));
+    return this;
+  }
+  ej2Schedule(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/schedule/schedule'));
     return this;
   }
 }

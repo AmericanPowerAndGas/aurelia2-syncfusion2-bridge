@@ -112,7 +112,8 @@ export class EjConfigBuilder {
             .ej2Uploader()
             .ej2Slider()
             .ej2Switch()
-            .ej2Toast();
+            .ej2Toast()
+            .ej2Schedule();
         return this;
     }
     withoutGlobalResources() {
@@ -564,6 +565,10 @@ export class EjConfigBuilder {
     }
     ej2Toast() {
         this.resources.push(PLATFORM.moduleName('./ej2/toast/toast'));
+        return this;
+    }
+    ej2Schedule() {
+        this.resources.push(PLATFORM.moduleName('./ej2/schedule/schedule'));
         return this;
     }
 }
