@@ -119,7 +119,8 @@ export class EjConfigBuilder {
             .ej2Slider()
             .ej2Switch()
             .ej2Toast()
-            .ej2Schedule();
+            .ej2Schedule()
+            .ej2ContextMenu();
         return this;
     }
     withoutGlobalResources() {
@@ -577,6 +578,10 @@ export class EjConfigBuilder {
         this.resources.push(PLATFORM.moduleName('./ej2/schedule/schedule'));
         return this;
     }
+    ej2ContextMenu() {
+        this.resources.push(PLATFORM.moduleName('./ej2/contextmenu/contextmenu'));
+        return this;
+    }
 }
 
 export function configure(aurelia, configCallback) {
@@ -994,8 +999,12 @@ export class Ej2WidgetBase {
         }
         if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
             this.allOption.value = this.allOption.value.toString();
-        this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
-        this.widget.appendTo(option.element);
+        if (this.controlName == constants.ej2ElementPrefix + 'ContextMenu')
+            this.eWidget = this.widget = new this.componentBaseRef(this.allOption, option.element.firstChild);
+        else {
+            this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
+            this.widget.appendTo(option.element);
+        }
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
@@ -1602,26 +1611,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejDateRangePicker = class ejDateRangePicker extends WidgetBase {
-    constructor(element) {
-        super();
-        this.isEditor = true;
-        this.element = element;
-    }
-};
-ejDateRangePicker = __decorate([
-    customAttribute(`${constants.attributePrefix}date-range-picker`),
-    generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']),
-    inject(Element)
-], ejDateRangePicker);
-export { ejDateRangePicker };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejDateTimePicker = class ejDateTimePicker extends WidgetBase {
     constructor(element) {
         super();
@@ -1635,6 +1624,26 @@ ejDateTimePicker = __decorate([
     inject(Element)
 ], ejDateTimePicker);
 export { ejDateTimePicker };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejDateRangePicker = class ejDateRangePicker extends WidgetBase {
+    constructor(element) {
+        super();
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ejDateRangePicker = __decorate([
+    customAttribute(`${constants.attributePrefix}date-range-picker`),
+    generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']),
+    inject(Element)
+], ejDateRangePicker);
+export { ejDateRangePicker };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2827,26 +2836,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejTagCloud = class ejTagCloud extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejTagCloud = __decorate([
-    customElement(`${constants.elementPrefix}tag-cloud`),
-    inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'htmlAttributes', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejTagCloud);
-export { ejTagCloud };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejTile = class ejTile extends WidgetBase {
     constructor(element) {
         super();
@@ -2860,6 +2849,26 @@ ejTile = __decorate([
     inject(Element)
 ], ejTile);
 export { ejTile };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejTagCloud = class ejTagCloud extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejTagCloud = __decorate([
+    customElement(`${constants.elementPrefix}tag-cloud`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'htmlAttributes', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejTagCloud);
+export { ejTagCloud };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3309,6 +3318,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { ContextMenu } from '@syncfusion/ej2-navigations';
+let ej2ContextMenu = class ej2ContextMenu extends Ej2WidgetBase {
+    constructor(element) {
+        super(ContextMenu);
+        this.element = element;
+    }
+};
+ej2ContextMenu = __decorate([
+    customElement(`${constants.ej2ElementPrefix}context-menu`),
+    inlineView("<template><ul></ul></template>"),
+    generateBindables(constants.ej2ElementPrefix + 'ContextMenu', ['animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'showItemOnClick', 'target', 'template'], [], null, null),
+    inject(Element)
+], ej2ContextMenu);
+export { ej2ContextMenu };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 import { DatePicker } from '@syncfusion/ej2-calendars';
 let Ej2DatePicker = class Ej2DatePicker extends Ej2WidgetBase {
     constructor(element) {
@@ -3351,6 +3381,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
+let ej2DropDownButton = class ej2DropDownButton extends Ej2WidgetBase {
+    constructor(element) {
+        super(DropDownButton);
+        this.element = element;
+    }
+};
+ej2DropDownButton = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}drop-down-button`),
+    generateBindables(constants.ej2ElementPrefix + 'DropDownButton', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target'], [], null, null),
+    inject(Element)
+], ej2DropDownButton);
+export { ej2DropDownButton };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 import { Diagram, DataBinding, HierarchicalTree } from '@syncfusion/ej2-diagrams';
 Diagram.Inject(DataBinding, HierarchicalTree);
 let ej2Diagram = class ej2Diagram extends Ej2WidgetBase {
@@ -3366,26 +3416,6 @@ ej2Diagram = __decorate([
     inject(Element)
 ], ej2Diagram);
 export { ej2Diagram };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
-let ej2DropDownButton = class ej2DropDownButton extends Ej2WidgetBase {
-    constructor(element) {
-        super(DropDownButton);
-        this.element = element;
-    }
-};
-ej2DropDownButton = __decorate([
-    customAttribute(`${constants.ej2AttributePrefix}drop-down-button`),
-    generateBindables(constants.ej2ElementPrefix + 'DropDownButton', ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target'], [], null, null),
-    inject(Element)
-], ej2DropDownButton);
-export { ej2DropDownButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3441,8 +3471,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit } from '@syncfusion/ej2-grids';
-Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit);
+import { Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, Edit } from '@syncfusion/ej2-grids';
+Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, Edit);
 let Ej2Grid = class Ej2Grid extends Ej2WidgetBase {
     constructor(element, templateEngine) {
         super(Grid);
@@ -3491,6 +3521,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { MaskedTextBox } from '@syncfusion/ej2-inputs';
+let ej2MaskEdit = class ej2MaskEdit extends Ej2WidgetBase {
+    constructor(element) {
+        super(MaskedTextBox);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ej2MaskEdit = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}mask-edit`),
+    generateBindables(constants.ej2AttributePrefix + 'MaskEdit', ['cssClass', 'customCharacters', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'mask', 'placeholder', 'promptChar', 'readonly', 'showClearButton', 'value', 'width'], ['value'], [], null),
+    inject(Element)
+], ej2MaskEdit);
+export { ej2MaskEdit };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 import { ListBox, CheckBoxSelection } from '@syncfusion/ej2-dropdowns';
 ListBox.Inject(CheckBoxSelection);
 let Ej2ListBox = class Ej2ListBox extends Ej2WidgetBase {
@@ -3506,27 +3557,6 @@ Ej2ListBox = __decorate([
     inject(Element)
 ], Ej2ListBox);
 export { Ej2ListBox };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-import { MaskedTextBox } from '@syncfusion/ej2-inputs';
-let ej2MaskEdit = class ej2MaskEdit extends Ej2WidgetBase {
-    constructor(element) {
-        super(MaskedTextBox);
-        this.isEditor = true;
-        this.element = element;
-    }
-};
-ej2MaskEdit = __decorate([
-    customAttribute(`${constants.ej2AttributePrefix}mask-edit`),
-    generateBindables(constants.ej2AttributePrefix + 'MaskEdit', ['cssClass', 'customCharacters', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'mask', 'placeholder', 'promptChar', 'readonly', 'showClearButton', 'value', 'width'], ['value'], [], null),
-    inject(Element)
-], ej2MaskEdit);
-export { ej2MaskEdit };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

@@ -41,8 +41,10 @@ var Ej2WidgetBase = exports.Ej2WidgetBase = function () {
             this.createTwoWays();
         }
         if (this.controlName == _constants.constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value) this.allOption.value = this.allOption.value.toString();
-        this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
-        this.widget.appendTo(option.element);
+        if (this.controlName == _constants.constants.ej2ElementPrefix + 'ContextMenu') this.eWidget = this.widget = new this.componentBaseRef(this.allOption, option.element.firstChild);else {
+            this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
+            this.widget.appendTo(option.element);
+        }
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }

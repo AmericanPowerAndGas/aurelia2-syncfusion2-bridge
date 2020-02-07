@@ -9,8 +9,8 @@ import { constants } from '../../common/constants';
 import { generateBindables } from '../../common/decorators';
 import { inject, inlineView, customElement, children, TemplatingEngine } from '../../common/common';
 import { Ej2TemplateProcessor } from '../../common/ej2-template-processor';
-import { Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit } from '@syncfusion/ej2-grids';
-Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit);
+import { Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, Edit } from '@syncfusion/ej2-grids';
+Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, Edit);
 let Ej2Grid = class Ej2Grid extends Ej2WidgetBase {
     constructor(element, templateEngine) {
         super(Grid);

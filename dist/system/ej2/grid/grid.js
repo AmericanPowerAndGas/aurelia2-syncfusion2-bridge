@@ -3,7 +3,7 @@
 System.register(["../../common/ej2-widget-base", "../../common/constants", "../../common/decorators", "../../common/common", "../../common/ej2-template-processor", "@syncfusion/ej2-grids"], function (_export, _context) {
     "use strict";
 
-    var Ej2WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, TemplatingEngine, Ej2TemplateProcessor, Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit, _typeof, __decorate, Ej2Grid;
+    var Ej2WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, TemplatingEngine, Ej2TemplateProcessor, Grid, Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, Edit, _typeof, __decorate, Ej2Grid;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -64,7 +64,6 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
             DetailRow = _syncfusionEj2Grids.DetailRow;
             PdfExport = _syncfusionEj2Grids.PdfExport;
             ExcelExport = _syncfusionEj2Grids.ExcelExport;
-            ContextMenu = _syncfusionEj2Grids.ContextMenu;
             Edit = _syncfusionEj2Grids.Edit;
         }],
         execute: function () {
@@ -83,7 +82,7 @@ System.register(["../../common/ej2-widget-base", "../../common/constants", "../.
                 }return c > 3 && r && Object.defineProperty(target, key, r), r;
             };
 
-            Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, ContextMenu, Edit);
+            Grid.Inject(Group, Filter, Page, Sort, Search, Toolbar, Freeze, Selection, Aggregate, DetailRow, PdfExport, ExcelExport, Edit);
 
             _export("Ej2Grid", Ej2Grid = function (_Ej2WidgetBase) {
                 _inherits(Ej2Grid, _Ej2WidgetBase);

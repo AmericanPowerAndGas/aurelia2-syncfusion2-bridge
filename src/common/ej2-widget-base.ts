@@ -37,14 +37,18 @@ export class Ej2WidgetBase {
             this.createTwoWays();
         }
         if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
-            this.allOption.value = this.allOption.value.toString();        
-        this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
-        this.widget.appendTo(option.element);
-        
+            this.allOption.value = this.allOption.value.toString();  
+        if (this.controlName == constants.ej2ElementPrefix + 'ContextMenu')           
+            this.eWidget = this.widget = new this.componentBaseRef(this.allOption, option.element.firstChild);       
+        else {
+            this.eWidget = this.widget = new this.componentBaseRef(this.allOption);
+            this.widget.appendTo(option.element);
+        }       
+                                                            
         if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
         }
-
+        
         if (this.isEditor || this.controlName == constants.ej2ElementPrefix + 'RTE') {
 
             this.widget.change = (arg) => {               

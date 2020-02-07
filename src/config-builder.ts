@@ -121,7 +121,8 @@ export class EjConfigBuilder {
       .ej2Slider()
       .ej2Switch()
       .ej2Toast()
-      .ej2Schedule();
+      .ej2Schedule()
+      .ej2ContextMenu();
     return this;
   }
   /**
@@ -581,6 +582,10 @@ export class EjConfigBuilder {
   }
   ej2Schedule(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/schedule/schedule'));
+    return this;
+  }
+  ej2ContextMenu(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/contextmenu/contextmenu'));
     return this;
   }
 }
