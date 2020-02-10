@@ -19,7 +19,7 @@ export class Ej2WidgetBase {
         }
         if (this.controlName == constants.ej2ElementPrefix + 'MaskEdit' && this.allOption.value)
             this.allOption.value = this.allOption.value.toString();
-        if (this.controlName == constants.ej2ElementPrefix + 'ContextMenu')
+        if (this.controlName == constants.ej2ElementPrefix + 'ContextMenu' || this.controlName == constants.ej2ElementPrefix + 'Menu')
             this.eWidget = this.widget = new this.componentBaseRef(this.allOption, option.element.firstChild);
         else {
             this.eWidget = this.widget = new this.componentBaseRef(this.allOption);

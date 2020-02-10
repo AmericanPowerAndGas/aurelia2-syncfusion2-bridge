@@ -84,13 +84,13 @@ declare module 'aurelia-syncfusion-bridge' {
     DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
-    DropDownButton
-  } from '@syncfusion/ej2-splitbuttons';
-  import {
     Diagram,
     DataBinding,
     HierarchicalTree
   } from '@syncfusion/ej2-diagrams';
+  import {
+    DropDownButton
+  } from '@syncfusion/ej2-splitbuttons';
   import {
     DropDownList
   } from '@syncfusion/ej2-dropdowns';
@@ -114,12 +114,15 @@ declare module 'aurelia-syncfusion-bridge' {
     LinearGauge
   } from '@syncfusion/ej2-lineargauge';
   import {
-    MaskedTextBox
-  } from '@syncfusion/ej2-inputs';
-  import {
     ListBox,
     CheckBoxSelection
   } from '@syncfusion/ej2-dropdowns';
+  import {
+    MaskedTextBox
+  } from '@syncfusion/ej2-inputs';
+  import {
+    Menu
+  } from '@syncfusion/ej2-navigations';
   import {
     MultiSelect
   } from '@syncfusion/ej2-dropdowns';
@@ -303,6 +306,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Toast(): any;
     ej2Schedule(): any;
     ej2ContextMenu(): any;
+    ej2Menu(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -411,10 +415,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDatePicker
   };
   export {
-    ejDateTimePicker
+    ejDateRangePicker
   };
   export {
-    ejDateRangePicker
+    ejDateTimePicker
   };
   export {
     ejDiagram
@@ -423,16 +427,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDialog
   };
   export {
-    ejDigitalGauge
-  };
-  export {
     ejDropDownList
   };
   export {
-    ejFileExplorer
+    ejDigitalGauge
   };
   export {
     ejGantt
+  };
+  export {
+    ejFileExplorer
   };
   export {
     Column
@@ -441,10 +445,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGrid
   };
   export {
-    ejGroupButton
+    ejHeatMap
   };
   export {
-    ejHeatMap
+    ejGroupButton
   };
   export {
     ejHeatMapLegend
@@ -462,9 +466,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListBox
   };
   export {
-    ejListView
-  };
-  export {
     Layer
   };
   export {
@@ -475,6 +476,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejMenu
+  };
+  export {
+    ejListView
   };
   export {
     ejNavigationDrawer
@@ -591,10 +595,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTab
   };
   export {
-    ejTile
+    ejTagCloud
   };
   export {
-    ejTagCloud
+    ejTile
   };
   export {
     ejTimePicker
@@ -669,10 +673,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2DateTimePicker
   };
   export {
-    ej2DropDownButton
+    ej2Diagram
   };
   export {
-    ej2Diagram
+    ej2DropDownButton
   };
   export {
     Ej2DropDownList
@@ -687,10 +691,13 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2LinearGauge
   };
   export {
+    Ej2ListBox
+  };
+  export {
     ej2MaskEdit
   };
   export {
-    Ej2ListBox
+    ej2Menu
   };
   export {
     Ej2MultiSelect
