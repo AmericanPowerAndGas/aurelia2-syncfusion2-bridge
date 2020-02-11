@@ -172,6 +172,9 @@ declare module 'aurelia-syncfusion-bridge' {
     DragAndDrop
   } from '@syncfusion/ej2-schedule';
   import {
+    Sidebar
+  } from '@syncfusion/ej2-navigations';
+  import {
     Slider
   } from '@syncfusion/ej2-inputs';
   import {
@@ -307,6 +310,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Schedule(): any;
     ej2ContextMenu(): any;
     ej2Menu(): any;
+    ej2Sidebar(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -427,16 +431,16 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDialog
   };
   export {
-    ejDropDownList
-  };
-  export {
     ejDigitalGauge
   };
   export {
-    ejGantt
+    ejDropDownList
   };
   export {
     ejFileExplorer
+  };
+  export {
+    ejGantt
   };
   export {
     Column
@@ -445,10 +449,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejGrid
   };
   export {
-    ejHeatMap
+    ejGroupButton
   };
   export {
-    ejGroupButton
+    ejHeatMap
   };
   export {
     ejHeatMapLegend
@@ -466,6 +470,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ejListBox
   };
   export {
+    ejListView
+  };
+  export {
     Layer
   };
   export {
@@ -476,9 +483,6 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejMenu
-  };
-  export {
-    ejListView
   };
   export {
     ejNavigationDrawer
@@ -722,6 +726,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Schedule
+  };
+  export {
+    ej2Sidebar
   };
   export {
     Ej2Slider

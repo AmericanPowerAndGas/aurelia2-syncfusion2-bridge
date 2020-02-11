@@ -115,7 +115,8 @@ export class EjConfigBuilder {
             .ej2Toast()
             .ej2Schedule()
             .ej2ContextMenu()
-            .ej2Menu();
+            .ej2Menu()
+            .ej2Sidebar();
         return this;
     }
     withoutGlobalResources() {
@@ -579,6 +580,10 @@ export class EjConfigBuilder {
     }
     ej2Menu() {
         this.resources.push(PLATFORM.moduleName('./ej2/menu/menu'));
+        return this;
+    }
+    ej2Sidebar() {
+        this.resources.push(PLATFORM.moduleName('./ej2/sidebar/sidebar'));
         return this;
     }
 }
