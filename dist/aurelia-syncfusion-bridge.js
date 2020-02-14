@@ -122,7 +122,8 @@ export class EjConfigBuilder {
             .ej2Schedule()
             .ej2ContextMenu()
             .ej2Menu()
-            .ej2Sidebar();
+            .ej2Sidebar()
+            .ej2Toolbar();
         return this;
     }
     withoutGlobalResources() {
@@ -590,6 +591,11 @@ export class EjConfigBuilder {
     }
     ej2Sidebar() {
         this.resources.push(PLATFORM.moduleName('./ej2/sidebar/sidebar'));
+        return this;
+    }
+    ej2Toolbar() {
+        this.resources.push(PLATFORM.moduleName('./ej2/toolbar/items'));
+        this.resources.push(PLATFORM.moduleName('./ej2/toolbar/toolbar'));
         return this;
     }
 }
@@ -1090,6 +1096,8 @@ export class Ej2WidgetBase {
             this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map((x) => x.au.controller.viewModel);
         if (PropertyName == 'chips')
             this[PropertyName] = Array.from(this.element.querySelectorAll('e-chips > e-chip')).map((x) => x.au.controller.viewModel);
+        if (PropertyName == 'items')
+            this[PropertyName] = Array.from(this.element.querySelectorAll('e-items > e-item')).map((x) => x.au.controller.viewModel);
         let childCollection = this[PropertyName];
         let len = childCollection.length;
         if (len) {
@@ -3906,6 +3914,48 @@ ej2Toast = __decorate([
     inject(Element)
 ], ej2Toast);
 export { ej2Toast };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let Ej2Items = class Ej2Items {
+};
+Ej2Items = __decorate([
+    inlineView(`${constants.aureliaTemplateString}`),
+    customElement(`e-item`),
+    generateBindables('items', ['align', 'cssClass', 'disabled', 'htmlAttributes', 'id', 'overflow', 'prefixIcon', 'showAlwaysInPopup', 'showTextOn', 'suffixIcon', 'template', 'text', 'tooltipText', 'type', 'visible', 'width'], [], null, null)
+], Ej2Items);
+export { Ej2Items };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Toolbar as ToolbarAlias } from '@syncfusion/ej2-navigations';
+let Ej2Toolbar = class Ej2Toolbar extends Ej2WidgetBase {
+    constructor(element) {
+        super(ToolbarAlias);
+        this.items = [];
+        this.element = element;
+        this.hasChildProperty = true;
+        this.childPropertyName = 'items';
+    }
+};
+__decorate([
+    children(`e-items`)
+], Ej2Toolbar.prototype, "items", void 0);
+Ej2Toolbar = __decorate([
+    customElement(`${constants.ej2ElementPrefix}toolbar`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables(constants.ej2ElementPrefix + 'Toolbar', ['cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width'], [], null, null),
+    inject(Element)
+], Ej2Toolbar);
+export { Ej2Toolbar };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

@@ -193,6 +193,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Toast
   } from '@syncfusion/ej2-notifications';
   import {
+    Toolbar as ToolbarAlias
+  } from '@syncfusion/ej2-navigations';
+  import {
     Uploader
   } from '@syncfusion/ej2-inputs';
   export class EjConfigBuilder {
@@ -311,6 +314,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ContextMenu(): any;
     ej2Menu(): any;
     ej2Sidebar(): any;
+    ej2Toolbar(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -747,6 +751,12 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Toast
+  };
+  export {
+    Ej2Items
+  };
+  export {
+    Ej2Toolbar
   };
   export {
     Ej2Uploader

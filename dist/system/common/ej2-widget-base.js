@@ -132,6 +132,9 @@ System.register(["../common/decorators", "../common/events", "../common/util", "
                     if (PropertyName == 'chips') this[PropertyName] = Array.from(this.element.querySelectorAll('e-chips > e-chip')).map(function (x) {
                         return x.au.controller.viewModel;
                     });
+                    if (PropertyName == 'items') this[PropertyName] = Array.from(this.element.querySelectorAll('e-items > e-item')).map(function (x) {
+                        return x.au.controller.viewModel;
+                    });
                     var childCollection = this[PropertyName];
                     var len = childCollection.length;
                     if (len) {

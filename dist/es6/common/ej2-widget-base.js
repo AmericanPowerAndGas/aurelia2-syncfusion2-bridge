@@ -100,6 +100,8 @@ export class Ej2WidgetBase {
             this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map((x) => x.au.controller.viewModel);
         if (PropertyName == 'chips')
             this[PropertyName] = Array.from(this.element.querySelectorAll('e-chips > e-chip')).map((x) => x.au.controller.viewModel);
+        if (PropertyName == 'items')
+            this[PropertyName] = Array.from(this.element.querySelectorAll('e-items > e-item')).map((x) => x.au.controller.viewModel);
         let childCollection = this[PropertyName];
         let len = childCollection.length;
         if (len) {
