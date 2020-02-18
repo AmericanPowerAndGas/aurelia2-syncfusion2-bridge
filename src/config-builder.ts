@@ -125,7 +125,8 @@ export class EjConfigBuilder {
       .ej2ContextMenu()
       .ej2Menu()
       .ej2Sidebar()
-      .ej2Toolbar();
+      .ej2Toolbar()
+      .ej2DateRangePicker();
     return this;
   }
   /**
@@ -602,6 +603,10 @@ export class EjConfigBuilder {
   ej2Toolbar(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/toolbar/items'));
     this.resources.push(PLATFORM.moduleName('./ej2/toolbar/toolbar'));
+    return this;
+  }
+  ej2DateRangePicker(): EjConfigBuilder {    
+    this.resources.push(PLATFORM.moduleName('./ej2/daterangepicker/daterangepicker'));
     return this;
   }
 }

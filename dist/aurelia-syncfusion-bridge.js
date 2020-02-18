@@ -123,7 +123,8 @@ export class EjConfigBuilder {
             .ej2ContextMenu()
             .ej2Menu()
             .ej2Sidebar()
-            .ej2Toolbar();
+            .ej2Toolbar()
+            .ej2DateRangePicker();
         return this;
     }
     withoutGlobalResources() {
@@ -598,6 +599,10 @@ export class EjConfigBuilder {
         this.resources.push(PLATFORM.moduleName('./ej2/toolbar/toolbar'));
         return this;
     }
+    ej2DateRangePicker() {
+        this.resources.push(PLATFORM.moduleName('./ej2/daterangepicker/daterangepicker'));
+        return this;
+    }
 }
 
 export function configure(aurelia, configCallback) {
@@ -1030,6 +1035,11 @@ export class Ej2WidgetBase {
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
                 else if (this.controlName == constants.ej2ElementPrefix + 'Switch' && arg)
                     this[this.util.getBindablePropertyName('checked')] = arg.checked;
+                else if (this.controlName == constants.ej2ElementPrefix + 'DateRangePicker' && arg) {
+                    this[this.util.getBindablePropertyName('value')] = arg.value;
+                    this[this.util.getBindablePropertyName('startDate')] = arg.startDate;
+                    this[this.util.getBindablePropertyName('endDate')] = arg.endDate;
+                }
                 else if (arg && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.value;
             };
@@ -3371,6 +3381,27 @@ Ej2DatePicker = __decorate([
     inject(Element)
 ], Ej2DatePicker);
 export { Ej2DatePicker };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { DateRangePicker } from '@syncfusion/ej2-calendars';
+let ej2DateRangePicker = class ej2DateRangePicker extends Ej2WidgetBase {
+    constructor(element) {
+        super(DateRangePicker);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ej2DateRangePicker = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}date-range-picker`),
+    generateBindables(constants.ej2ElementPrefix + 'DateRangePicker', ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'keyConfigs', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'serverTimezoneOffset', 'showClearButton', 'start', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex'], ['startDate', 'endDate', 'value'], null, null),
+    inject(Element)
+], ej2DateRangePicker);
+export { ej2DateRangePicker };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

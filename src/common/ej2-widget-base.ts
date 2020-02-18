@@ -55,9 +55,14 @@ export class Ej2WidgetBase {
                 if (this.controlName == constants.ej2ElementPrefix + 'RTE' && arg && arg.element && 'eValue' in this)
                     this[this.util.getBindablePropertyName('value')] = arg.element.value;
                 else if (this.controlName == constants.ej2ElementPrefix + 'Switch' && arg)
-                    this[this.util.getBindablePropertyName('checked')] = arg.checked;                   
+                    this[this.util.getBindablePropertyName('checked')] = arg.checked;
+                else if (this.controlName == constants.ej2ElementPrefix + 'DateRangePicker' && arg) {
+                    this[this.util.getBindablePropertyName('value')] = arg.value;
+                    this[this.util.getBindablePropertyName('startDate')] = arg.startDate;
+                    this[this.util.getBindablePropertyName('endDate')] = arg.endDate;
+                }                    
                 else if (arg && 'eValue' in this)
-                    this[this.util.getBindablePropertyName('value')] = arg.value;                      
+                    this[this.util.getBindablePropertyName('value')] = arg.value;               
             };
 
         }       

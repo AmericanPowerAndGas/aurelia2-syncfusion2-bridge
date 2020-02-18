@@ -81,6 +81,9 @@ declare module 'aurelia-syncfusion-bridge' {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
+    DateRangePicker
+  } from '@syncfusion/ej2-calendars';
+  import {
     DateTimePicker
   } from '@syncfusion/ej2-calendars';
   import {
@@ -315,6 +318,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Menu(): any;
     ej2Sidebar(): any;
     ej2Toolbar(): any;
+    ej2DateRangePicker(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -676,6 +680,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2DatePicker
+  };
+  export {
+    ej2DateRangePicker
   };
   export {
     ej2DateTimePicker
