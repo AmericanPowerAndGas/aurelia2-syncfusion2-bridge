@@ -1,8 +1,8 @@
 'use strict';
 
 exports.__esModule = true;
-exports.Ej2Uploader = exports.Ej2Toolbar = exports.Ej2Items = exports.ej2Toast = exports.Ej2TextBox = exports.ej2Tab = exports.Ej2Switch = exports.ej2SplitButton = exports.Ej2Slider = exports.ej2Sidebar = exports.ej2Schedule = exports.ej2Rte = exports.Ej2RadioButton = exports.ej2ProgressButton = exports.ej2PdfViewer = exports.ej2Overview = exports.Ej2NumericTextBox = exports.Ej2MultiSelect = exports.ej2Menu = exports.ej2MaskEdit = exports.Ej2ListBox = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.Ej2DropDownList = exports.ej2DropDownButton = exports.ej2Diagram = exports.ej2DateTimePicker = exports.ej2DateRangePicker = exports.Ej2DatePicker = exports.ej2ContextMenu = exports.Ej2ComboBox = exports.Ej2ColorPicker = exports.Chips = exports.ej2ChipList = exports.Ej2CheckBox = exports.SeriesVM = exports.ej2Chart = exports.ej2Button = exports.Ej2AutoComplete = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
-exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
+exports.Ej2Uploader = exports.Ej2Toolbar = exports.Ej2Items = exports.ej2Toast = exports.Ej2TimePicker = exports.Ej2TextBox = exports.ej2Tab = exports.Ej2Switch = exports.ej2SplitButton = exports.Ej2Slider = exports.ej2Sidebar = exports.ej2Schedule = exports.ej2Rte = exports.Ej2RadioButton = exports.ej2ProgressButton = exports.ej2PdfViewer = exports.ej2Overview = exports.Ej2NumericTextBox = exports.Ej2MultiSelect = exports.ej2Menu = exports.ej2MaskEdit = exports.Ej2ListBox = exports.ej2LinearGauge = exports.Ej2Grid = exports.Ej2Column = exports.Ej2DropDownList = exports.ej2DropDownButton = exports.ej2Diagram = exports.ej2DateTimePicker = exports.ej2DateRangePicker = exports.Ej2DatePicker = exports.ej2ContextMenu = exports.Ej2ComboBox = exports.Ej2ColorPicker = exports.Chips = exports.ej2ChipList = exports.Ej2CheckBox = exports.SeriesVM = exports.ej2Chart = exports.ej2Button = exports.Ej2AutoComplete = exports.Ej2Accordion = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = undefined;
+exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSpellCheck = exports.ejSplitButton = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDigitalGauge = exports.ejDialog = exports.ejDiagram = exports.ejDateTimePicker = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.Ej2WidgetBase = exports.Ej2Template = exports.Ej2TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejComboBox = exports.ejColorPicker = exports.ejCircularGauge = exports.ejCheckBox = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -67,7 +67,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     }
 
     EjConfigBuilder.prototype.useAll = function useAll() {
-        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge().ej2Chart().ej2MaskEdit().ej2Button().ej2DropDownButton().ej2ProgressButton().ej2SplitButton().ej2ChipList().ej2AutoComplete().ej2ComboBox().ej2DropDownList().ej2MultiSelect().ej2ListBox().ej2TextBox().ej2NumericTextBox().ej2RadioButton().ej2CheckBox().ej2ColorPicker().ej2Uploader().ej2Slider().ej2Switch().ej2Toast().ej2Schedule().ej2ContextMenu().ej2Menu().ej2Sidebar().ej2Toolbar().ej2DateRangePicker();
+        this.ejGrid().ejChart().ejSunburstChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejComboBox().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejDateRangePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejSpellCheck().ejTemplate().ej2Template().ej2DatePicker().ej2Accordion().ej2Grid().ej2DateTimePicker().ej2Diagram().ej2Overview().ej2RTE().ej2Tab().ej2PdfViewer().ej2LinearGauge().ej2Chart().ej2MaskEdit().ej2Button().ej2DropDownButton().ej2ProgressButton().ej2SplitButton().ej2ChipList().ej2AutoComplete().ej2ComboBox().ej2DropDownList().ej2MultiSelect().ej2ListBox().ej2TextBox().ej2NumericTextBox().ej2RadioButton().ej2CheckBox().ej2ColorPicker().ej2Uploader().ej2Slider().ej2Switch().ej2Toast().ej2Schedule().ej2ContextMenu().ej2Menu().ej2Sidebar().ej2Toolbar().ej2DateRangePicker().ej2TimePicker();
         return this;
     };
 
@@ -659,6 +659,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
 
     EjConfigBuilder.prototype.ej2DateRangePicker = function ej2DateRangePicker() {
         this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/daterangepicker/daterangepicker'));
+        return this;
+    };
+
+    EjConfigBuilder.prototype.ej2TimePicker = function ej2TimePicker() {
+        this.resources.push(_aureliaPal.PLATFORM.moduleName('./ej2/timepicker/timepicker'));
         return this;
     };
 
@@ -3213,11 +3218,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejSpellCheck = function (_WidgetBase58) {
-    _inherits(ejSpellCheck, _WidgetBase58);
+var ejSplitButton = function (_WidgetBase58) {
+    _inherits(ejSplitButton, _WidgetBase58);
 
-    function ejSpellCheck(element) {
-        _classCallCheck(this, ejSpellCheck);
+    function ejSplitButton(element) {
+        _classCallCheck(this, ejSplitButton);
 
         var _this68 = _possibleConstructorReturn(this, _WidgetBase58.call(this));
 
@@ -3225,10 +3230,10 @@ var ejSpellCheck = function (_WidgetBase58) {
         return _this68;
     }
 
-    return ejSpellCheck;
+    return ejSplitButton;
 }(WidgetBase);
-exports.ejSpellCheck = ejSpellCheck = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'spell-check'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync', 'ajaxRequestType', 'ajaxDataType']), (0, _aureliaDependencyInjection.inject)(Element)], ejSpellCheck);
-exports.ejSpellCheck = ejSpellCheck;
+exports.ejSplitButton = ejSplitButton = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'split-button'), generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejSplitButton);
+exports.ejSplitButton = ejSplitButton;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -3239,11 +3244,11 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ejSplitButton = function (_WidgetBase59) {
-    _inherits(ejSplitButton, _WidgetBase59);
+var ejSpellCheck = function (_WidgetBase59) {
+    _inherits(ejSpellCheck, _WidgetBase59);
 
-    function ejSplitButton(element) {
-        _classCallCheck(this, ejSplitButton);
+    function ejSpellCheck(element) {
+        _classCallCheck(this, ejSpellCheck);
 
         var _this69 = _possibleConstructorReturn(this, _WidgetBase59.call(this));
 
@@ -3251,10 +3256,10 @@ var ejSplitButton = function (_WidgetBase59) {
         return _this69;
     }
 
-    return ejSplitButton;
+    return ejSpellCheck;
 }(WidgetBase);
-exports.ejSplitButton = ejSplitButton = __decorate([(0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'split-button'), generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }), (0, _aureliaDependencyInjection.inject)(Element)], ejSplitButton);
-exports.ejSplitButton = ejSplitButton;
+exports.ejSpellCheck = ejSpellCheck = __decorate([(0, _aureliaTemplating.customElement)(constants.elementPrefix + 'spell-check'), (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync', 'ajaxRequestType', 'ajaxDataType']), (0, _aureliaDependencyInjection.inject)(Element)], ejSpellCheck);
+exports.ejSpellCheck = ejSpellCheck;
 
 
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
@@ -4788,16 +4793,44 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ej2Toast = function (_Ej2WidgetBase35) {
-    _inherits(ej2Toast, _Ej2WidgetBase35);
+var Ej2TimePicker = function (_Ej2WidgetBase35) {
+    _inherits(Ej2TimePicker, _Ej2WidgetBase35);
+
+    function Ej2TimePicker(element) {
+        _classCallCheck(this, Ej2TimePicker);
+
+        var _this120 = _possibleConstructorReturn(this, _Ej2WidgetBase35.call(this, _ej2Calendars.TimePicker));
+
+        _this120.isEditor = true;
+        _this120.element = element;
+        return _this120;
+    }
+
+    return Ej2TimePicker;
+}(Ej2WidgetBase);
+exports.Ej2TimePicker = Ej2TimePicker = __decorate([(0, _aureliaTemplating.customAttribute)(constants.ej2AttributePrefix + 'time-picker'), generateBindables(constants.ej2ElementPrefix + 'TimePicker', ['allowEdit', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'htmlAttributes', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'scrollTo', 'showClearButton', 'step', 'strictMode', 'value', 'width', 'zIndex'], ['value'], null, null), (0, _aureliaDependencyInjection.inject)(Element)], Ej2TimePicker);
+exports.Ej2TimePicker = Ej2TimePicker;
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === 'undefined' ? 'undefined' : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ej2Toast = function (_Ej2WidgetBase36) {
+    _inherits(ej2Toast, _Ej2WidgetBase36);
 
     function ej2Toast(element) {
         _classCallCheck(this, ej2Toast);
 
-        var _this120 = _possibleConstructorReturn(this, _Ej2WidgetBase35.call(this, _ej2Notifications.Toast));
+        var _this121 = _possibleConstructorReturn(this, _Ej2WidgetBase36.call(this, _ej2Notifications.Toast));
 
-        _this120.element = element;
-        return _this120;
+        _this121.element = element;
+        return _this121;
     }
 
     return ej2Toast;
@@ -4830,19 +4863,19 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2Toolbar = function (_Ej2WidgetBase36) {
-    _inherits(Ej2Toolbar, _Ej2WidgetBase36);
+var Ej2Toolbar = function (_Ej2WidgetBase37) {
+    _inherits(Ej2Toolbar, _Ej2WidgetBase37);
 
     function Ej2Toolbar(element) {
         _classCallCheck(this, Ej2Toolbar);
 
-        var _this121 = _possibleConstructorReturn(this, _Ej2WidgetBase36.call(this, _ej2Navigations.Toolbar));
+        var _this122 = _possibleConstructorReturn(this, _Ej2WidgetBase37.call(this, _ej2Navigations.Toolbar));
 
-        _this121.items = [];
-        _this121.element = element;
-        _this121.hasChildProperty = true;
-        _this121.childPropertyName = 'items';
-        return _this121;
+        _this122.items = [];
+        _this122.element = element;
+        _this122.hasChildProperty = true;
+        _this122.childPropertyName = 'items';
+        return _this122;
     }
 
     return Ej2Toolbar;
@@ -4861,17 +4894,17 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var Ej2Uploader = function (_Ej2WidgetBase37) {
-    _inherits(Ej2Uploader, _Ej2WidgetBase37);
+var Ej2Uploader = function (_Ej2WidgetBase38) {
+    _inherits(Ej2Uploader, _Ej2WidgetBase38);
 
     function Ej2Uploader(element) {
         _classCallCheck(this, Ej2Uploader);
 
-        var _this122 = _possibleConstructorReturn(this, _Ej2WidgetBase37.call(this, _ej2Inputs.Uploader));
+        var _this123 = _possibleConstructorReturn(this, _Ej2WidgetBase38.call(this, _ej2Inputs.Uploader));
 
-        _this122.isEditor = true;
-        _this122.element = element;
-        return _this122;
+        _this123.isEditor = true;
+        _this123.element = element;
+        return _this123;
     }
 
     return Ej2Uploader;

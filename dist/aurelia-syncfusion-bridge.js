@@ -124,7 +124,8 @@ export class EjConfigBuilder {
             .ej2Menu()
             .ej2Sidebar()
             .ej2Toolbar()
-            .ej2DateRangePicker();
+            .ej2DateRangePicker()
+            .ej2TimePicker();
         return this;
     }
     withoutGlobalResources() {
@@ -601,6 +602,10 @@ export class EjConfigBuilder {
     }
     ej2DateRangePicker() {
         this.resources.push(PLATFORM.moduleName('./ej2/daterangepicker/daterangepicker'));
+        return this;
+    }
+    ej2TimePicker() {
+        this.resources.push(PLATFORM.moduleName('./ej2/timepicker/timepicker'));
         return this;
     }
 }
@@ -2683,6 +2688,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ejSplitButton = class ejSplitButton extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejSplitButton = __decorate([
+    customAttribute(`${constants.attributePrefix}split-button`),
+    generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }),
+    inject(Element)
+], ejSplitButton);
+export { ejSplitButton };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let ejSpellCheck = class ejSpellCheck extends WidgetBase {
     constructor(element) {
         super();
@@ -2696,25 +2720,6 @@ ejSpellCheck = __decorate([
     inject(Element)
 ], ejSpellCheck);
 export { ejSpellCheck };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-let ejSplitButton = class ejSplitButton extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejSplitButton = __decorate([
-    customAttribute(`${constants.attributePrefix}split-button`),
-    generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }),
-    inject(Element)
-], ejSplitButton);
-export { ejSplitButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3924,6 +3929,27 @@ Ej2TextBox = __decorate([
     inject(Element)
 ], Ej2TextBox);
 export { Ej2TextBox };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { TimePicker } from '@syncfusion/ej2-calendars';
+let Ej2TimePicker = class Ej2TimePicker extends Ej2WidgetBase {
+    constructor(element) {
+        super(TimePicker);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+Ej2TimePicker = __decorate([
+    customAttribute(`${constants.ej2AttributePrefix}time-picker`),
+    generateBindables(constants.ej2ElementPrefix + 'TimePicker', ['allowEdit', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'htmlAttributes', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'scrollTo', 'showClearButton', 'step', 'strictMode', 'value', 'width', 'zIndex'], ['value'], null, null),
+    inject(Element)
+], Ej2TimePicker);
+export { Ej2TimePicker };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

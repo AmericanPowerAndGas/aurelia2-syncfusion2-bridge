@@ -193,6 +193,9 @@ declare module 'aurelia-syncfusion-bridge' {
     TextBox
   } from '@syncfusion/ej2-inputs';
   import {
+    TimePicker
+  } from '@syncfusion/ej2-calendars';
+  import {
     Toast
   } from '@syncfusion/ej2-notifications';
   import {
@@ -319,6 +322,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Sidebar(): any;
     ej2Toolbar(): any;
     ej2DateRangePicker(): any;
+    ej2TimePicker(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -580,10 +584,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSparkline
   };
   export {
-    ejSpellCheck
+    ejSplitButton
   };
   export {
-    ejSplitButton
+    ejSpellCheck
   };
   export {
     ejSplitter
@@ -755,6 +759,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2TextBox
+  };
+  export {
+    Ej2TimePicker
   };
   export {
     ej2Toast

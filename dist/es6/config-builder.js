@@ -118,7 +118,8 @@ export class EjConfigBuilder {
             .ej2Menu()
             .ej2Sidebar()
             .ej2Toolbar()
-            .ej2DateRangePicker();
+            .ej2DateRangePicker()
+            .ej2TimePicker();
         return this;
     }
     withoutGlobalResources() {
@@ -595,6 +596,10 @@ export class EjConfigBuilder {
     }
     ej2DateRangePicker() {
         this.resources.push(PLATFORM.moduleName('./ej2/daterangepicker/daterangepicker'));
+        return this;
+    }
+    ej2TimePicker() {
+        this.resources.push(PLATFORM.moduleName('./ej2/timepicker/timepicker'));
         return this;
     }
 }
