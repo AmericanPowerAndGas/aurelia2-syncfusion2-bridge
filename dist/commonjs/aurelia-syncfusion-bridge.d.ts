@@ -96,6 +96,9 @@ declare module 'aurelia-syncfusion-bridge' {
     HierarchicalTree
   } from '@syncfusion/ej2-diagrams';
   import {
+    Dialog
+  } from '@syncfusion/ej2-popups';
+  import {
     DropDownButton
   } from '@syncfusion/ej2-splitbuttons';
   import {
@@ -327,6 +330,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Toolbar(): any;
     ej2DateRangePicker(): any;
     ej2TimePicker(): any;
+    ej2Dialog(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -588,10 +592,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSparkline
   };
   export {
-    ejSplitButton
+    ejSpellCheck
   };
   export {
-    ejSpellCheck
+    ejSplitButton
   };
   export {
     ejSplitter
@@ -697,6 +701,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Diagram
+  };
+  export {
+    ej2Dialog
   };
   export {
     ej2DropDownButton

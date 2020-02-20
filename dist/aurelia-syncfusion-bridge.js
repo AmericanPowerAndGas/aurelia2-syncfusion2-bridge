@@ -125,7 +125,8 @@ export class EjConfigBuilder {
             .ej2Sidebar()
             .ej2Toolbar()
             .ej2DateRangePicker()
-            .ej2TimePicker();
+            .ej2TimePicker()
+            .ej2Dialog();
         return this;
     }
     withoutGlobalResources() {
@@ -606,6 +607,10 @@ export class EjConfigBuilder {
     }
     ej2TimePicker() {
         this.resources.push(PLATFORM.moduleName('./ej2/timepicker/timepicker'));
+        return this;
+    }
+    ej2Dialog() {
+        this.resources.push(PLATFORM.moduleName('./ej2/dialog/dialog'));
         return this;
     }
 }
@@ -2688,25 +2693,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejSplitButton = class ejSplitButton extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejSplitButton = __decorate([
-    customAttribute(`${constants.attributePrefix}split-button`),
-    generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }),
-    inject(Element)
-], ejSplitButton);
-export { ejSplitButton };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejSpellCheck = class ejSpellCheck extends WidgetBase {
     constructor(element) {
         super();
@@ -2720,6 +2706,25 @@ ejSpellCheck = __decorate([
     inject(Element)
 ], ejSpellCheck);
 export { ejSpellCheck };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejSplitButton = class ejSplitButton extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejSplitButton = __decorate([
+    customAttribute(`${constants.attributePrefix}split-button`),
+    generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': ['enableRtl'], 'targetID': ['targetId'] }),
+    inject(Element)
+], ejSplitButton);
+export { ejSplitButton };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3450,6 +3455,27 @@ ej2Diagram = __decorate([
     inject(Element)
 ], ej2Diagram);
 export { ej2Diagram };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Dialog } from '@syncfusion/ej2-popups';
+let ej2Dialog = class ej2Dialog extends Ej2WidgetBase {
+    constructor(element) {
+        super(Dialog);
+        this.element = element;
+    }
+};
+ej2Dialog = __decorate([
+    customElement(`${constants.ej2ElementPrefix}dialog`),
+    inlineView(constants.aureliaTemplateString),
+    generateBindables(constants.ej2ElementPrefix + 'Dialog', ['allowDragging', 'animationSettings', 'buttons', 'closeOnEscape', 'content', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'footerTemplate', 'header', 'height', 'isModal', 'locale', 'minHeight', 'position', 'showCloseIcon', 'target', 'visible', 'width', 'zIndex'], ['visible'], null, null),
+    inject(Element)
+], ej2Dialog);
+export { ej2Dialog };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
