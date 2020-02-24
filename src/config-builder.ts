@@ -128,7 +128,8 @@ export class EjConfigBuilder {
       .ej2Toolbar()
       .ej2DateRangePicker()
       .ej2TimePicker()
-      .ej2Dialog();
+      .ej2Dialog()
+      .ej2ListView();
     return this;
   }
   /**
@@ -617,6 +618,10 @@ export class EjConfigBuilder {
   }
   ej2Dialog(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/dialog/dialog'));
+    return this;
+  }
+  ej2ListView(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/listview/listview'));
     return this;
   }
 }

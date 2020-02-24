@@ -128,6 +128,9 @@ declare module 'aurelia-syncfusion-bridge' {
     CheckBoxSelection
   } from '@syncfusion/ej2-dropdowns';
   import {
+    ListView
+  } from '@syncfusion/ej2-lists';
+  import {
     MaskedTextBox
   } from '@syncfusion/ej2-inputs';
   import {
@@ -331,6 +334,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2DateRangePicker(): any;
     ej2TimePicker(): any;
     ej2Dialog(): any;
+    ej2ListView(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -499,9 +503,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejMap
   };
   export {
-    ejMaskEdit
-  };
-  export {
     ejMenu
   };
   export {
@@ -509,6 +510,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejNumericTextbox
+  };
+  export {
+    ejMaskEdit
   };
   export {
     ejOverview
@@ -722,6 +726,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2ListBox
+  };
+  export {
+    ej2ListView
   };
   export {
     ej2MaskEdit

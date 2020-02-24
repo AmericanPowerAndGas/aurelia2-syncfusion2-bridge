@@ -126,7 +126,8 @@ export class EjConfigBuilder {
             .ej2Toolbar()
             .ej2DateRangePicker()
             .ej2TimePicker()
-            .ej2Dialog();
+            .ej2Dialog()
+            .ej2ListView();
         return this;
     }
     withoutGlobalResources() {
@@ -611,6 +612,10 @@ export class EjConfigBuilder {
     }
     ej2Dialog() {
         this.resources.push(PLATFORM.moduleName('./ej2/dialog/dialog'));
+        return this;
+    }
+    ej2ListView() {
+        this.resources.push(PLATFORM.moduleName('./ej2/listview/listview'));
         return this;
     }
 }
@@ -2064,26 +2069,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejMaskEdit = class ejMaskEdit extends WidgetBase {
-    constructor(element) {
-        super();
-        this.isEditor = true;
-        this.element = element;
-    }
-};
-ejMaskEdit = __decorate([
-    customAttribute(`${constants.attributePrefix}mask-edit`),
-    generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']),
-    inject(Element)
-], ejMaskEdit);
-export { ejMaskEdit };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejMenu = class ejMenu extends WidgetBase {
     constructor(element) {
         super();
@@ -2136,6 +2121,26 @@ ejNumericTextbox = __decorate([
     inject(Element)
 ], ejNumericTextbox);
 export { ejNumericTextbox };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejMaskEdit = class ejMaskEdit extends WidgetBase {
+    constructor(element) {
+        super();
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+ejMaskEdit = __decorate([
+    customAttribute(`${constants.attributePrefix}mask-edit`),
+    generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']),
+    inject(Element)
+], ejMaskEdit);
+export { ejMaskEdit };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3616,6 +3621,27 @@ Ej2ListBox = __decorate([
     inject(Element)
 ], Ej2ListBox);
 export { Ej2ListBox };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { ListView } from '@syncfusion/ej2-lists';
+let ej2ListView = class ej2ListView extends Ej2WidgetBase {
+    constructor(element) {
+        super(ListView);
+        this.element = element;
+    }
+};
+ej2ListView = __decorate([
+    customElement(`${constants.ej2ElementPrefix}list-view`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables(constants.ej2ElementPrefix + 'ListView', ['animation', 'checkBoxPosition', 'cssClass', 'dataSource', 'enable', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'groupTemplate', 'headerTemplate', 'headerTitle', 'height', 'htmlAttributes', 'locale', 'query', 'showCheckBox', 'showHeader', 'showIcon', 'sortOrder', 'template', 'width'], [], [], null),
+    inject(Element)
+], ej2ListView);
+export { ej2ListView };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
