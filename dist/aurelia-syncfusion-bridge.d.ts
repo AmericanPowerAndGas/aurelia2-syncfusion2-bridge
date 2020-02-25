@@ -208,6 +208,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Toolbar as ToolbarAlias
   } from '@syncfusion/ej2-navigations';
   import {
+    Tooltip as TooltipAs
+  } from '@syncfusion/ej2-popups';
+  import {
     Uploader
   } from '@syncfusion/ej2-inputs';
   export class EjConfigBuilder {
@@ -331,6 +334,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2TimePicker(): any;
     ej2Dialog(): any;
     ej2ListView(): any;
+    ej2Tooltip(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -499,6 +503,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ejMap
   };
   export {
+    ejMaskEdit
+  };
+  export {
     ejMenu
   };
   export {
@@ -506,9 +513,6 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejNumericTextbox
-  };
-  export {
-    ejMaskEdit
   };
   export {
     ejOverview
@@ -535,9 +539,6 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotSchemaDesigner
   };
   export {
-    ejPivotTreeMap
-  };
-  export {
     ejProgressBar
   };
   export {
@@ -545,6 +546,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejRadialMenu
+  };
+  export {
+    ejPivotTreeMap
   };
   export {
     ejRadialSlider
@@ -613,13 +617,13 @@ declare module 'aurelia-syncfusion-bridge' {
     SunburstLevels
   };
   export {
-    ejSymbolPalette
-  };
-  export {
     ejTab
   };
   export {
     ejTagCloud
+  };
+  export {
+    ejSymbolPalette
   };
   export {
     ejTile
@@ -785,6 +789,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     Ej2Toolbar
+  };
+  export {
+    ej2Tooltip
   };
   export {
     Ej2Uploader
