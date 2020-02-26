@@ -130,7 +130,8 @@ export class EjConfigBuilder {
       .ej2TimePicker()
       .ej2Dialog()
       .ej2ListView()
-      .ej2Tooltip();
+      .ej2Tooltip()
+      .ej2Splitter();
     return this;
   }
   /**
@@ -627,6 +628,10 @@ export class EjConfigBuilder {
   }
   ej2Tooltip(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./ej2/tooltip/tooltip'));
+    return this;
+  }
+  ej2Splitter(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./ej2/splitter/splitter'));
     return this;
   }
 }

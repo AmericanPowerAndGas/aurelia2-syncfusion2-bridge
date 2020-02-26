@@ -190,6 +190,9 @@ declare module 'aurelia-syncfusion-bridge' {
     SplitButton
   } from '@syncfusion/ej2-splitbuttons';
   import {
+    Splitter
+  } from '@syncfusion/ej2-layouts';
+  import {
     Switch
   } from '@syncfusion/ej2-buttons';
   import {
@@ -335,6 +338,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Dialog(): any;
     ej2ListView(): any;
     ej2Tooltip(): any;
+    ej2Splitter(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -539,6 +543,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ejPivotSchemaDesigner
   };
   export {
+    ejPivotTreeMap
+  };
+  export {
     ejProgressBar
   };
   export {
@@ -546,9 +553,6 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ejRadialMenu
-  };
-  export {
-    ejPivotTreeMap
   };
   export {
     ejRadialSlider
@@ -617,13 +621,13 @@ declare module 'aurelia-syncfusion-bridge' {
     SunburstLevels
   };
   export {
+    ejSymbolPalette
+  };
+  export {
     ejTab
   };
   export {
     ejTagCloud
-  };
-  export {
-    ejSymbolPalette
   };
   export {
     ejTile
@@ -768,6 +772,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2SplitButton
+  };
+  export {
+    Ej2Splitter
   };
   export {
     Ej2Switch

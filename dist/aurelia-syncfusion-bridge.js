@@ -128,7 +128,8 @@ export class EjConfigBuilder {
             .ej2TimePicker()
             .ej2Dialog()
             .ej2ListView()
-            .ej2Tooltip();
+            .ej2Tooltip()
+            .ej2Splitter();
         return this;
     }
     withoutGlobalResources() {
@@ -621,6 +622,10 @@ export class EjConfigBuilder {
     }
     ej2Tooltip() {
         this.resources.push(PLATFORM.moduleName('./ej2/tooltip/tooltip'));
+        return this;
+    }
+    ej2Splitter() {
+        this.resources.push(PLATFORM.moduleName('./ej2/splitter/splitter'));
         return this;
     }
 }
@@ -2313,6 +2318,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ejPivotTreeMap = class ejPivotTreeMap extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejPivotTreeMap = __decorate([
+    customElement(`${constants.elementPrefix}pivot-tree-map`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableXHRCredentials']),
+    inject(Element)
+], ejPivotTreeMap);
+export { ejPivotTreeMap };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let ejProgressBar = class ejProgressBar extends WidgetBase {
     constructor(element) {
         super();
@@ -2380,26 +2405,6 @@ ejRadialMenu = __decorate([
     inject(Element, TemplatingEngine)
 ], ejRadialMenu);
 export { ejRadialMenu };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-let ejPivotTreeMap = class ejPivotTreeMap extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejPivotTreeMap = __decorate([
-    customElement(`${constants.elementPrefix}pivot-tree-map`),
-    inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableXHRCredentials']),
-    inject(Element)
-], ejPivotTreeMap);
-export { ejPivotTreeMap };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2844,6 +2849,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ejSymbolPalette = class ejSymbolPalette extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejSymbolPalette = __decorate([
+    customElement(`${constants.elementPrefix}symbol-palette`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']),
+    inject(Element)
+], ejSymbolPalette);
+export { ejSymbolPalette };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let ejTab = class ejTab extends WidgetBase {
     constructor(element) {
         super();
@@ -2877,26 +2902,6 @@ ejTagCloud = __decorate([
     inject(Element)
 ], ejTagCloud);
 export { ejTagCloud };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-let ejSymbolPalette = class ejSymbolPalette extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejSymbolPalette = __decorate([
-    customElement(`${constants.elementPrefix}symbol-palette`),
-    inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']),
-    inject(Element)
-], ejSymbolPalette);
-export { ejSymbolPalette };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3922,6 +3927,27 @@ ej2SplitButton = __decorate([
     inject(Element)
 ], ej2SplitButton);
 export { ej2SplitButton };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Splitter } from '@syncfusion/ej2-layouts';
+let Ej2Splitter = class Ej2Splitter extends Ej2WidgetBase {
+    constructor(element) {
+        super(Splitter);
+        this.element = element;
+    }
+};
+Ej2Splitter = __decorate([
+    customElement(`${constants.ej2ElementPrefix}splitter`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables(constants.ej2ElementPrefix + 'Splitter', ['cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enabled', 'height', 'locale', 'orientation', 'paneSettings', 'separatorSize', 'width'], [], null, null),
+    inject(Element)
+], Ej2Splitter);
+export { Ej2Splitter };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

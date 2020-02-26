@@ -122,7 +122,8 @@ export class EjConfigBuilder {
             .ej2TimePicker()
             .ej2Dialog()
             .ej2ListView()
-            .ej2Tooltip();
+            .ej2Tooltip()
+            .ej2Splitter();
         return this;
     }
     withoutGlobalResources() {
@@ -615,6 +616,10 @@ export class EjConfigBuilder {
     }
     ej2Tooltip() {
         this.resources.push(PLATFORM.moduleName('./ej2/tooltip/tooltip'));
+        return this;
+    }
+    ej2Splitter() {
+        this.resources.push(PLATFORM.moduleName('./ej2/splitter/splitter'));
         return this;
     }
 }
