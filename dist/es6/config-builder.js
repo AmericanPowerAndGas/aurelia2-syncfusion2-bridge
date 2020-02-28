@@ -123,7 +123,8 @@ export class EjConfigBuilder {
             .ej2Dialog()
             .ej2ListView()
             .ej2Tooltip()
-            .ej2Splitter();
+            .ej2Splitter()
+            .ej2DashboardLayout();
         return this;
     }
     withoutGlobalResources() {
@@ -620,6 +621,10 @@ export class EjConfigBuilder {
     }
     ej2Splitter() {
         this.resources.push(PLATFORM.moduleName('./ej2/splitter/splitter'));
+        return this;
+    }
+    ej2DashboardLayout() {
+        this.resources.push(PLATFORM.moduleName('./ej2/dashboardlayout/dashboardlayout'));
         return this;
     }
 }

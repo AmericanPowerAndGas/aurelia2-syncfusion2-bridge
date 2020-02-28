@@ -78,6 +78,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ContextMenu
   } from '@syncfusion/ej2-navigations';
   import {
+    DashboardLayout
+  } from '@syncfusion/ej2-layouts';
+  import {
     DatePicker
   } from '@syncfusion/ej2-calendars';
   import {
@@ -339,6 +342,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2ListView(): any;
     ej2Tooltip(): any;
     ej2Splitter(): any;
+    ej2DashboardLayout(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -453,10 +457,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDateTimePicker
   };
   export {
-    ejDiagram
+    ejDialog
   };
   export {
-    ejDialog
+    ejDiagram
   };
   export {
     ejDigitalGauge
@@ -697,6 +701,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2ContextMenu
+  };
+  export {
+    Ej2DashboardLayout
   };
   export {
     Ej2DatePicker
