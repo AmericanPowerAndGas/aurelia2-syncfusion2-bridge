@@ -124,7 +124,8 @@ export class EjConfigBuilder {
             .ej2ListView()
             .ej2Tooltip()
             .ej2Splitter()
-            .ej2DashboardLayout();
+            .ej2DashboardLayout()
+            .ej2Calendar();
         return this;
     }
     withoutGlobalResources() {
@@ -625,6 +626,10 @@ export class EjConfigBuilder {
     }
     ej2DashboardLayout() {
         this.resources.push(PLATFORM.moduleName('./ej2/dashboardlayout/dashboardlayout'));
+        return this;
+    }
+    ej2Calendar() {
+        this.resources.push(PLATFORM.moduleName('./ej2/calendar/calendar'));
         return this;
     }
 }

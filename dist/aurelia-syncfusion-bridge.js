@@ -130,7 +130,8 @@ export class EjConfigBuilder {
             .ej2ListView()
             .ej2Tooltip()
             .ej2Splitter()
-            .ej2DashboardLayout();
+            .ej2DashboardLayout()
+            .ej2Calendar();
         return this;
     }
     withoutGlobalResources() {
@@ -631,6 +632,10 @@ export class EjConfigBuilder {
     }
     ej2DashboardLayout() {
         this.resources.push(PLATFORM.moduleName('./ej2/dashboardlayout/dashboardlayout'));
+        return this;
+    }
+    ej2Calendar() {
+        this.resources.push(PLATFORM.moduleName('./ej2/calendar/calendar'));
         return this;
     }
 }
@@ -1709,26 +1714,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ejDialog = class ejDialog extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
-};
-ejDialog = __decorate([
-    customElement(`${constants.elementPrefix}dialog`),
-    inlineView(`${constants.aureliaTemplateString}`),
-    generateBindables('ejDialog', ['actionButtons', 'ajaxSettings', 'allowDraggable', 'allowKeyboardNavigation', 'animation', 'backgroundScroll', 'closeOnEscape', 'containment', 'contentType', 'contentUrl', 'cssClass', 'enableAnimation', 'enabled', 'enableModal', 'enablePersistence', 'enableResize', 'enableRTL', 'faviconCSS', 'height', 'htmlAttributes', 'isResponsive', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'position', 'showHeader', 'showOnInit', 'showRoundedCorner', 'target', 'title', 'tooltip', 'width', 'zIndex', 'showFooter', 'footerTemplateId'], [], { 'enableRTL': ['enableRtl'] }),
-    inject(Element)
-], ejDialog);
-export { ejDialog };
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 let ejDiagram = class ejDiagram extends WidgetBase {
     constructor(element) {
         super();
@@ -1742,6 +1727,26 @@ ejDiagram = __decorate([
     inject(Element)
 ], ejDiagram);
 export { ejDiagram };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ejDialog = class ejDialog extends WidgetBase {
+    constructor(element) {
+        super();
+        this.element = element;
+    }
+};
+ejDialog = __decorate([
+    customElement(`${constants.elementPrefix}dialog`),
+    inlineView(`${constants.aureliaTemplateString}`),
+    generateBindables('ejDialog', ['actionButtons', 'ajaxSettings', 'allowDraggable', 'allowKeyboardNavigation', 'animation', 'backgroundScroll', 'closeOnEscape', 'containment', 'contentType', 'contentUrl', 'cssClass', 'enableAnimation', 'enabled', 'enableModal', 'enablePersistence', 'enableResize', 'enableRTL', 'faviconCSS', 'height', 'htmlAttributes', 'isResponsive', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'position', 'showHeader', 'showOnInit', 'showRoundedCorner', 'target', 'title', 'tooltip', 'width', 'zIndex', 'showFooter', 'footerTemplateId'], [], { 'enableRTL': ['enableRtl'] }),
+    inject(Element)
+], ejDialog);
+export { ejDialog };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3221,6 +3226,28 @@ ej2Button = __decorate([
     inject(Element)
 ], ej2Button);
 export { ej2Button };
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Calendar } from '@syncfusion/ej2-calendars';
+let Ej2Calendar = class Ej2Calendar extends Ej2WidgetBase {
+    constructor(element) {
+        super(Calendar);
+        this.isEditor = true;
+        this.element = element;
+    }
+};
+Ej2Calendar = __decorate([
+    customElement(`${constants.ej2AttributePrefix}calendar`),
+    inlineView("<template><div></div></template>"),
+    generateBindables(constants.ej2ElementPrefix + 'Calendar', ['calendarMode', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'serverTimezoneOffset', 'showTodayButton', 'start', 'value', 'values', 'weekNumber'], ['value', 'values'], null, null),
+    inject(Element)
+], Ej2Calendar);
+export { Ej2Calendar };
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

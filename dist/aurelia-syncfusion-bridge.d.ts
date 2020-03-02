@@ -39,6 +39,9 @@ declare module 'aurelia-syncfusion-bridge' {
     Button
   } from '@syncfusion/ej2-buttons';
   import {
+    Calendar
+  } from '@syncfusion/ej2-calendars';
+  import {
     Chart,
     Category,
     Legend,
@@ -343,6 +346,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ej2Tooltip(): any;
     ej2Splitter(): any;
     ej2DashboardLayout(): any;
+    ej2Calendar(): any;
   }
   export function configure(aurelia?: any, configCallback?: any): any;
   export {
@@ -457,10 +461,10 @@ declare module 'aurelia-syncfusion-bridge' {
     ejDateTimePicker
   };
   export {
-    ejDialog
+    ejDiagram
   };
   export {
-    ejDiagram
+    ejDialog
   };
   export {
     ejDigitalGauge
@@ -677,6 +681,9 @@ declare module 'aurelia-syncfusion-bridge' {
   };
   export {
     ej2Button
+  };
+  export {
+    Ej2Calendar
   };
   export {
     ej2Chart
