@@ -1,87 +1,62 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.generateBindables = generateBindables;
-exports.delayed = delayed;
-
-var _aureliaTemplating = require('aurelia-templating');
-
-var _aureliaDependencyInjection = require('aurelia-dependency-injection');
-
-var _aureliaMetadata = require('aurelia-metadata');
-
-var _aureliaTaskQueue = require('aurelia-task-queue');
-
-var _aureliaBinding = require('aurelia-binding');
-
-var _util = require('./util');
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.componentMixins = exports.applyMixins = exports.generateBindables = void 0;
+const kernel_1 = require("@aurelia/kernel");
+const metadata_1 = require("@aurelia/metadata");
+const runtime_1 = require("@aurelia/runtime");
+const util_1 = require("./util");
 function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
-    return function (target, key, descriptor) {
-        var behaviorResource = _aureliaMetadata.metadata.getOrCreateOwn(_aureliaMetadata.metadata.resource, _aureliaTemplating.HtmlBehaviorResource, target);
-        var container = _aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container();
-        var util = container.get(_util.Util);
-        var bindingInstance = container.get(_aureliaBinding.BindingEngine);
+    return function (target, key, descriptor, container) {
         inputs.push('options');
         inputs.push('widget');
-        var len = inputs.length;
+        let len = inputs.length;
         if (observerCollection) {
             target.prototype.arrayObserver = [];
-            observerCollection.forEach(function (element) {
-                target.prototype.arrayObserver.push(util.getBindablePropertyName(element));
+            observerCollection.forEach((element) => {
+                target.prototype.arrayObserver.push(util_1.getBindablePropertyName(element));
             });
-            target.prototype.bindingInstance = bindingInstance;
         }
         target.prototype.controlName = controlName;
         target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
         target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];
         if (len) {
             target.prototype.controlProperties = inputs;
-            for (var i = 0; i < len; i++) {
-                var option = inputs[i];
+            for (let i = 0; i < len; i++) {
+                let option = inputs[i];
                 if (abbrevProperties && option in abbrevProperties) {
                     option = abbrevProperties[option];
-                    option.forEach(function (prop) {
-                        registerProp(util, prop, target, behaviorResource, descriptor);
+                    option.forEach((prop) => {
+                        registerProp(target, prop);
                     });
-                } else {
-                    registerProp(util, option, target, behaviorResource, descriptor);
+                }
+                else {
+                    registerProp(target, option);
                 }
             }
         }
     };
 }
-function registerProp(util, option, target, behaviorResource, descriptor) {
-    var nameOrConfigOrTarget = {
-        name: util.getBindablePropertyName(option)
-    };
-    if (option === 'widget') {
-        nameOrConfigOrTarget.defaultBindingMode = _aureliaBinding.bindingMode.twoWay;
-    }
-    var prop = new _aureliaTemplating.BindableProperty(nameOrConfigOrTarget);
-    prop.registerWith(target, behaviorResource, descriptor);
+exports.generateBindables = generateBindables;
+function registerProp(target, option) {
+    let prop = util_1.getBindablePropertyName(option);
+    metadata_1.Metadata.define(runtime_1.Bindable.name, runtime_1.BindableDefinition.create(prop, { mode: runtime_1.BindingMode.twoWay }), target, prop);
+    kernel_1.Protocol.annotation.appendTo(target, runtime_1.Bindable.keyFrom(prop));
 }
-function delayed() {
-    return function (target, key, descriptor) {
-        var taskQueue = (_aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container()).get(_aureliaTaskQueue.TaskQueue);
-        var ptr = descriptor.value;
-        descriptor.value = function () {
-            var _this = this;
-
-            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                args[_key] = arguments[_key];
+function applyMixins(derivedClass, baseClass) {
+    baseClass.forEach(baseClass => {
+        Object.getOwnPropertyNames(baseClass.prototype).forEach(name => {
+            if (!derivedClass.prototype.hasOwnProperty(name) || baseClass.isFormBase) {
+                derivedClass.prototype[name] = baseClass.prototype[name];
             }
-
-            if (this.childPropertyName) {
-                taskQueue.queueTask(function () {
-                    return ptr.apply(_this, args);
-                });
-            } else {
-                ptr.apply(this, args);
-            }
-        };
-        return descriptor;
+        });
+    });
+}
+exports.applyMixins = applyMixins;
+function componentMixins(baseClass) {
+    return function (derivedClass) {
+        applyMixins(derivedClass, baseClass);
     };
 }
+exports.componentMixins = componentMixins;
+
+//# sourceMappingURL=decorators.js.map

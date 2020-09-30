@@ -1,16 +1,23 @@
-import {WidgetBase} from '../common/widget-base';
-import {constants} from '../common/constants';
-import {generateBindables} from '../common/decorators';
-import {customAttribute, inject} from '../common/common';
+﻿import { constants } from '../common/constants';
+import { generateBindables, componentMixins } from '../common/decorators';
+import { customAttribute, inject } from '../common/common';
+import { DatePicker } from '@syncfusion/ej2-calendars';
+import { IComponentBase, ComponentBase } from '../common/component-base';
 
-@customAttribute(`${constants.attributePrefix}date-picker`)
-    @generateBindables('ejDatePicker', ['allowEdit', 'allowDrillDown', 'blackoutDates', 'buttonText', 'cssClass', 'dateFormat', 'dayHeaderFormat', 'depthLevel', 'displayInline', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'fields', 'headerFormat', 'height', 'highlightSection', 'highlightWeekend', 'htmlAttributes', 'locale', 'maxDate', 'minDate', 'readOnly', 'showDisabledRange', 'showFooter', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'showTooltip', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'tooltipFormat', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'weekNumber', 'width'], ['value'], {'enableRTL': ['enableRtl']})
+export const inputs: string[] = ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'];
+export const outputs: string[] = ['created'];
+export const twoWays: string[] = ['value'];
+
+@customAttribute(`${constants.ej2AttributePrefix}date-picker`)
+@generateBindables(constants.ej2ElementPrefix + 'DatePicker', inputs, twoWays , null, null)
 @inject(Element)
-export class ejDatePicker extends WidgetBase {
-  constructor(element) {
-    super();
-    this.isEditor = true;
-    this.element = element;
-  }
-}
+@componentMixins([ComponentBase])
+export class Ej2DatePicker extends DatePicker implements IComponentBase {
 
+    constructor(element) {
+        super();
+        this.element = element; 
+        this.addTwoWay.call(this, twoWays);
+    }
+    public addTwoWay: (propList: string[]) => void;
+}

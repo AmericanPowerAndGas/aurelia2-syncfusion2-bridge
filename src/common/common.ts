@@ -1,4 +1,3 @@
-import {customAttribute, bindable, customElement, children, TemplatingEngine, inlineView} from 'aurelia-templating';
-import {inject} from 'aurelia-dependency-injection';
+import { customAttribute, bindable, customElement, children,inject} from 'aurelia';
 
-export {customAttribute, bindable, inject, inlineView, customElement, children, TemplatingEngine};
+export { customAttribute, bindable, inject, customElement, children };

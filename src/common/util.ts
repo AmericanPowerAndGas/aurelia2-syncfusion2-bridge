@@ -1,31 +1,29 @@
 import {constants} from './constants';
 
-export class Util {
-
-  getBindablePropertyName(propertyName: string): string {
+  export function getBindablePropertyName(propertyName: string): string {
     let name = `${constants.bindablePrefix}${propertyName}`;
-    return this._unhyphenate(name);
+      return unhyphenate(name);
   }
 
-  _unhyphenate(name: string): string {
+  export function unhyphenate(name: string): string {
     return name.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
   }
 
-  getOptions(model, properties ) {
+  export function getOptions(model, properties ) {
     let bindableproperites = {};
     let value;
     for (let prop of properties) {
       if (model.abbrevProperties && prop in model.abbrevProperties && model.abbrevProperties.hasOwnProperty(prop)) {
         model.abbrevProperties[prop].some(property => {
-          value = model[this.getBindablePropertyName(property)];
-          return this.hasValue(value);
+          value = model[getBindablePropertyName(property)];
+          return hasValue(value);
         });
       } else {
-        value = model[this.getBindablePropertyName(prop)];
+        value = model[getBindablePropertyName(prop)];
       }
-      if (this.hasValue(value)) {
+      if (hasValue(value)) {
         if (typeof value === 'string' ) {
-          value = this.processData(value);
+          value = processData(value);
         }
         bindableproperites[prop] = value;
       }
@@ -33,16 +31,16 @@ export class Util {
     return bindableproperites;
   }
 
-  getControlPropertyName(options, propertyName) {
+  export function getControlPropertyName(options, propertyName) {
     let property;
     for (let prop of options.controlProperties) {
       if (options.abbrevProperties && prop in options.abbrevProperties && options.abbrevProperties.hasOwnProperty(prop)) {
         options.abbrevProperties[prop].some(props => {
-          property = propertyName === this.getBindablePropertyName(props) ? prop : undefined;
+          property = propertyName === getBindablePropertyName(props) ? prop : undefined;
           return property;
         });
         if (property) break;
-      } else if (propertyName === this.getBindablePropertyName(prop)) {
+      } else if (propertyName === getBindablePropertyName(prop)) {
         property = prop;
         break;
       }
@@ -50,11 +48,11 @@ export class Util {
     return property;
   }
 
-  hasValue(prop) {
+  export function hasValue(prop) {
     return typeof (prop) !== 'undefined' && prop !== null;
   }
 
-  processData(value) {
+  function processData(value) {
     if (value === 'true') {
       return true;
     } else if (value === 'false') {
@@ -64,4 +62,4 @@ export class Util {
     }
     return value;
   }
-}
+

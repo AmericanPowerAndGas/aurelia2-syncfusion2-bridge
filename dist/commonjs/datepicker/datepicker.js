@@ -1,49 +1,37 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.ejDatePicker = undefined;
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _widgetBase = require("../common/widget-base");
-
-var _constants = require("../common/constants");
-
-var _decorators = require("../common/decorators");
-
-var _common = require("../common/common");
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
-    var c = arguments.length,
-        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-        d;
-    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-var ejDatePicker = function (_WidgetBase) {
-    _inherits(ejDatePicker, _WidgetBase);
-
-    function ejDatePicker(element) {
-        _classCallCheck(this, ejDatePicker);
-
-        var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
-
-        _this.isEditor = true;
-        _this.element = element;
-        return _this;
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ej2DatePicker = exports.twoWays = exports.outputs = exports.inputs = void 0;
+const constants_1 = require("../common/constants");
+const decorators_1 = require("../common/decorators");
+const common_1 = require("../common/common");
+const ej2_calendars_1 = require("@syncfusion/ej2-calendars");
+const component_base_1 = require("../common/component-base");
+exports.inputs = ['allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'placeholder', 'readonly', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex'];
+exports.outputs = ['created'];
+exports.twoWays = ['value'];
+let Ej2DatePicker = class Ej2DatePicker extends ej2_calendars_1.DatePicker {
+    constructor(element) {
+        super();
+        this.element = element;
+        this.addTwoWay.call(this, exports.twoWays);
     }
+};
+Ej2DatePicker = __decorate([
+    common_1.customAttribute(`${constants_1.constants.ej2AttributePrefix}date-picker`),
+    decorators_1.generateBindables(constants_1.constants.ej2ElementPrefix + 'DatePicker', exports.inputs, exports.twoWays, null, null),
+    common_1.inject(Element),
+    decorators_1.componentMixins([component_base_1.ComponentBase]),
+    __metadata("design:paramtypes", [Object])
+], Ej2DatePicker);
+exports.Ej2DatePicker = Ej2DatePicker;
 
-    return ejDatePicker;
-}(_widgetBase.WidgetBase);
-exports.ejDatePicker = ejDatePicker = __decorate([(0, _common.customAttribute)(_constants.constants.attributePrefix + "date-picker"), (0, _decorators.generateBindables)('ejDatePicker', ['allowEdit', 'allowDrillDown', 'blackoutDates', 'buttonText', 'cssClass', 'dateFormat', 'dayHeaderFormat', 'depthLevel', 'displayInline', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'fields', 'headerFormat', 'height', 'highlightSection', 'highlightWeekend', 'htmlAttributes', 'locale', 'maxDate', 'minDate', 'readOnly', 'showDisabledRange', 'showFooter', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'showTooltip', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'tooltipFormat', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'weekNumber', 'width'], ['value'], { 'enableRTL': ['enableRtl'] }), (0, _common.inject)(Element)], ejDatePicker);
-exports.ejDatePicker = ejDatePicker;
+//# sourceMappingURL=datepicker.js.map

@@ -1,5 +1,4 @@
-import {Util} from './util';
-import {Container} from 'aurelia-dependency-injection';
+import { unhyphenate} from './util';
 import {constants} from './constants';
 
 /**
@@ -11,8 +10,7 @@ export function getEventOption(element) {
   let attr;
   let attributes = element.attributes;
   let option = {};
-  let container = (Container.instance || new Container());
-  let util = container.get(Util);
+  
   for (let i = 0, len = attributes.length; i < len; i++) {
     attr = attributes[i];
     name = attr.name;
@@ -20,7 +18,7 @@ export function getEventOption(element) {
       continue;
     }
     let actualEventName = name.split('.')[0];//Event name with constants event prefix
-    let eventName = util._unhyphenate(actualEventName.split(constants.eventPrefix)[1]);
+      let eventName = unhyphenate(actualEventName.split(constants.eventPrefix)[1]);
     option[eventName] = e => fireEvent(element, actualEventName, e);  // eslint-disable-line no-loop-func
   }
   return option;
@@ -31,7 +29,8 @@ export function getEventOption(element) {
 * @param name The Event's name
 * @param data Addition data to attach to an event
 */
-export function fireEvent(element: Element, name: string, data? = {}) {
+//export function fireEvent(element: Element, name: string, data? = {}) {
+export function fireEvent(element: Element, name: string, data = {}) {
   let event = new CustomEvent(name, {
     detail: data,
     bubbles: true
