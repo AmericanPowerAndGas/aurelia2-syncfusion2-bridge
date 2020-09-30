@@ -1,6 +1,6 @@
 # aurelia-syncfusion-bridge
 
-A set of [Aurelia](http://aurelia.io) wrappers for [Syncfusion Essential Studio for JavaScript](https://www.syncfusion.com/products/javascript)
+A set of [Aurelia 2](http://aurelia.io) wrappers for [Syncfusion Essential Studio for JavaScript](https://www.syncfusion.com/products/javascript)
 
 This fork supports EJ2.
 
