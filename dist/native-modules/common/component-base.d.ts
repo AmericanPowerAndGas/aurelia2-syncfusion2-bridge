@@ -9,7 +9,6 @@ export declare class ComponentBase<T> {
     appendTo: (ele: string | HTMLElement) => void;
     change: (arg: any) => void;
     protected isProtectedOnChange: boolean;
-    private isAngular;
     protected oldProperties: {
         [key: string]: Object;
     };

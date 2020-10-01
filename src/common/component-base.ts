@@ -15,8 +15,7 @@ export class ComponentBase<T> {
     change: (arg: any) => void;
 
 
-    protected isProtectedOnChange: boolean = true;
-    private isAngular: boolean;
+    protected isProtectedOnChange: boolean = true;    
     protected oldProperties: { [key: string]: Object };
     protected changedProperties: { [key: string]: Object };
     protected finalUpdate: Function;
