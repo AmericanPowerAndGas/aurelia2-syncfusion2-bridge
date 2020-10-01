@@ -1,10 +1,11 @@
 ﻿import { IContainer } from '@aurelia/kernel';
-import { Ej2DatePicker } from './datepicker/datepicker'
+import { DatePickerComponent } from './datepicker/datepicker';
+import { AccordionComponent } from './accordion/accordion';
 
 function createConfiguration() {
   return {
     register(container: IContainer) {
-      container.register(Ej2DatePicker);
+      container.register(DatePickerComponent, AccordionComponent);
       return container;
     }
   };
