@@ -33,6 +33,7 @@ node_modules
 # Compiled files
 /scripts
 /dev-app/environment.ts
-/dist
+
 /test/coverage-jest
 /.vs
+/package-lock.json
