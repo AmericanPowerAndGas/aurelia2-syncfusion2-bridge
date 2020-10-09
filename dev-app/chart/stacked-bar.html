@@ -1,0 +1,24 @@
+﻿<div class="card">
+  <div class="card-header">Chart</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <p>
+          This sample visualizes sales comparison of different fruits with default stacked bar series in chart. Legend in the sample shows the information about the series.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+
+        <ej2-chart style='display:block;' e-chart-area.bind='chartArea' e-width.bind='width' e-align='center' id='chartcontainer' e-primary-x-axis.bind='primaryXAxis'
+                   e-primary-y-axis.bind='primaryYAxis' e-title.bind='title' e-tooltip.bind='tooltip' e-on-load.trigger="load($event.detail)">
+          <e-series e-data-source.bind='data' e-type='StackingBar' e-x-name='x' e-y-name='y' e-name='Apple' e-width="2"> </e-series>
+          <e-series e-data-source.bind='data1' e-type='StackingBar' e-x-name='x' e-y-name='y' e-name='Orange' e-width="2"> </e-series>
+          <e-series e-data-source.bind='data2' e-type='StackingBar' e-x-name='x' e-y-name='y' e-name='Wastage' e-width="2"> </e-series>
+        </ej2-chart>
+
+      </div>
+    </div>
+  </div>
+</div>

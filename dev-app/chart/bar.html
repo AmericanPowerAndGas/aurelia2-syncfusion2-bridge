@@ -1,0 +1,16 @@
+﻿<div class="card">
+  <div class="card-header">Chart</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+
+        <ej2-chart style='display:block;' e-chart-area.bind='chartArea' e-width.bind='width' e-align='center' id='chartcontainer' e-primary-x-axis.bind='primaryXAxis'
+                   e-primary-y-axis.bind='primaryYAxis' e-title.bind='title' e-tooltip.bind='tooltip'>
+          <e-series e-data-source.bind='data' e-type='Bar' e-x-name='x' e-y-name='y' e-name='Imports'> </e-series>
+          <e-series e-data-source.bind='data1' e-type='Bar' e-x-name='x' e-y-name='y' e-name='Exports'> </e-series>
+        </ej2-chart>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -83,14 +83,8 @@ export class ComponentBase<T> {
         return Object.assign({}, propOptions, eventOption);        
     }
     getChildProperties(options) {
-        let PropertyName = this.childPropertyName;
-        if (PropertyName == 'series')
-            this[PropertyName] = Array.from(this.element.querySelectorAll('e-series-collection > e-series')).map((x: any) => x.au.controller.viewModel);
-        if (PropertyName == 'chips')
-            this[PropertyName] = Array.from(this.element.querySelectorAll('e-chips > e-chip')).map((x: any) => x.au.controller.viewModel);
-        if (PropertyName == 'items')
-            this[PropertyName] = Array.from(this.element.querySelectorAll('e-items > e-item')).map((x: any) => x.au.controller.viewModel);
-        let childCollection = this[PropertyName];
+        let PropertyName = this.childPropertyName.replace("ChildProp", "");
+        let childCollection = this[this.childPropertyName];
         let len = childCollection.length;
         if (len) {
             options[PropertyName] = [];
