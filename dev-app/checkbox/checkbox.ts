@@ -1,4 +1,4 @@
-﻿export class App {
+﻿export class CheckBox {
   checked: boolean = true;
   changeHandler() {
 
