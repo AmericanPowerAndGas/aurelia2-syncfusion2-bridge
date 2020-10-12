@@ -6,12 +6,13 @@ import { ButtonComponent } from './button/button';
 import { CalendarComponent } from './calendar/calendar';
 import { SeriesComponent } from './chart/series';
 import { ChartComponent } from './chart/chart';
+import { CheckBoxComponent } from './checkbox/checkbox';
 
 
 function createConfiguration() {
   return {
     register(container: IContainer) {
-          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent,SeriesComponent,ChartComponent);
+          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent,SeriesComponent,ChartComponent,CheckBoxComponent);
       return container;
     }
   };
