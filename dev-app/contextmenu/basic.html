@@ -1,0 +1,16 @@
+﻿<div class="card">
+  <div class="card-header">ContextMenu</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <div id="contextmenutarget">${content}</div>
+        <ej2-context-menu id='contextmenu' e-target='#contextmenutarget' e-items.bind='menuItems' e-on-before-item-render.trigger='addDisabled($event.detail)' e-on-created.trigger='onCreated()'></ej2-context-menu>
+      </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <p>This sample demonstrates the default functionalities of the ContextMenu. Right click/Touch hold the rectangular area to open the ContextMenu.</p>
+      </div>
+    </div>
+  </div>
+</div>

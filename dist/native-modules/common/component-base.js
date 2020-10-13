@@ -20,7 +20,12 @@ export class ComponentBase {
         for (let prop in this.allOption) {
             this[prop] = this.allOption[prop];
         }
-        this.appendTo(option.element);
+        if (this.constructor.name === 'ContextMenuComponent') {
+            this.appendTo(option.element.firstChild);
+        }
+        else {
+            this.appendTo(option.element);
+        }
     }
     propertyChanged(property, newValue, oldValue) {
         let modelValue;

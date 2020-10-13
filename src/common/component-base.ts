@@ -1,8 +1,9 @@
 ﻿import { getBindablePropertyName, hasValue, getOptions, getControlPropertyName } from "./util";
 import { getEventOption } from "./events";
+import { ContextMenuComponent } from "../contextmenu/contextmenu";
 
-export interface IComponentBase {    
-    addTwoWay: (propList: string[]) => void;    
+export interface IComponentBase {
+    addTwoWay: (propList: string[]) => void;
 }
 
 
@@ -15,7 +16,7 @@ export class ComponentBase<T> {
     change: (arg: any) => void;
 
 
-    protected isProtectedOnChange: boolean = true;    
+    protected isProtectedOnChange: boolean = true;
     protected oldProperties: { [key: string]: Object };
     protected changedProperties: { [key: string]: Object };
     protected finalUpdate: Function;
@@ -25,29 +26,33 @@ export class ComponentBase<T> {
     childPropertyName: any;
     hasChildProperty: any;
     templateProcessor: any;
-
-    afterAttach() {            
+    afterAttach() {
         if (this.templateProcessor) {
             this[this.childPropertyName].forEach(template => template.setTemplates());
-        }   
+        }
         this.createComponent({ element: this.element });
     }
     afterDetach() {
         if (this.templateProcessor) {
             this.templateProcessor.clearTempalte();
-        }        
-    }    
+        }
+    }
     createComponent(option) {
         this.allOption = this.getWidgetOptions(option.element);
         for (let prop in this.allOption) {
             this[prop] = this.allOption[prop];
         }
-        this.appendTo(option.element);        
+        if (this.constructor.name === 'ContextMenuComponent') {
+            this.appendTo(option.element.firstChild);
+        }
+        else {
+            this.appendTo(option.element);
+        }            
     }
     propertyChanged(property, newValue, oldValue) {
         let modelValue;
         let prop = getControlPropertyName(this, property);
-        
+
         if (prop) {
             if (prop === 'widget') {
                 return;
@@ -80,7 +85,7 @@ export class ComponentBase<T> {
         if (this.hasChildProperty) {
             this.getChildProperties(propOptions);
         }
-        return Object.assign({}, propOptions, eventOption);        
+        return Object.assign({}, propOptions, eventOption);
     }
     getChildProperties(options) {
         let PropertyName = this.childPropertyName.replace("ChildProp", "");
@@ -120,8 +125,8 @@ export class ComponentBase<T> {
             return null;
         };
     }
-    protected addTwoWay(propList: string[]): void {        
-        this.twoWays = propList;       
+    protected addTwoWay(propList: string[]): void {
+        this.twoWays = propList;
     }
     protected saveChanges(key: string, newValue: Object, oldValue: Object): void {
         if (this.isProtectedOnChange) {

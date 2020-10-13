@@ -10,10 +10,11 @@ import { ChipComponent } from './chips/chip';
 import { ChipListComponent } from './chips/chiplist';
 import { ColorPickerComponent } from './colorpicker/colorpicker';
 import { ComboBoxComponent } from './combobox/combobox';
+import { ContextMenuComponent } from './contextmenu/contextmenu';
 function createConfiguration() {
     return {
         register(container) {
-            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent);
+            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent);
             return container;
         }
     };
