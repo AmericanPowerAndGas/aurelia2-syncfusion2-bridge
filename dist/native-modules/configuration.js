@@ -7,7 +7,7 @@ import { SeriesComponent } from './chart/series';
 import { ChartComponent } from './chart/chart';
 import { CheckBoxComponent } from './checkbox/checkbox';
 import { ChipComponent } from './chips/chip';
-import { ChipListComponent } from './chips/chip-list';
+import { ChipListComponent } from './chips/chiplist';
 function createConfiguration() {
     return {
         register(container) {

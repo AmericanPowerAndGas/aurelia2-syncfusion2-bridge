@@ -39,4 +39,4 @@ ChipListComponent = __decorate([
 ], ChipListComponent);
 exports.ChipListComponent = ChipListComponent;
 
-//# sourceMappingURL=chip-list.js.map
+//# sourceMappingURL=chiplist.js.map

@@ -10,8 +10,8 @@ enableRipple(true);
 export const inputs: string[] = ['checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value'];
 export const twoWays: string[] = ['checked', 'indeterminate'];
 
-@customAttribute(`${constants.ej2ElementPrefix}check-box`)
-@generateBindables(constants.ej2ElementPrefix + 'CheckBox', inputs, twoWays, null, null)
+@customAttribute(`${constants.ej2AttributePrefix}check-box`)
+@generateBindables(constants.ej2AttributePrefix + 'CheckBox', inputs, twoWays, null, null)
 @inject(Element)
 @componentMixins([ComponentBase])
 export class CheckBoxComponent extends CheckBox implements IComponentBase {   

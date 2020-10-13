@@ -24,8 +24,8 @@ let CheckBoxComponent = class CheckBoxComponent extends CheckBox {
     }
 };
 CheckBoxComponent = __decorate([
-    customAttribute(`${constants.ej2ElementPrefix}check-box`),
-    generateBindables(constants.ej2ElementPrefix + 'CheckBox', inputs, twoWays, null, null),
+    customAttribute(`${constants.ej2AttributePrefix}check-box`),
+    generateBindables(constants.ej2AttributePrefix + 'CheckBox', inputs, twoWays, null, null),
     inject(Element),
     componentMixins([ComponentBase]),
     __metadata("design:paramtypes", [Object])

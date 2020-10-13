@@ -10,11 +10,11 @@ const series_1 = require("./chart/series");
 const chart_1 = require("./chart/chart");
 const checkbox_1 = require("./checkbox/checkbox");
 const chip_1 = require("./chips/chip");
-const chip_list_1 = require("./chips/chip-list");
+const chiplist_1 = require("./chips/chiplist");
 function createConfiguration() {
     return {
         register(container) {
-            container.register(datepicker_1.DatePickerComponent, accordion_1.AccordionComponent, autocomplete_1.AutoCompleteComponent, button_1.ButtonComponent, calendar_1.CalendarComponent, series_1.SeriesComponent, chart_1.ChartComponent, checkbox_1.CheckBoxComponent, chip_1.ChipComponent, chip_list_1.ChipListComponent);
+            container.register(datepicker_1.DatePickerComponent, accordion_1.AccordionComponent, autocomplete_1.AutoCompleteComponent, button_1.ButtonComponent, calendar_1.CalendarComponent, series_1.SeriesComponent, chart_1.ChartComponent, checkbox_1.CheckBoxComponent, chip_1.ChipComponent, chiplist_1.ChipListComponent);
             return container;
         }
     };

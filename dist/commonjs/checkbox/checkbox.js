@@ -27,8 +27,8 @@ let CheckBoxComponent = class CheckBoxComponent extends ej2_buttons_1.CheckBox {
     }
 };
 CheckBoxComponent = __decorate([
-    common_1.customAttribute(`${constants_1.constants.ej2ElementPrefix}check-box`),
-    decorators_1.generateBindables(constants_1.constants.ej2ElementPrefix + 'CheckBox', exports.inputs, exports.twoWays, null, null),
+    common_1.customAttribute(`${constants_1.constants.ej2AttributePrefix}check-box`),
+    decorators_1.generateBindables(constants_1.constants.ej2AttributePrefix + 'CheckBox', exports.inputs, exports.twoWays, null, null),
     common_1.inject(Element),
     decorators_1.componentMixins([component_base_1.ComponentBase]),
     __metadata("design:paramtypes", [Object])
