@@ -1,4 +1,4 @@
-﻿export class CheckBox {
+﻿export class Basic {
   checked: boolean = true;
   changeHandler() {
 
