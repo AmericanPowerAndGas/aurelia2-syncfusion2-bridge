@@ -9,10 +9,11 @@ import { CheckBoxComponent } from './checkbox/checkbox';
 import { ChipComponent } from './chips/chip';
 import { ChipListComponent } from './chips/chiplist';
 import { ColorPickerComponent } from './colorpicker/colorpicker';
+import { ComboBoxComponent } from './combobox/combobox';
 function createConfiguration() {
     return {
         register(container) {
-            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent);
+            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent);
             return container;
         }
     };
