@@ -8,14 +8,14 @@ export class ComponentBase {
         if (this.templateProcessor) {
             this[this.childPropertyName].forEach(template => template.setTemplates());
         }
-        this.createWidget({ element: this.element });
+        this.createComponent({ element: this.element });
     }
     afterDetach() {
         if (this.templateProcessor) {
             this.templateProcessor.clearTempalte();
         }
     }
-    createWidget(option) {
+    createComponent(option) {
         this.allOption = this.getWidgetOptions(option.element);
         for (let prop in this.allOption) {
             this[prop] = this.allOption[prop];

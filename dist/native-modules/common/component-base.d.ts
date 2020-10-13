@@ -24,7 +24,7 @@ export declare class ComponentBase<T> {
     templateProcessor: any;
     afterAttach(): void;
     afterDetach(): void;
-    createWidget(option: any): void;
+    createComponent(option: any): void;
     propertyChanged(property: any, newValue: any, oldValue: any): void;
     getWidgetOptions(element: any): any;
     getChildProperties(options: any): void;

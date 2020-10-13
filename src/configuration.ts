@@ -9,12 +9,14 @@ import { ChartComponent } from './chart/chart';
 import { CheckBoxComponent } from './checkbox/checkbox';
 import { ChipComponent } from './chips/chip';
 import { ChipListComponent } from './chips/chiplist';
+import { ColorPickerComponent } from './colorpicker/colorpicker';
+
 
 
 function createConfiguration() {
   return {
     register(container: IContainer) {
-          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent,SeriesComponent,ChartComponent,CheckBoxComponent,ChipComponent,ChipListComponent);
+          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent);
       return container;
     }
   };
