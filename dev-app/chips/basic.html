@@ -1,0 +1,70 @@
+﻿<div class="card">
+  <div class="card-header">Chips</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <ej2-chip-list id="chip-default">
+          <e-chip e-text="Apple" e-css-class="e-primary"></e-chip>
+          <e-chip e-text="Microsoft" e-css-class="e-info"></e-chip>
+          <e-chip e-text="Google" e-css-class="e-success"></e-chip>
+          <e-chip e-text="Tesla" e-css-class="e-warning"></e-chip>
+          <e-chip e-text="Intel" e-css-class="e-danger"></e-chip>
+        </ej2-chip-list>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <b>Input Chips</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <ej2-chip-list id="chip-avatar" e-enable-delete="true">
+          <e-chip e-text="Anne" e-leading-icon-css="anne"></e-chip>
+          <e-chip e-text="Janet" e-leading-icon-css="janet"></e-chip>
+          <e-chip e-text="Laura" e-leading-icon-css="laura"></e-chip>
+          <e-chip e-text="Margaret" e-leading-icon-css="margaret"></e-chip>
+        </ej2-chip-list>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <b>Filter Chips</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <ej2-chip-list id="chip-filter" e-selection="Multiple" e-selected-chips.bind="filterSelected">
+          <e-chip e-text="Extra small"></e-chip>
+          <e-chip e-text="Small"></e-chip>
+          <e-chip e-text="Medium"></e-chip>
+          <e-chip e-text="Large"></e-chip>
+          <e-chip e-text="Extra large"></e-chip>
+        </ej2-chip-list>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <b>Choice Chips</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <ej2-chip-list id="chip-choice" e-selection="Single" e-css-class="e-outline" e-selected-chips.bind="choiceSelected">
+          <e-chip e-text="Send a text" e-avatar-icon-css="text"></e-chip>
+          <e-chip e-text="Set a remainder" e-avatar-icon-css="alarm"></e-chip>
+          <e-chip e-text="Read my emails" e-avatar-icon-css="mail"></e-chip>
+          <e-chip e-text="Play a game" e-avatar-icon-css="game"></e-chip>
+        </ej2-chip-list>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg12 col-md-12">
+        <p>
+          This sample demonstrates the default functionalities of Chips with different types and predefined styles. Click
+          and interact the chip, to select single or multiple options from chips collection.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
