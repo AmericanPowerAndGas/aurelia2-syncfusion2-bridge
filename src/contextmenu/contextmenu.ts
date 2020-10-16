@@ -7,8 +7,6 @@ import { ContextMenu } from '@syncfusion/ej2-navigations';
 export const inputs: string[] = ['animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'showItemOnClick', 'target', 'template'];
 export const twoWays: string[] = [];
 
-
-//@customElement(`${constants.ej2ElementPrefix}context-menu`)
 @customElement({
     name: `${constants.ej2ElementPrefix}context-menu`,
     template:`<ul></ul>`
