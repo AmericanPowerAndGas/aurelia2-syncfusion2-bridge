@@ -12,10 +12,11 @@ import { ColorPickerComponent } from './colorpicker/colorpicker';
 import { ComboBoxComponent } from './combobox/combobox';
 import { ContextMenuComponent } from './contextmenu/contextmenu';
 import { DashboardLayoutComponent } from './dashboardlayout/dashboardlayout';
+import { DateTimePickerComponent } from './datetimepicker/datetimepicker';
 function createConfiguration() {
     return {
         register(container) {
-            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent);
+            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateTimePickerComponent);
             return container;
         }
     };
