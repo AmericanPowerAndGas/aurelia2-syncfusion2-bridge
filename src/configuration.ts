@@ -14,13 +14,15 @@ import { ComboBoxComponent } from './combobox/combobox';
 import { ContextMenuComponent } from './contextmenu/contextmenu';
 import { DashboardLayoutComponent } from './dashboardlayout/dashboardlayout';
 import { DateTimePickerComponent } from './datetimepicker/datetimepicker';
+import { DateRangePickerComponent } from './daterangepicker/daterangepicker';
+import { DiagramComponent } from './diagram/diagram';
 
 
 
 function createConfiguration() {
   return {
     register(container: IContainer) {
-          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent,DateTimePickerComponent);
+          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent);
       return container;
     }
   };
