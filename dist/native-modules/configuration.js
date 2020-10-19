@@ -15,10 +15,11 @@ import { DashboardLayoutComponent } from './dashboardlayout/dashboardlayout';
 import { DateTimePickerComponent } from './datetimepicker/datetimepicker';
 import { DateRangePickerComponent } from './daterangepicker/daterangepicker';
 import { DiagramComponent } from './diagram/diagram';
+import { DropDownButtonComponent } from './dropdownbutton/dropdownbutton';
 function createConfiguration() {
     return {
         register(container) {
-            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent);
+            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DropDownButtonComponent);
             return container;
         }
     };
