@@ -18,11 +18,12 @@ const dashboardlayout_1 = require("./dashboardlayout/dashboardlayout");
 const datetimepicker_1 = require("./datetimepicker/datetimepicker");
 const daterangepicker_1 = require("./daterangepicker/daterangepicker");
 const diagram_1 = require("./diagram/diagram");
+const dialog_1 = require("./dialog/dialog");
 const dropdownbutton_1 = require("./dropdownbutton/dropdownbutton");
 function createConfiguration() {
     return {
         register(container) {
-            container.register(datepicker_1.DatePickerComponent, accordion_1.AccordionComponent, autocomplete_1.AutoCompleteComponent, button_1.ButtonComponent, calendar_1.CalendarComponent, series_1.SeriesComponent, chart_1.ChartComponent, checkbox_1.CheckBoxComponent, chip_1.ChipComponent, chiplist_1.ChipListComponent, colorpicker_1.ColorPickerComponent, combobox_1.ComboBoxComponent, contextmenu_1.ContextMenuComponent, dashboardlayout_1.DashboardLayoutComponent, daterangepicker_1.DateRangePickerComponent, datetimepicker_1.DateTimePickerComponent, diagram_1.DiagramComponent, dropdownbutton_1.DropDownButtonComponent);
+            container.register(datepicker_1.DatePickerComponent, accordion_1.AccordionComponent, autocomplete_1.AutoCompleteComponent, button_1.ButtonComponent, calendar_1.CalendarComponent, series_1.SeriesComponent, chart_1.ChartComponent, checkbox_1.CheckBoxComponent, chip_1.ChipComponent, chiplist_1.ChipListComponent, colorpicker_1.ColorPickerComponent, combobox_1.ComboBoxComponent, contextmenu_1.ContextMenuComponent, dashboardlayout_1.DashboardLayoutComponent, daterangepicker_1.DateRangePickerComponent, datetimepicker_1.DateTimePickerComponent, diagram_1.DiagramComponent, dialog_1.DialogComponent, dropdownbutton_1.DropDownButtonComponent);
             return container;
         }
     };

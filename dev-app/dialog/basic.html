@@ -1,0 +1,35 @@
+﻿<div class="card">
+  <div class="card-header">Dialog</div>
+  <div class="card-body control-section">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+        <button id='dlgbtn' click.delegate="BtnClick()">Open</button>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+        <ej2-dialog id='dialog' e-buttons.bind='dlgButtons' e-header.bind='header' e-animation-settings.bind='animationSettings'
+                    e-show-close-icon.bind='showCloseIcon' e-target.bind='target' e-width.bind='width' e-on-open.trigger="dialogOpen()" e-on-close.trigger="dialogClose()">
+          <div #content>
+            <p>
+              In the Succinctly series, Syncfusion created a robust, free library of more than 130 technical e-books
+              formatted for PDF, Kindle, and EPUB. <br>
+              <br> The Succinctly series was born in 2012 out of a desire to provide concise technical e-books for
+              software developers
+              Each title in the Succinctly series is written by a carefully chosen expert and provides essential
+              content in about 100 pages.
+            </p>
+          </div>
+        </ej2-dialog>
+      </div>
+
+    </div>
+    <div class="row" style="margin-top:50px;">
+      <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+        <p>
+          This example demonstrates the default rendering of the dialog component with minimum configuration. Click close
+          or press ESC to close the dialog. Click “open” to show the dialog again, if it is closed.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
