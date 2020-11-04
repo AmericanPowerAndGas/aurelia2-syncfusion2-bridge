@@ -1,0 +1,37 @@
+﻿<div class="card">
+  <div class="card-header">Grid</div>
+  <div class="card-body control-section">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+
+        <ej2-grid e-data-source.bind='data'>
+          <e-columns>
+            <e-column e-field='OrderID' e-header-text='Order ID' e-width='120' e-text-align='Right'></e-column>
+            <e-column e-field='CustomerName' e-header-text='Customer Name' e-width='150'></e-column>
+            <e-column e-field='OrderDate' e-header-text='Order Date' e-width='130' e-format="yMd" e-text-align='Right'></e-column>
+            <e-column e-field='Freight' e-header-text='Freight' e-width='120' e-format='C2' e-text-align='Right'></e-column>
+            <e-column e-field='ShippedDate' e-header-text='Shipped Date' e-width='130' e-format="yMd" e-text-align='Right'></e-column>
+            <e-column e-field='ShipCountry' e-header-text='Ship Country' e-width='150'></e-column>
+          </e-columns>
+        </ej2-grid>
+      </div>
+    </div>
+
+  </div>
+  <div class="row" style="margin-top:50px;">
+    <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+      <p>
+        The Grid component is used to display and manipulate tabular data with configuration options to control the way the data
+        is presented and manipulated. It will pull the data from a data source, such as an array of JSON objects, OData web
+        services, or <code>
+          <a target="_blank" class="code"
+             href="http://ej2.syncfusion.com/documentation/data/api-dataManager.html">
+            DataManager
+          </a>
+        </code>; binding data fields to columns. Also, displaying a column header
+        to identify the field with support for grouped records.
+      </p>
+    </div>
+
+  </div>
+</div>
