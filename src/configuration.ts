@@ -23,13 +23,14 @@ import { ColumnComponent } from './grid/column';
 import { GridComponent } from './grid/grid';
 import { LinearGaugeComponent } from './lineargauge/lineargauge';
 import { ListBoxComponent } from './listbox/listbox';
+import { ListViewComponent } from './listview/listview';
 
 
 
 function createConfiguration() {
   return {
     register(container: IContainer) {
-          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent);
+          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent);
       return container;
     }
   };

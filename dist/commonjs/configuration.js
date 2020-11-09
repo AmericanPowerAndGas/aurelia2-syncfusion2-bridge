@@ -25,10 +25,11 @@ const column_1 = require("./grid/column");
 const grid_1 = require("./grid/grid");
 const lineargauge_1 = require("./lineargauge/lineargauge");
 const listbox_1 = require("./listbox/listbox");
+const listview_1 = require("./listview/listview");
 function createConfiguration() {
     return {
         register(container) {
-            container.register(datepicker_1.DatePickerComponent, accordion_1.AccordionComponent, autocomplete_1.AutoCompleteComponent, button_1.ButtonComponent, calendar_1.CalendarComponent, series_1.SeriesComponent, chart_1.ChartComponent, checkbox_1.CheckBoxComponent, chip_1.ChipComponent, chiplist_1.ChipListComponent, colorpicker_1.ColorPickerComponent, combobox_1.ComboBoxComponent, contextmenu_1.ContextMenuComponent, dashboardlayout_1.DashboardLayoutComponent, daterangepicker_1.DateRangePickerComponent, datetimepicker_1.DateTimePickerComponent, diagram_1.DiagramComponent, dialog_1.DialogComponent, dropdownbutton_1.DropDownButtonComponent, dropdownlist_1.DropDownListComponent, column_1.ColumnComponent, grid_1.GridComponent, lineargauge_1.LinearGaugeComponent, listbox_1.ListBoxComponent);
+            container.register(datepicker_1.DatePickerComponent, accordion_1.AccordionComponent, autocomplete_1.AutoCompleteComponent, button_1.ButtonComponent, calendar_1.CalendarComponent, series_1.SeriesComponent, chart_1.ChartComponent, checkbox_1.CheckBoxComponent, chip_1.ChipComponent, chiplist_1.ChipListComponent, colorpicker_1.ColorPickerComponent, combobox_1.ComboBoxComponent, contextmenu_1.ContextMenuComponent, dashboardlayout_1.DashboardLayoutComponent, daterangepicker_1.DateRangePickerComponent, datetimepicker_1.DateTimePickerComponent, diagram_1.DiagramComponent, dialog_1.DialogComponent, dropdownbutton_1.DropDownButtonComponent, dropdownlist_1.DropDownListComponent, column_1.ColumnComponent, grid_1.GridComponent, lineargauge_1.LinearGaugeComponent, listbox_1.ListBoxComponent, listview_1.ListViewComponent);
             return container;
         }
     };
