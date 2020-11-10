@@ -1,0 +1,35 @@
+﻿<div class="card">
+  <div class="card-header">Toast</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+        <ej2-toast id='defaultToast' e-position.bind="position" e-title="Adaptive Tiles Meeting" e-on-created.trigger="onCreate()"
+                   e-on-close.trigger="onClose($event)" e-icon="e-meeting" e-on-before-open.trigger="onBeforeOpen()">
+          <div>Conference Room 01 / Building 135 10:00 AM-10:30 AM</div>
+        </ej2-toast>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:50px;">
+    <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+      <button class="btn btn-info" click.delegate='showToast()'>
+        Show
+        Toasts
+      </button>
+      <button if.bind="showBtnHide" class="btn btn-info" click.delegate='hideToast()'>
+        Hide
+        All
+      </button>
+    </div>
+
+  </div>
+  <div class="row" style="margin-top:50px;">
+    <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+      <p>
+        The <code>Toast</code> is a notification pop-up used to display on the desired position with required message
+        and header icons.
+      </p>
+    </div>
+
+  </div>
+</div>
