@@ -26,10 +26,13 @@ import { ListViewComponent } from './listview/listview';
 import { TextBoxComponent } from './textbox/textbox';
 import { TimePickerComponent } from './timepicker/timepicker';
 import { ToastComponent } from './toast/toast';
+import { MaskedTextBoxComponent } from './maskedtextbox/maskedtextbox';
+import { NumericTextBoxComponent } from './numerictextbox/numerictextbox';
+import { ProgressButtonComponent } from './progressbutton/progressbutton';
 function createConfiguration() {
     return {
         register(container) {
-            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent);
+            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent);
             return container;
         }
     };
