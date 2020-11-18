@@ -35,10 +35,12 @@ import { SplitButtonComponent } from './splitbutton/splitbutton';
 import { SplitterComponent } from './splitter/splitter';
 import { SwitchComponent } from './switch/switch';
 import { TabComponent } from './tab/tab';
+import { ItemsComponent } from './toolbar/items';
+import { ToolbarComponent } from './toolbar/toolbar';
 function createConfiguration() {
     return {
         register(container) {
-            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent, RadioButtonComponent, SliderComponent, SplitButtonComponent, SplitterComponent, SwitchComponent, TabComponent);
+            container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent, RadioButtonComponent, SliderComponent, SplitButtonComponent, SplitterComponent, SwitchComponent, TabComponent, ItemsComponent, ToolbarComponent);
             return container;
         }
     };
