@@ -23,7 +23,7 @@ class ComponentBase {
         for (let prop in this.allOption) {
             this[prop] = this.allOption[prop];
         }
-        if (this.constructor.name === 'ContextMenuComponent') {
+        if (this.constructor.name === 'ContextMenuComponent' || this.constructor.name === 'MenuComponent') {
             this.appendTo(option.element.firstChild);
         }
         else {
