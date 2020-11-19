@@ -1,0 +1,28 @@
+﻿<div class="card">
+  <div class="card-header">Overview</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+
+        <ej2-diagram id="diagram" e-width="100%" e-height="600px" e-scroll-settings.bind="scrollSettings" e-get-connector-defaults.bind="connDefaults" e-get-node-defaults.bind="nodeDefaults" e-layout.bind="layout" e-data-source-settings.bind="data" e-set-node-template.bind="setNodeTemplate" e-tool.bind="tool" e-snap-settings="snapSettings"></ej2-diagram>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+        <ej2-overview id="overview" e-width="100%" e-height="590px" e-source-id="diagram">
+        </ej2-overview>
+      </div>
+    </div>
+    <div class="row" style="margin-top:50px;">
+      <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+        <p>
+          This example shows how to render the overview panel and how to display a preview (overall view) of the entire content of
+          a diagram. This helps you look at the overall picture of a large diagram and also to navigate (pan or zoom) to a
+          particular position of the page. The
+          <code>sourceID</code> property can be used to map the diagram control with overview.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>

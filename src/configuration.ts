@@ -42,6 +42,7 @@ import { TooltipComponent } from './tooltip/tooltip';
 import { UploaderComponent } from './uploader/uploader';
 import { MenuComponent } from './menu/menu';
 import { MultiSelectComponent } from './multiselect/multiselect';
+import { OverviewComponent } from './overview/overview';
 
 
 
@@ -49,7 +50,7 @@ import { MultiSelectComponent } from './multiselect/multiselect';
 function createConfiguration() {
   return {
     register(container: IContainer) {
-          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent, RadioButtonComponent, SliderComponent, SplitButtonComponent, SplitterComponent, SwitchComponent, TabComponent, ItemsComponent, ToolbarComponent, TooltipComponent, UploaderComponent, MenuComponent,MultiSelectComponent);
+          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent, RadioButtonComponent, SliderComponent, SplitButtonComponent, SplitterComponent, SwitchComponent, TabComponent, ItemsComponent, ToolbarComponent, TooltipComponent, UploaderComponent, MenuComponent, MultiSelectComponent, OverviewComponent);
       return container;
     }
   };
