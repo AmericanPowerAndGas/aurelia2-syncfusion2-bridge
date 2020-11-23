@@ -46,11 +46,12 @@ import { OverviewComponent } from './overview/overview';
 import { PdfViewerComponent } from './pdfviewer/pdfviewer';
 import { ScheduleComponent } from './schedule/schedule';
 import { SidebarComponent } from './sidebar/sidebar';
+import { RichTextEditorComponent } from './richtexteditor/richtexteditor';
 
 function createConfiguration() {
   return {
     register(container: IContainer) {
-          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent, RadioButtonComponent, SliderComponent, SplitButtonComponent, SplitterComponent, SwitchComponent, TabComponent, ItemsComponent, ToolbarComponent, TooltipComponent, UploaderComponent, MenuComponent, MultiSelectComponent, OverviewComponent, PdfViewerComponent, ScheduleComponent, SidebarComponent);
+          container.register(DatePickerComponent, AccordionComponent, AutoCompleteComponent, ButtonComponent, CalendarComponent, SeriesComponent, ChartComponent, CheckBoxComponent, ChipComponent, ChipListComponent, ColorPickerComponent, ComboBoxComponent, ContextMenuComponent, DashboardLayoutComponent, DateRangePickerComponent, DateTimePickerComponent, DiagramComponent, DialogComponent, DropDownButtonComponent, DropDownListComponent, ColumnComponent, GridComponent, LinearGaugeComponent, ListBoxComponent, ListViewComponent, TextBoxComponent, TimePickerComponent, ToastComponent, MaskedTextBoxComponent, NumericTextBoxComponent, ProgressButtonComponent, RadioButtonComponent, SliderComponent, SplitButtonComponent, SplitterComponent, SwitchComponent, TabComponent, ItemsComponent, ToolbarComponent, TooltipComponent, UploaderComponent, MenuComponent, MultiSelectComponent, OverviewComponent, PdfViewerComponent, ScheduleComponent, SidebarComponent, RichTextEditorComponent);
       return container;
     }
   };
