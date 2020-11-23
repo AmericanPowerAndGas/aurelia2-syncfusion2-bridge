@@ -78,7 +78,7 @@ export class ComponentBase<T> {
         let propOptions;
         if (this.ejOptions) {
             propOptions = this.ejOptions;
-        } else {
+        } else {            
             propOptions = getOptions(this, this.controlProperties);
         }
         let eventOption = getEventOption(element);
@@ -128,8 +128,18 @@ export class ComponentBase<T> {
     protected addTwoWay(propList: string[]): void {
         this.twoWays = propList;
     }
-    protected saveChanges(key: string, newValue: Object, oldValue: Object): void {
-        if (this.isProtectedOnChange) {
+    protected saveChanges(key: string, newValue: Object, oldValue: Object): void {       
+        if (this.isProtectedOnChange) {            
+            if (this.twoWays.indexOf(key) > -1) {
+                let viewModelProp = getBindablePropertyName(key);
+                if (viewModelProp && newValue !== oldValue) {
+                    this[viewModelProp] = newValue;                   
+                }
+
+            }
+            return;
+        }
+        if (this.constructor.name === 'RichTextEditorComponent') {
             if (this.twoWays.indexOf(key) > -1) {
                 let viewModelProp = getBindablePropertyName(key);
                 if (viewModelProp && newValue !== oldValue) {
@@ -137,7 +147,6 @@ export class ComponentBase<T> {
                 }
 
             }
-            return;
         }
         this.oldProperties[key] = oldValue;
         this.changedProperties[key] = newValue;
